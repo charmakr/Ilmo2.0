@@ -58,3 +58,16 @@ Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:13:48) [GET]
   [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
 Rendering courses/show
 Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:16:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering courses/show
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:16:31) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering courses/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/courses]
