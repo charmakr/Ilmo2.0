@@ -1,3 +1,34 @@
 body {
-	
+	background-color: #f3f3f3;
+}
+
+#container {
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    width: 750px;
+}
+
+ a:link {
+    color: #808080;
+}
+
+ a:visited {
+    color: #808080;
+}
+
+ a:hover {
+    color: #804040;
+}
+
+ a:active {
+    color: #804040;
+}
+
+#sisalto {
+    color: #494747;
+    margin-left: 15px;
+	margin-right: 25px;
 }

@@ -154,3 +154,11 @@ Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:20:37) [GET]
 Rendering template within layouts/application
 Rendering courses/show
 Completed in 10ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:26:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
