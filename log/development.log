@@ -30,3 +30,31 @@ Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:04:32) [GET]
   [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
 Rendering courses/index
 Completed in 15ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:13:05) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering courses/index
+Completed in 80ms (View: 70, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:13:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = '--- :id
+') [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Course with ID=id):
+  app/controllers/courses_controller.rb:6:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:13:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering courses/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
