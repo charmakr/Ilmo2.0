@@ -162,3 +162,85 @@ Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:26:48) [GET]
 Rendering template within layouts/application
 Rendering courses/show
 Completed in 20ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:28:37) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:28:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:28:40) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 17ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:28:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:28:44) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:30:21) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:30:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:30:24) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:30:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:30:27) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:30:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
