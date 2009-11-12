@@ -244,3 +244,61 @@ Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:30:28) [GET]
 Rendering template within layouts/application
 Rendering courses/show
 Completed in 10ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:32:07) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:32:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:32:45) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:34:40) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/courses]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-11 01:34:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://localhost/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-11 01:34:44) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://localhost/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 10:51:44) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 53ms (View: 48, DB: 1) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 10:53:04) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses]
