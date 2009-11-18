@@ -8,13 +8,19 @@ class UsersController < ApplicationController
   def create
     u = User.find_by_id(session[:user])
     
-   if params[:user][:password3]!=params[:user][:password2]
+    if params[:user][:password3]!=params[:user][:password2]
       flash[:warning]= "Uudet salasanat ei täsmää" 
       redirect_to :controller=>:users, :action=>:index 
       return
     end
-    
-    ok = User.authenticate(u.username, params[:user][:password])
+    begin 
+      ok = User.authenticate(u.username, params[:user][:password])
+    rescue
+      flash[:warning]="Väärä salasana, tietoja ei tallenettu"
+      redirect_to :controller=>:users, :action=>:index
+      return  
+      
+    end
     if ok
       u.first_name = params[:user][:first_name]
       u.surname = params[:user][:surname]

@@ -6827,3 +6827,325 @@ Rendering users/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 17ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
   [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:53:26) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"12312312312312", "first_name"=>"LAuri", "password"=>"", "surname"=>"Joku"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+
+ArgumentError (Login failed):
+  app/models/user.rb:5:in `authenticate'
+  app/controllers/users_controller.rb:17:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:53:31) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"12312312312312", "first_name"=>"LAuri", "password"=>"", "surname"=>"Joku"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+
+ArgumentError (Login failed):
+  app/models/user.rb:5:in `authenticate'
+  app/controllers/users_controller.rb:17:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 00:53:33) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:53:34) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:53:41) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"late1", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late1') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "student_number" = '123213123', "surname" = 'asdas', "updated_at" = '2009-11-18 22:53:41' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 73ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:53:41) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 00:53:44) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:53:45) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:53:59) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+
+ArgumentError (Login failed):
+  app/models/user.rb:5:in `authenticate'
+  app/controllers/users_controller.rb:17:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:54:03) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:54:34) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+
+ArgumentError (Login failed):
+  app/models/user.rb:5:in `authenticate'
+  app/controllers/users_controller.rb:17:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:56:45) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 00:56:47) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:56:49) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:56:52) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:56:52) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:56:54) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:56:54) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 00:56:55) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:56:57) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:56:58) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 10ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:56:58) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 16ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:57:01) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"7", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '7') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:57:01) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:57:06) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"sdfuri", "password"=>"", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:57:06) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 16ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 00:57:08) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:57:09) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:57:14) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 10ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:57:14) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:57:26) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:57:37) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123213123", "first_name"=>"LAuri", "password"=>"late1", "surname"=>"asdas"}, "commit"=>"Päivitä", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 11ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:57:37) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 00:57:43) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (49.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 71ms (View: 15, DB: 51) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-19 00:57:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/courses/show/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:58:17) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users]
