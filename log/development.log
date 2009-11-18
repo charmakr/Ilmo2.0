@@ -615,3 +615,60 @@ Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:06:18) [GET]
 Rendering template within layouts/application
 Rendering courses/index
 Completed in 1641ms (View: 1632, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:10:52) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-11-18 19:10:54) [POST]
+  Parameters: {"user"=>{"username"=>"", "password"=>""}, "commit"=>"ok", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo="}
+
+NameError (uninitialized constant UsersController):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:11:02) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-11-18 19:11:05) [POST]
+  Parameters: {"user"=>{"username"=>"as", "password"=>"asd"}, "commit"=>"ok", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo="}
+
+NameError (uninitialized constant UsersController):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:12:23) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-11-18 19:12:25) [POST]
+  Parameters: {"user"=>{"username"=>"", "password"=>""}, "commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo="}
+
+NameError (uninitialized constant UsersController):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
