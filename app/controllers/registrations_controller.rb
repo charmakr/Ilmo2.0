@@ -16,7 +16,7 @@ class RegistrationsController < ApplicationController
      end
     ok = User.register(params[:user][:username], params[:user][:password])
     if ok
-      flash[:sucsess]="Käyttäjän luonti onnistui"
+      flash[:success]="Käyttäjän luonti onnistui"
       redirect_to :controller=>:sessions, :action=>:index  
       return
     end

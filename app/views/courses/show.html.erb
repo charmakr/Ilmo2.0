@@ -4,9 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <title>Untitled Document</title>
     </head>
-    <body>
-        <%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
+    <body>        
         <h2>Kurssi: <%= @courses.name %></h2>
+		<%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
         <h3>Kurssin kuvaus</h3>
         <%=@courses.description %>
         <br/>
