@@ -12,11 +12,14 @@
 	<%= f.label :student_number, 'opiskelijanumero' %>:
     <%= f.password_field :student_number %><br />
 	
-	<%= f.label :password, 'Salasana' %>:
-    <%= f.password_field :password %><br />
+	<%= f.label :password3, 'Uusi salasana' %>:
+    <%= f.password_field :password3 %><br />
 	
-	<%= f.label :password2, 'Salasana uudelleen' %>:
+	<%= f.label :password2, 'Uusi salasana uudelleen' %>:
     <%= f.password_field :password2 %><br />
+	
+	<%= f.label :password, 'Vanha salasana' %>:
+    <%= f.password_field :password %><br />
 	
 	<br />
 	<%= submit_tag "Päivitä" %>
