@@ -4424,3 +4424,63 @@ Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:20:29) 
 Rendering template within layouts/application
 Rendering registrations/index
 Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:23:07) [POST]
+  Parameters: {"user"=>{"password2"=>"make", "username"=>"UUSI", "password"=>"make"}, "commit"=>"Rekisteröi", "authenticity_token"=>"3nC4G8Ud2SyRuiTiYqLmuNHxLvxvlQhUFeLhnO2CM1Y="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'UUSI') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "password", "created_at") VALUES('2009-11-18 21:23:07', 'UUSI', 'make', '2009-11-18 21:23:07')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 40ms (DB: 2) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:23:07) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 23:23:16) [POST]
+  Parameters: {"user"=>{"username"=>"uusi", "password"=>"make"}, "commit"=>"Kirjaudu", "authenticity_token"=>"3nC4G8Ud2SyRuiTiYqLmuNHxLvxvlQhUFeLhnO2CM1Y="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'uusi' AND password = 'make') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 7ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:23:16) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 23:23:23) [POST]
+  Parameters: {"user"=>{"username"=>"UUSI", "password"=>"make"}, "commit"=>"Kirjaudu", "authenticity_token"=>"3nC4G8Ud2SyRuiTiYqLmuNHxLvxvlQhUFeLhnO2CM1Y="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'UUSI' AND password = 'make') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 7ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:23:23) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-18 23:23:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 23:23:25) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:23:25) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]

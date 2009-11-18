@@ -1,5 +1,5 @@
 body {
-	background-color: #f3f3f3;
+    background-color: #f3f3f3;
 }
 
 #container {
@@ -11,28 +11,32 @@ body {
     width: 750px;
 }
 
- a:link {
+a:link {
     color: #808080;
 }
 
- a:visited {
+a:visited {
     color: #808080;
 }
 
- a:hover {
+a:hover {
     color: #804040;
 }
 
- a:active {
+a:active {
     color: #804040;
 }
 
 #sisalto {
     color: #494747;
     margin-left: 15px;
-	margin-right: 25px;
+    margin-right: 25px;
 }
-#varoitus{
 
-	color: #ff0000;
-	}
+#varoitus {
+    color: #ff0000;
+}
+
+#onnistuminen {
+    color:#80ff80;
+}

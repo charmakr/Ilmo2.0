@@ -18,6 +18,12 @@
                 </div>
                 <%end %>
                 <br/>
+				<% if flash[:sucsess] %>
+                <div id="onnistuminen">
+                    <%= flash[:sucsess] %>
+                </div>
+                <%end %>
+                <br/>
                 <%= yield %>
             </div>
             <center>
