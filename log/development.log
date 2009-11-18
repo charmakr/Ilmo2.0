@@ -1908,3 +1908,142 @@ Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 20:48:14) [GET]
 Rendering template within layouts/application
 Rendering sessions/index
 Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 20:50:04) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo=", "users"=>{"username"=>"as", "password"=>"as"}}
+
+ActionView::MissingTemplate (Missing template sessions/create.erb in view path app/views):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:50:33) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-18 20:50:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:50:44) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 20:50:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 20:50:53) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo=", "users"=>{"username"=>"as", "password"=>"as"}}
+
+NameError (undefined local variable or method `root' for #<SessionsController:0x5c77f68>):
+  app/controllers/sessions_controller.rb:8:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 20:51:04) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo=", "users"=>{"username"=>"as", "password"=>"as"}}
+
+NameError (undefined local variable or method `root' for #<SessionsController:0x5dc1c20>):
+  app/controllers/sessions_controller.rb:8:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 20:51:36) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo=", "users"=>{"username"=>"as", "password"=>"as"}}
+
+NameError (undefined local variable or method `root_url' for #<SessionsController:0x5ce8920>):
+  app/controllers/sessions_controller.rb:8:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 20:51:51) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo=", "users"=>{"username"=>"as", "password"=>"as"}}
+Redirected to http://127.0.0.1:3002/
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:51:52) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:51:54) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:51:55) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:51:56) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:51:57) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:51:57) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:51:58) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:52:00) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 62ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/]
