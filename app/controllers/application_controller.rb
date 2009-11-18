@@ -7,4 +7,13 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  before_filter :authentication_required
+  
+  def authentication_required
+    unless session[:user]
+      flash[:warning]="Kirjaudu sisään ensin"
+      redirect_to sessions_url
+      return false;
+    end
+  end
 end
