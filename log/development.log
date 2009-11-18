@@ -682,3 +682,10 @@ ActionController::UnknownAction (No action responded to create. Actions: ):
   -e:2
 
 Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:17:25) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/]
