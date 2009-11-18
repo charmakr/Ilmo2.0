@@ -432,3 +432,179 @@ Migrating to CreateUsers (20091118164610)
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("courses")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 18:53:29) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @user do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 18:54:05) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @user do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 18:57:20) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @users do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 18:57:23) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @users do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:00:37) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @users do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (50.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:02:03) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x52e8f4c>) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @users do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:02:06) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x54e4828>) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @users do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:03:21) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x4287400>) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @users do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
