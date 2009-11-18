@@ -43,6 +43,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :users
   map.resources :sessions
+  map.resources :registrations
   
   
   

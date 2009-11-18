@@ -3733,3 +3733,167 @@ Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:12:32) [GET]
 Rendering template within layouts/application
 Rendering sessions/index
 Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 22:36:48) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1524ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:36:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 49ms (View: 48, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:36:54) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:37:00) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:37:53) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+
+ActionView::TemplateError (registration_url failed to generate from {:action=>"show", :controller=>"registrations"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["registrations", :id] - are they all satisfied?) on line #11 of app/views/sessions/index.html.erb:
+8:     <%= f.password_field :password %><br />
+9: 	<%= submit_tag "Kirjaudu" %>
+10:   <% end %>
+11:   <%= link_to "Rekisteröinti", registration_url%>
+
+    (eval):16:in `registration_url'
+    app/views/sessions/index.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:38:43) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:38:44) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:38:44) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:38:46) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:38:46) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:38:47) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:38:47) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:38:47) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:38:47) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:38:48) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:38:48) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:38:49) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:39:07) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:39:10) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 22:39:22) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:39:22) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:39:25) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:39:32) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 22:39:35) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:39:37) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/registrations]
