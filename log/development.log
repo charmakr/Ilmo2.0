@@ -2047,3 +2047,50 @@ Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:52:00) [GET]
 Rendering template within layouts/application
 Rendering courses/index
 Completed in 62ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:57:33) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:58:03) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:58:12) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:00:57) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#show (for 127.0.0.1 at 2009-11-18 21:00:58) [GET]
+  Parameters: {"id"=>"logout"}
+
+ActionController::UnknownAction (No action responded to show. Actions: authentication_required, create, and index):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 21:01:33) [GET]
+
+ActionController::UnknownAction (No action responded to destroy. Actions: authentication_required, create, and index):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
