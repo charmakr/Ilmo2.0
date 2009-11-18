@@ -4609,3 +4609,356 @@ Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:28:39) 
 Rendering template within layouts/application
 Rendering registrations/index
 Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 1[0m
+  [4;36;1mUser Destroy (1.0ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 2[0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 3[0m
+  [4;36;1mUser Destroy (0.0ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 4[0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 5[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:30:25) [POST]
+  Parameters: {"user"=>{"password2"=>"", "username"=>"", "password"=>""}, "commit"=>"Rekisteröi", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+Redirected to http://127.0.0.1:3002/registrations
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:30:25) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:30:27) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:30:27) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 23:30:29) [POST]
+  Parameters: {"user"=>{"username"=>"", "password"=>""}, "commit"=>"Kirjaudu", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = '' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 56ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:30:29) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 23:30:30) [POST]
+  Parameters: {"user"=>{"username"=>"", "password"=>""}, "commit"=>"Kirjaudu", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = '' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 7ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:30:30) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 23:30:34) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Kirjaudu", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 6ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:30:34) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:30:36) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:30:44) [POST]
+  Parameters: {"user"=>{"password2"=>"joku", "username"=>"late", "password"=>"late"}, "commit"=>"Rekisteröi", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+Redirected to http://127.0.0.1:3002/registrations
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:30:44) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:30:52) [POST]
+  Parameters: {"user"=>{"password2"=>"late", "username"=>"late", "password"=>"late"}, "commit"=>"Rekisteröi", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+
+TypeError (Symbol as array index):
+  app/controllers/registrations_controller.rb:12:in `[]='
+  app/controllers/registrations_controller.rb:12:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:31:07) [POST]
+  Parameters: {"user"=>{"password2"=>"late", "username"=>"late", "password"=>"late"}, "commit"=>"Rekisteröi", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+
+TypeError (Symbol as array index):
+  app/controllers/registrations_controller.rb:12:in `[]='
+  app/controllers/registrations_controller.rb:12:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:31:10) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:31:10) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:31:11) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:31:22) [POST]
+  Parameters: {"user"=>{"password2"=>"salasana", "username"=>"late", "password"=>"salasana"}, "commit"=>"Rekisteröi", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+
+TypeError (Symbol as array index):
+  app/controllers/registrations_controller.rb:12:in `[]='
+  app/controllers/registrations_controller.rb:12:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:35:10) [POST]
+  Parameters: {"user"=>{"password2"=>"salasana", "username"=>"late", "password"=>"salasana"}, "commit"=>"Rekisteröi", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+
+TypeError (Symbol as array index):
+  app/controllers/registrations_controller.rb:12:in `[]'
+  app/controllers/registrations_controller.rb:12:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:35:13) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:35:13) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:35:14) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:35:20) [POST]
+  Parameters: {"user"=>{"password2"=>"late", "username"=>"late", "password"=>"late"}, "commit"=>"Rekisteröi", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+
+TypeError (Symbol as array index):
+  app/controllers/registrations_controller.rb:12:in `[]'
+  app/controllers/registrations_controller.rb:12:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-11-18 23:35:55) [POST]
+  Parameters: {"user"=>{"password2"=>"late", "username"=>"late", "password"=>"late"}, "commit"=>"Rekisteröi", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/registrations_controller.rb:30: syntax error, unexpected kEND, expecting $end):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:36:08) [POST]
+  Parameters: {"user"=>{"password2"=>"late", "username"=>"late", "password"=>"late"}, "commit"=>"Rekisteröi", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "password", "created_at") VALUES('2009-11-18 21:36:08', 'late', 'late', '2009-11-18 21:36:08')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 67ms (DB: 1) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:36:08) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 23:36:25) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Kirjaudu", "authenticity_token"=>"7SF2uNzJnmvpwRP47+bGs3GuaWHkmOvurcS9F0gHbd0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:36:25) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 23:36:27) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:36:27) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:37:00) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:37:09) [POST]
+  Parameters: {"user"=>{"password2"=>"joo", "username"=>"late", "password"=>"joo"}, "commit"=>"Rekisteröi", "authenticity_token"=>"PIejInm+FptMhS19vT2FZpXSiLkbnVCmtt0kJS/d5HY="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/registrations
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:37:09) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:37:22) [POST]
+  Parameters: {"user"=>{"password2"=>"juu", "username"=>"", "password"=>"juu"}, "commit"=>"Rekisteröi", "authenticity_token"=>"PIejInm+FptMhS19vT2FZpXSiLkbnVCmtt0kJS/d5HY="}
+Redirected to http://127.0.0.1:3002/registrations
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:37:22) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:37:27) [POST]
+  Parameters: {"user"=>{"password2"=>"", "username"=>"juu", "password"=>""}, "commit"=>"Rekisteröi", "authenticity_token"=>"PIejInm+FptMhS19vT2FZpXSiLkbnVCmtt0kJS/d5HY="}
+Redirected to http://127.0.0.1:3002/registrations
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 23:37:27) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 23:37:34) [POST]
+  Parameters: {"user"=>{"password2"=>"juu", "username"=>"juu", "password"=>"juu"}, "commit"=>"Rekisteröi", "authenticity_token"=>"PIejInm+FptMhS19vT2FZpXSiLkbnVCmtt0kJS/d5HY="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'juu') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "password", "created_at") VALUES('2009-11-18 21:37:34', 'juu', 'juu', '2009-11-18 21:37:34')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 41ms (DB: 1) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:37:34) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 23:37:39) [POST]
+  Parameters: {"user"=>{"username"=>"juu", "password"=>"juu"}, "commit"=>"Kirjaudu", "authenticity_token"=>"PIejInm+FptMhS19vT2FZpXSiLkbnVCmtt0kJS/d5HY="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'juu' AND password = 'juu') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:37:39) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 62ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-18 23:37:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:37:47) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-18 23:37:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 23:37:49) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:37:49) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
