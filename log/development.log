@@ -1880,3 +1880,31 @@ Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 20:43:52) [GET]
 Rendering template within layouts/application
 Rendering sessions/index
 Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 20:46:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 20:46:54) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo=", "users"=>{"username"=>"s", "password"=>"a"}}
+
+ActionView::MissingTemplate (Missing template sessions/create.erb in view path app/views):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 20:48:14) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 20:48:14) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]

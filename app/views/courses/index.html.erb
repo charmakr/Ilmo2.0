@@ -1,13 +1,5 @@
 
- <h2> Kirjaudu:</h2>
-  <% form_for @users, :url=>sessions_url do |f| %>
-    <%= f.label :username, 'Käyttäjänimi' %>:
-    <%= f.text_field :username %><br />
-	
-    <%= f.label :password, 'Salasana' %>:
-    <%= f.password_field :password %><br />
-	<%= submit_tag "Kirjaudu" %>
-  <% end %>
+
   
 <h2>Kurssit:</h2>
 <% @courses.each do |course| %>
