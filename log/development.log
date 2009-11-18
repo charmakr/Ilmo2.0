@@ -302,3 +302,112 @@ Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 10:53:04) [GET]
 Rendering template within layouts/application
 Rendering courses/index
 Completed in 8ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 10:58:32) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 10:58:37) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 11:59:46) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 12:00:23) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 54ms (View: 48, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 12:00:25) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 12:00:26) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 12:00:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 12:00:39) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 12:00:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 12:00:43) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 80.223.209.94 at 2009-11-12 13:51:52) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://lasipalatsi.dyndns.tv/courses]
+
+
+Processing CoursesController#show (for 80.223.209.94 at 2009-11-12 13:51:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://lasipalatsi.dyndns.tv/courses/show/1]
+
+
+Processing CoursesController#index (for 80.223.209.94 at 2009-11-12 13:52:04) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://lasipalatsi.dyndns.tv/]
+
+
+Processing CoursesController#show (for 80.223.209.94 at 2009-11-12 13:52:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://lasipalatsi.dyndns.tv/courses/show/1]
+
+
+Processing CoursesController#index (for 80.223.209.94 at 2009-11-12 13:55:51) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://lasipalatsi.dyndns.tv/courses]
