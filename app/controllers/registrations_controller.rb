@@ -9,6 +9,11 @@ class RegistrationsController < ApplicationController
       redirect_to :controller=>:registrations, :action=>:index  
       return
     end
+     if params[:user][:username]==""||[:user][:password]=""
+       flash[:warning]="Tyhjiä kenttiä"
+       redirect_to :controller=>:registrations, :action=>:index 
+       return
+     end
     ok = User.register(params[:user][:username], params[:user][:password])
     if ok
       flash[:sucsess]="Käyttäjän luonti onnistui"

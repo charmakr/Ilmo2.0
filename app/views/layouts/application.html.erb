@@ -11,19 +11,23 @@
                 <h1>Ilmo 2.0</h1>
                 <% if session[:user] %>
                 <%= link_to "Kirjaudu ulos", logout_url %>
+				<br/>
                 <%end %>
+				
                 <% if flash[:warning] %>
                 <div id="varoitus">
                     <%= flash[:warning] %>
                 </div>
+				<br/>
                 <%end %>
-                <br/>
+                
 				<% if flash[:sucsess] %>
                 <div id="onnistuminen">
                     <%= flash[:sucsess] %>
                 </div>
+				<br/>
                 <%end %>
-                <br/>
+                
                 <%= yield %>
             </div>
             <center>

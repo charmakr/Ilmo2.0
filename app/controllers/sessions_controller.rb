@@ -12,6 +12,7 @@ end
   return
     end
     session[:user]=user.id
+    flash[:sucsess]="Sisäänkirjautuminen onnistui"
     redirect_to "/"
   end
   
