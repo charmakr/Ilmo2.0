@@ -5,7 +5,7 @@ end
 
   def create
     user = User.authenticate(params[:user][:username], params[:user][:password])
-    session[:user]=true
+    session[:user]=user.id
     redirect_to "/"
   end
   def destroy
