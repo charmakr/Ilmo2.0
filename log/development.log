@@ -689,3 +689,14 @@ Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:17:25) [GET]
 Rendering template within layouts/application
 Rendering courses/index
 Completed in 20ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "password", "created_at") VALUES('2009-11-18 17:20:14', 'late', 'salasana', '2009-11-18 17:20:14')[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-18 19:20:25) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"salasana"}, "commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo="}
+
+ActionController::UnknownAction (No action responded to create. Actions: ):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
