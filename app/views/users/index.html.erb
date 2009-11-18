@@ -4,13 +4,13 @@
   <% form_for :user do |f| %>
 	
 	<%= f.label :first_name, 'Etunimi' %>:
-    <%= f.password_field :first_name %><br />
+    <%= f.text_field :first_name %><br />
 	
 	<%= f.label :surname, 'Sukunimi' %>:
-    <%= f.password_field :surname %><br />
+    <%= f.text_field :surname %><br />
 	
 	<%= f.label :student_number, 'opiskelijanumero' %>:
-    <%= f.password_field :student_number %><br />
+    <%= f.text_field :student_number %><br />
 	
 	<%= f.label :password3, 'Uusi salasana' %>:
     <%= f.password_field :password3 %><br />
