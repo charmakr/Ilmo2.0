@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
 end
 
   def create
+    user = User.authenticate(params[:user][:username], params[:user][:password])
     session[:user]=true
     redirect_to "/"
   end

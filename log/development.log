@@ -2356,3 +2356,228 @@ Processing CoursesController#show (for 127.0.0.1 at 2009-11-18 21:11:20) [GET]
 Rendering template within layouts/application
 Rendering courses/show
 Completed in 9ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-18 21:29:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 21:29:39) [GET]
+Redirected to http://127.0.0.1:3002/
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:29:39) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:29:39) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:29:40) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"mET8XLIMNUNr6cM5uvPd5CQe72NWohtpiBwFXJcMTNo=", "users"=>{"username"=>"", "password"=>""}}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:7:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:29:47) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:29:49) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"mET8XLIMNUNr6cM5uvPd5CQe72NWohtpiBwFXJcMTNo=", "users"=>{"username"=>"as", "password"=>"as"}}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:7:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:30:12) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:30:20) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"mET8XLIMNUNr6cM5uvPd5CQe72NWohtpiBwFXJcMTNo=", "users"=>{"username"=>"late", "password"=>"salasana"}}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:7:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (81.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:31:07) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:31:14) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"mET8XLIMNUNr6cM5uvPd5CQe72NWohtpiBwFXJcMTNo=", "users"=>{"username"=>"late", "password"=>"salasana"}}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:7:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:31:35) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"mET8XLIMNUNr6cM5uvPd5CQe72NWohtpiBwFXJcMTNo=", "users"=>{"username"=>"late", "password"=>"salasana"}}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/sessions_controller.rb:7:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (81.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:31:37) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:31:37) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:31:39) [POST]
+  Parameters: {"user"=>{"username"=>"", "password"=>""}, "commit"=>"Kirjaudu", "authenticity_token"=>"mET8XLIMNUNr6cM5uvPd5CQe72NWohtpiBwFXJcMTNo="}
+
+ArgumentError (Unknown key(s): condititions):
+  app/models/user.rb:3:in `authenticate'
+  app/controllers/sessions_controller.rb:7:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:32:26) [POST]
+  Parameters: {"user"=>{"username"=>"", "password"=>""}, "commit"=>"Kirjaudu", "authenticity_token"=>"mET8XLIMNUNr6cM5uvPd5CQe72NWohtpiBwFXJcMTNo="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = '' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 6ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:32:26) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 21:32:28) [GET]
+Redirected to http://127.0.0.1:3002/
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:32:28) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:32:28) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:32:31) [POST]
+  Parameters: {"user"=>{"username"=>"s", "password"=>"s"}, "commit"=>"Kirjaudu", "authenticity_token"=>"UQaBtB29ZYp7s9hneQisWJ/h9dKQhLuZN+oskfuKGvE="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 's' AND password = 's') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 6ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:32:31) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 21:32:32) [GET]
+Redirected to http://127.0.0.1:3002/
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:32:32) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:32:32) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:32:43) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"salasana"}, "commit"=>"Kirjaudu", "authenticity_token"=>"Dz4EkgOtQqXvRBhZMCQfABuLfxfKM5cRoIiysDx8tg8="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'salasana') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 6ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:32:43) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
