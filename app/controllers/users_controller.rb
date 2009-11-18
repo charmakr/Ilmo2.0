@@ -20,10 +20,13 @@ class UsersController < ApplicationController
       u.surname = params[:user][:first_name]
       u.student_number = params[:user][:first_name]
       if params[:user][:password2]==""||params[:user][:password3]==""
+        u.save
         flash[:success]="Tiedot päivitetty, Salasanaa ei vaihdettu"
         redirect_to :controller=>:users, :action=>:index
         return  
       end
+      u.password = params[:user][:password2]
+      u.save
       flash[:success]="Tiedot päivitetty, Salasanaa vaihdettu"
       redirect_to :controller=>:users, :action=>:index
       return
