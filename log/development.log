@@ -2094,3 +2094,97 @@ ActionController::UnknownAction (No action responded to destroy. Actions: authen
   -e:2
 
 Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 21:03:13) [GET]
+Redirected to http://127.0.0.1:3002/
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:03:17) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 21:03:18) [GET]
+Redirected to http://127.0.0.1:3002/
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:03:18) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:03:18) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:03:22) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"Tl8zWISnqrqMjoIP9prreOhlq/wGDyR4jfcH5qxWHxg=", "users"=>{"username"=>"", "password"=>""}}
+Redirected to http://127.0.0.1:3002/
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:03:22) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 21:03:23) [GET]
+Redirected to http://127.0.0.1:3002/
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 21:03:25) [GET]
+Redirected to http://127.0.0.1:3002/
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:03:25) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:03:25) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 21:03:27) [POST]
+  Parameters: {"commit"=>"Kirjaudu", "authenticity_token"=>"Wsq1usobk3V8nl+D2ldhS3OB6v2KVpKTFGC1mio3pGQ=", "users"=>{"username"=>"as", "password"=>"as"}}
+Redirected to http://127.0.0.1:3002/
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:03:27) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 21:03:28) [GET]
+Redirected to http://127.0.0.1:3002/
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 21:03:28) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 21:03:28) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
