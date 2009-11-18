@@ -672,3 +672,13 @@ NameError (uninitialized constant UsersController):
 Rendered rescues/_trace (30.0ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-18 19:13:57) [POST]
+  Parameters: {"user"=>{"username"=>"", "password"=>""}, "commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo="}
+
+ActionController::UnknownAction (No action responded to create. Actions: ):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
