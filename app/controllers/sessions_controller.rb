@@ -7,7 +7,9 @@ end
     begin
     user = User.authenticate(params[:user][:username], params[:user][:password])
   rescue
-    render :text => "Kirjautuminen epäonnistui" and return
+    flash[:warning]= "Kirjautuminen epäonnistui" 
+  redirect_to :controller=> :sessions, :action => :index
+  return
     end
     session[:user]=user.id
     redirect_to "/"
@@ -15,6 +17,6 @@ end
   
   def destroy
     reset_session
-    redirect_to "/"
+    redirect_to :controller=> :sessions, :action => :index
   end
 end

@@ -12,6 +12,9 @@
                 <% if session[:user] %>
                 <%= link_to "Kirjaudu ulos", logout_url %>
                 <%end %>
+				<% if flash[:warning] %>
+                <%= flash[:warning] %>
+                <%end %>
                 <br/>
                 <%= yield %>
             </div>
