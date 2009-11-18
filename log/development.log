@@ -5048,3 +5048,181 @@ Rendering template within layouts/application
 Rendering courses/index
   [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
 Completed in 23ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:47:13) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+
+ActionView::TemplateError (user_url failed to generate from {:action=>"show", :controller=>"users"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #13 of app/views/layouts/application.html.erb:
+10:             <div id="sisalto">
+11:                 <h1>Ilmo 2.0</h1>
+12:                 <% if session[:user] %>
+13:                 <%= link_to User.find_by_id(session[:user]).username, user_url%> (<%= link_to "Kirjaudu ulos", logout_url %>)
+14: 				<br/>
+15:                 <%end %>
+16: 				
+
+    (eval):16:in `user_url'
+    app/views/layouts/application.html.erb:13
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:48:39) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+
+ActionView::TemplateError (user_url failed to generate from {:action=>"show", :controller=>"users"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #13 of app/views/layouts/application.html.erb:
+10:             <div id="sisalto">
+11:                 <h1>Ilmo 2.0</h1>
+12:                 <% if session[:user] %>
+13:                 <%= link_to User.find_by_id(session[:user]).username, user_url%> (<%= link_to "Kirjaudu ulos", logout_url %>)
+14: 				<br/>
+15:                 <%end %>
+16: 				
+
+    (eval):16:in `user_url'
+    app/views/layouts/application.html.erb:13
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (92.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:48:49) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+
+ActionView::TemplateError (user_url failed to generate from {:action=>"show", :controller=>"users"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #13 of app/views/layouts/application.html.erb:
+10:             <div id="sisalto">
+11:                 <h1>Ilmo 2.0</h1>
+12:                 <% if session[:user] %>
+13:                 <%= link_to User.find_by_id(session[:user]).username, user_url%> (<%= link_to "Kirjaudu ulos", logout_url %>)
+14: 				<br/>
+15:                 <%end %>
+16: 				
+
+    (eval):16:in `user_url'
+    app/views/layouts/application.html.erb:13
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:48:50) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+
+ActionView::TemplateError (user_url failed to generate from {:action=>"show", :controller=>"users"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #13 of app/views/layouts/application.html.erb:
+10:             <div id="sisalto">
+11:                 <h1>Ilmo 2.0</h1>
+12:                 <% if session[:user] %>
+13:                 <%= link_to User.find_by_id(session[:user]).username, user_url%> (<%= link_to "Kirjaudu ulos", logout_url %>)
+14: 				<br/>
+15:                 <%end %>
+16: 				
+
+    (eval):16:in `user_url'
+    app/views/layouts/application.html.erb:13
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:50:10) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 23:50:12) [GET]
+
+ActionView::MissingTemplate (Missing template users/index.erb in view path app/views):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 23:50:50) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 18ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 23:51:11) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-18 23:51:19) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 3ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:51:19) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 23:51:25) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Kirjaudu", "authenticity_token"=>"dYiEkFb8496rwN+j8CE70f1sTqo6dLzLzF7/P4mi16M="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 7ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:51:25) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 23:51:27) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 23:52:49) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 23:53:14) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]

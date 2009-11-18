@@ -10,24 +10,14 @@
             <div id="sisalto">
                 <h1>Ilmo 2.0</h1>
                 <% if session[:user] %>
-                <%= link_to User.find_by_id(session[:user]).username, users_url%> (<%= link_to "Kirjaudu ulos", logout_url %>)
-				<br/>
+                <%= link_to "Kirjaudu ulos", logout_url %>
                 <%end %>
-				
                 <% if flash[:warning] %>
                 <div id="varoitus">
                     <%= flash[:warning] %>
                 </div>
-				<br/>
                 <%end %>
-                
-				<% if flash[:sucsess] %>
-                <div id="onnistuminen">
-                    <%= flash[:sucsess] %>
-                </div>
-				<br/>
-                <%end %>
-                
+                <br/>
                 <%= yield %>
             </div>
             <center>
