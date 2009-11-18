@@ -608,3 +608,10 @@ ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:
 Rendered rescues/_trace (48.0ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:06:18) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1641ms (View: 1632, DB: 1) | 200 OK [http://127.0.0.1/]
