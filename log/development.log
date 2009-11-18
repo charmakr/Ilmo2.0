@@ -4962,3 +4962,89 @@ Processing SessionsController#index (for 127.0.0.1 at 2009-11-18 23:37:49) [GET]
 Rendering template within layouts/application
 Rendering sessions/index
 Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 23:41:06) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Kirjaudu", "authenticity_token"=>"x3tTu16Ij6zlk7x21jmqu46vQy8ayIhnk4Le6XtgWwU="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 7ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:41:06) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:42:09) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '--- :user
+') LIMIT 1[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.username) on line #13 of app/views/layouts/application.html.erb:
+10:             <div id="sisalto">
+11:                 <h1>Ilmo 2.0</h1>
+12:                 <% if session[:user] %>
+13:                 <%= User.find_by_id(:user).username%><%= link_to "Kirjaudu ulos", logout_url %>
+14: 				<br/>
+15:                 <%end %>
+16: 				
+
+    app/views/layouts/application.html.erb:13
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:43:37) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '--- :user
+') LIMIT 1[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.username) on line #13 of app/views/layouts/application.html.erb:
+10:             <div id="sisalto">
+11:                 <h1>Ilmo 2.0</h1>
+12:                 <% if session[:user] %>
+13:                 <%= User.find_by_id(:user).username%><%= link_to "Kirjaudu ulos", logout_url %>
+14: 				<br/>
+15:                 <%end %>
+16: 				
+
+    app/views/layouts/application.html.erb:13
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:45:21) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 23:45:46) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/]
