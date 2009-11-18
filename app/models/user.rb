@@ -11,10 +11,9 @@ class User < ActiveRecord::Base
         u = User.find(:first, :conditions=>["username = ?", username])        
     if u==nil
       User.create(:username=>username, :password=>password)
-      flash[:sucsess]="Käyttäjän luonti onnistui"
-      return
+      return true 
     end
-    flash[:warning]="Käyttäjänimi on jo käytössä"
+    return false
   end
     
     
