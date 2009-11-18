@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   def index   
   end
   
-  def show    
+  def show
+    @u = User.find_by_id(session[:user])   
   end
   
   def create
@@ -40,5 +41,9 @@ class UsersController < ApplicationController
     if !ok
       flash[:warning]="Väärä salasana"
     end
+  end
+  
+  def destroy
+    
   end
 end
