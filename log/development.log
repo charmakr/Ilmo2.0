@@ -700,3 +700,86 @@ ActionController::UnknownAction (No action responded to create. Actions: ):
   -e:2
 
 Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:26:59) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (undefined local variable or method `url' for #<ActionView::Base:0x417d924>) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @users, url=>sessions_url do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:27:41) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (undefined local variable or method `url' for #<ActionView::Base:0x5d1ce64>) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @users, url=>sessions_path do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:27:42) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (undefined local variable or method `url' for #<ActionView::Base:0x5d563bc>) on line #3 of app/views/courses/index.html.erb:
+1: 
+2:  <h2> Kirjaudu:</h2>
+3:   <% form_for @users, url=>sessions_path do |f| %>
+4:     <%= f.label :username, 'Käyttäjänimi' %>:
+5:     <%= f.text_field :username %><br />
+6: 	
+
+    app/views/courses/index.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:28:21) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 54ms (View: 45, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 19:28:23) [POST]
+  Parameters: {"user"=>{"username"=>"", "password"=>""}, "commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo="}
+
+ActionController::UnknownAction (No action responded to create. Actions: ):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)

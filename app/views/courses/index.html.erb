@@ -1,6 +1,6 @@
 
  <h2> Kirjaudu:</h2>
-  <% form_for @users do |f| %>
+  <% form_for @users, :url=>sessions_url do |f| %>
     <%= f.label :username, 'Käyttäjänimi' %>:
     <%= f.text_field :username %><br />
 	
