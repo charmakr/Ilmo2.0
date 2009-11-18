@@ -1,2 +1,23 @@
 <h2>Käyttäjätiedot</h2>
 <%= link_to "Etusivulle" , "/"%>
+<br />
+  <% form_for :user do |f| %>
+	
+	<%= f.label :first_name, 'Etunimi' %>:
+    <%= f.password_field :first_name %><br />
+	
+	<%= f.label :surname, 'Sukunimi' %>:
+    <%= f.password_field :surname %><br />
+	
+	<%= f.label :student_number, 'opiskelijanumero' %>:
+    <%= f.password_field :student_number %><br />
+	
+	<%= f.label :password, 'Salasana' %>:
+    <%= f.password_field :password %><br />
+	
+	<%= f.label :password2, 'Salasana uudelleen' %>:
+    <%= f.password_field :password2 %><br />
+	
+	<br />
+	<%= submit_tag "Päivitä" %>
+  <% end %>
