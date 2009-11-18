@@ -17,8 +17,8 @@ class UsersController < ApplicationController
     ok = User.authenticate(u.username, params[:user][:password])
     if ok
       u.first_name = params[:user][:first_name]
-      u.surname = params[:user][:first_name]
-      u.student_number = params[:user][:first_name]
+      u.surname = params[:user][:surname]
+      u.student_number = params[:user][:student_number]
       if params[:user][:password2]==""||params[:user][:password3]==""
         u.save
         flash[:success]="Tiedot päivitetty, Salasanaa ei vaihdettu"

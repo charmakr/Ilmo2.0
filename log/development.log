@@ -6415,3 +6415,415 @@ Rendering template within layouts/application
 Rendering users/index
   [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 22ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:46:39) [GET]
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `value' for #<ActionView::Base:0x5c3d340>) on line #7 of app/views/users/index.html.erb:
+4:   <% form_for :user do |f| %>
+5: 	
+6: 	<%= f.label :first_name, 'Etunimi' %>:
+7:     <%= f.text_field :first_name , value=>"Nimi"%><br />
+8: 	
+9: 	<%= f.label :surname, 'Sukunimi' %>:
+10:     <%= f.text_field :surname %><br />
+
+    app/views/users/index.html.erb:7
+    app/views/users/index.html.erb:4
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:46:47) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 21ms (View: 20, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:47:54) [GET]
+Rendering template within layouts/application
+Rendering users/index
+ERROR: compiling _run_erb_app47views47users47index46html46erb RAISED compile error
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :first_name , :value=u.first_name>).to_s); @output_buffer.concat "<br />\n"
+                                                                                         ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:8: syntax error, unexpected ')'
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :first_name , :value=u.first_name>).to_s); @output_buffer.concat "<br />\n"
+                                                                                                      ^
+Function body:           def _run_erb_app47views47users47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>K\303\244ytt\303\244j\303\244tiedot</h2>\n"
+@output_buffer.concat(( link_to "Etusivulle" , "/").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+ u = User.find_by_name(session[:user]); @output_buffer.concat "\n"
+@output_buffer.concat "  ";  form_for :user do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :first_name, 'Etunimi' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :first_name , :value=u.first_name>).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :surname, 'Sukunimi' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :surname ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :student_number, 'opiskelijanumero' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :student_number ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password3, 'Uusi salasana' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password3 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password2, 'Uusi salasana uudelleen' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password2 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password, 'Vanha salasana' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t<br />\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( submit_tag "Päivitä" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:31:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :first_name , :value=u.first_name>).to_s); @output_buffer.concat "<br />\n"
+                                                                                         ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:8: syntax error, unexpected ')'
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :first_name , :value=u.first_name>).to_s); @output_buffer.concat "<br />\n"
+                                                                                                      ^) on line #8 of app/views/users/index.html.erb:
+5:   <% form_for :user do |f| %>
+6: 	
+7: 	<%= f.label :first_name, 'Etunimi' %>:
+8:     <%= f.text_field :first_name , :value=u.first_name>%><br />
+9: 	
+10: 	<%= f.label :surname, 'Sukunimi' %>:
+11:     <%= f.text_field :surname %><br />
+
+    app/views/users/index.html.erb:31:in `compile!'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:48:59) [GET]
+Rendering template within layouts/application
+Rendering users/index
+ERROR: compiling _run_erb_app47views47users47index46html46erb RAISED compile error
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:8: syntax error, unexpected ')'
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :first_name , :value=>u.first_name>).to_s); @output_buffer.concat "<br />\n"
+                                                                                                       ^
+Function body:           def _run_erb_app47views47users47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>K\303\244ytt\303\244j\303\244tiedot</h2>\n"
+@output_buffer.concat(( link_to "Etusivulle" , "/").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+ u = User.find_by_name(session[:user]); @output_buffer.concat "\n"
+@output_buffer.concat "  ";  form_for :user do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :first_name, 'Etunimi' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :first_name , :value=>u.first_name>).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :surname, 'Sukunimi' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :surname ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :student_number, 'opiskelijanumero' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :student_number ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password3, 'Uusi salasana' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password3 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password2, 'Uusi salasana uudelleen' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password2 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password, 'Vanha salasana' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t<br />\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( submit_tag "Päivitä" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:31:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:8: syntax error, unexpected ')'
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :first_name , :value=>u.first_name>).to_s); @output_buffer.concat "<br />\n"
+                                                                                                       ^) on line #8 of app/views/users/index.html.erb:
+5:   <% form_for :user do |f| %>
+6: 	
+7: 	<%= f.label :first_name, 'Etunimi' %>:
+8:     <%= f.text_field :first_name , :value=>u.first_name>%><br />
+9: 	
+10: 	<%= f.label :surname, 'Sukunimi' %>:
+11:     <%= f.text_field :surname %><br />
+
+    app/views/users/index.html.erb:31:in `compile!'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:49:48) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `find_by_name' for #<Class:0x5ddaba8>) on line #4 of app/views/users/index.html.erb:
+1: <h2>Käyttäjätiedot</h2>
+2: <%= link_to "Etusivulle" , "/"%>
+3: <br />
+4: <% u = User.find_by_name(session[:user])%>
+5:   <% form_for :user do |f| %>
+6: 	
+7: 	<%= f.label :first_name, 'Etunimi' %>:
+
+    app/views/users/index.html.erb:4
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:50:01) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:50:35) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 00:50:51) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"123455111", "first_name"=>"LAuri", "password"=>"late1", "surname"=>"Joku"}, "commit"=>"Päivitä", "authenticity_token"=>"lmwyDyOR9HdtHHuwDz7NJlMhXc6HDcLklpE26paCJpM="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late1') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "student_number" = 'LAuri', "surname" = 'LAuri', "updated_at" = '2009-11-18 22:50:51', "first_name" = 'LAuri' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 72ms (DB: 2) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:50:52) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 16ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-19 00:50:54) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-19 00:50:54) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-19 00:50:58) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late1"}, "commit"=>"Kirjaudu", "authenticity_token"=>"TDCJtlEYZBRhYSvuty4uMlYp7aqlKqFxe4icL/uNSa0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 00:50:58) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:51:00) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 00:51:19) [GET]
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m

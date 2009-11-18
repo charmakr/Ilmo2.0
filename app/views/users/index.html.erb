@@ -1,16 +1,17 @@
 <h2>Käyttäjätiedot</h2>
 <%= link_to "Etusivulle" , "/"%>
 <br />
+<% u = User.find_by_id(session[:user])%>
   <% form_for :user do |f| %>
 	
 	<%= f.label :first_name, 'Etunimi' %>:
-    <%= f.text_field :first_name %><br />
+    <%= f.text_field :first_name , :value=>u.first_name%><br />
 	
 	<%= f.label :surname, 'Sukunimi' %>:
-    <%= f.text_field :surname %><br />
+    <%= f.text_field :surname, :value=>u.surname %><br />
 	
 	<%= f.label :student_number, 'opiskelijanumero' %>:
-    <%= f.text_field :student_number %><br />
+    <%= f.text_field :student_number, :value=>u.student_number %><br />
 	
 	<%= f.label :password3, 'Uusi salasana' %>:
     <%= f.password_field :password3 %><br />
