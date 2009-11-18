@@ -783,3 +783,20 @@ ActionController::UnknownAction (No action responded to create. Actions: ):
   -e:2
 
 Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-18 19:30:06) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-18 19:30:08) [POST]
+  Parameters: {"user"=>{"username"=>"sa", "password"=>"as"}, "commit"=>"Kirjaudu", "authenticity_token"=>"rYVyA/9oqSweAtbr4uPxlEp7c7HwphiqWk/3k+c6Slo="}
+
+ActionView::MissingTemplate (Missing template sessions/create.erb in view path app/views):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
