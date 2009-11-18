@@ -7,11 +7,17 @@
     </head>
     <body>
         <div id="container">
-            <div id="sisalto">  <h1>Ilmo 2.0</h1>
-			<%= link_to "Kirjaudu ulos", logout_url%><br />
+            <div id="sisalto">
+                <h1>Ilmo 2.0</h1>
+                <% if session[:user] %>
+                <%= link_to "Kirjaudu ulos", logout_url %>
+                <%end %>
+                <br/>
                 <%= yield %>
             </div>
-			<center><%= luontiaika%></center>
+            <center>
+                <%= luontiaika %>
+            </center>
         </div>
     </body>
 </html>
