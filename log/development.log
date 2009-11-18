@@ -3897,3 +3897,37 @@ Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:39:37) 
 Rendering template within layouts/application
 Rendering registrations/index
 Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:43:24) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:43:37) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:43:48) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-18 22:43:54) [POST]
+  Parameters: {"user"=>{"password2"=>"", "username"=>"", "password"=>""}, "commit"=>"Rekisteröi", "authenticity_token"=>"K5v9IZw90Sr9iYtemvIkbqCdzZBdmJpoH5ZLTAYDRzg="}
+
+ActionController::UnknownAction (No action responded to create. Actions: authentication_required and index):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-18 22:44:00) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/registrations]
