@@ -9,41 +9,43 @@ class UsersController < ApplicationController
   
   def create
     u = User.find_by_id(session[:user])
-    raise params[:commit].inspect
-    warning = User.checkInformation_on_update(params[:user])
-    if warning!=nil
-      flash[:warning]=warning
-      redirect_to :controller=>:users, :action=>:index
-      return
-    end   
-
+    
     begin 
-      ok = User.authenticate(u.username, params[:user][:password])
+      User.authenticate(u.username, params[:user][:password])
     rescue
       flash[:warning]="Väärä salasana, tietoja ei tallenettu"
       redirect_to :controller=>:users, :action=>:index
       return  
-      
     end
-    if ok
+    
+    if params[:commit]=="Päivitä"
       u.first_name = params[:user][:first_name]
       u.surname = params[:user][:surname]
       u.student_number = params[:user][:student_number]
-      if params[:user][:password2]==""||params[:user][:password3]==""
-        u.save
-        flash[:success]="Tiedot päivitetty, Salasanaa ei vaihdettu"
+      u.save
+      flash[:success]="Tiedot päivitetty"
+      redirect_to :controller=>:users, :action=>:index
+      return        
+    end
+    
+    if params[:commit]=="Vaihda salasana"
+      warning = User.checkInformation_on_update(params[:user])
+      if warning!=nil
+        flash[:warning]=warning
         redirect_to :controller=>:users, :action=>:index
-        return  
-      end
+        return
+      end   
       u.password = params[:user][:password2]
       u.save
-      flash[:success]="Tiedot päivitetty, Salasanaa vaihdettu"
+      flash[:success]="Salasanaa vaihdettu"
       redirect_to :controller=>:users, :action=>:index
       return
     end
-    if !ok
-      flash[:warning]="Väärä salasana"
+    if params[:commit]=="Poista käyttäjätili"
+      redirect_to :controller=>:users, :action=>:destroy
+      return
     end
+        
   end
   
   def destroy

@@ -30,6 +30,10 @@ class User < ActiveRecord::Base
         if user[:password3]!=user[:password2]
       return "Uudet salasanat ei täsmää"     
     end
+          if user[:username]=="" || user[:password2]==""
+        return "Tyhjiä kenttiä"
+      end
+    
   end
 
 end
