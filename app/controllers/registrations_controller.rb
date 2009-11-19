@@ -5,7 +5,7 @@ class RegistrationsController < ApplicationController
   end
   def create
 
-    warning = User.checkInformation(params[:user])
+    warning = User.checkInformation_on_registration(params[:user])
     if warning!=nil
       flash[:warning]=warning
       redirect_to :controller=>:registrations, :action=>:index

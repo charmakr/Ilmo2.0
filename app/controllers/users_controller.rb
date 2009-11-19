@@ -10,11 +10,13 @@ class UsersController < ApplicationController
   def create
     u = User.find_by_id(session[:user])
     
-    if params[:user][:password3]!=params[:user][:password2]
-      flash[:warning]= "Uudet salasanat ei täsmää" 
-      redirect_to :controller=>:users, :action=>:index 
+    warning = User.checkInformation_on_update(params[:user])
+    if warning!=nil
+      flash[:warning]=warning
+      redirect_to :controller=>:users, :action=>:index
       return
-    end
+    end   
+
     begin 
       ok = User.authenticate(u.username, params[:user][:password])
     rescue
