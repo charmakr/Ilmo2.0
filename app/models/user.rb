@@ -25,9 +25,11 @@ class User < ActiveRecord::Base
         return "Tyhjiä kenttiä"
       end
   end
+  
   def self.checkInformation_on_update(user)
         if user[:password3]!=user[:password2]
       return "Uudet salasanat ei täsmää"     
     end
   end
+
 end
