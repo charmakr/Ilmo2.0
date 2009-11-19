@@ -8240,3 +8240,94 @@ Rendering template within layouts/application
 Rendering users/show
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
 Completed in 15ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/users/show]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 02:04:33) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users/show]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 02:04:38) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"", "first_name"=>"fsdfs", "password"=>"late", "surname"=>""}, "commit"=>"Päivitä", "authenticity_token"=>"KVNm8xTfT7TmsTsB9D9lGCk285oLsgTBviNQw4BF4Mw="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 64ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/users/show]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 02:05:26) [GET]
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.first_name) on line #8 of app/views/users/index.html.erb:
+5:   <% form_for :user do |f| %>
+6: 	
+7: 	<%= f.label :first_name, 'Etunimi' %>:
+8:     <%= f.text_field :first_name , :value=>@u.first_name%><br />
+9: 	
+10: 	<%= f.label :surname, 'Sukunimi' %>:
+11:     <%= f.text_field :surname, :value=>@u.surname %><br />
+
+    app/views/users/index.html.erb:8
+    app/views/users/index.html.erb:5
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 02:05:59) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 23ms (View: 14, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 02:06:01) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 02:06:05) [POST]
+  Parameters: {"user"=>{"password2"=>"", "password3"=>"", "student_number"=>"", "first_name"=>"sdadad", "password"=>"late", "surname"=>""}, "commit"=>"Päivitä", "authenticity_token"=>"KVNm8xTfT7TmsTsB9D9lGCk285oLsgTBviNQw4BF4Mw="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "student_number" = '', "surname" = '', "updated_at" = '2009-11-19 00:06:05', "first_name" = 'sdadad' WHERE "id" = 6[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 35ms (DB: 3) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 02:06:05) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 02:06:08) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 02:06:09) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/users]

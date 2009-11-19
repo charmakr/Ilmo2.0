@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  def index   
+  def index
+    @u = User.find_by_id(session[:user])
   end
   
   def show
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
       ok = User.authenticate(u.username, params[:user][:password])
     rescue
       flash[:warning]="Väärä salasana, tietoja ei tallenettu"
-      redirect_to :controller=>:users, :action=>:show
+      redirect_to :controller=>:users, :action=>:index
       return  
       
     end
@@ -29,13 +30,13 @@ class UsersController < ApplicationController
       if params[:user][:password2]==""||params[:user][:password3]==""
         u.save
         flash[:success]="Tiedot päivitetty, Salasanaa ei vaihdettu"
-        redirect_to :controller=>:users, :action=>:show
+        redirect_to :controller=>:users, :action=>:index
         return  
       end
       u.password = params[:user][:password2]
       u.save
       flash[:success]="Tiedot päivitetty, Salasanaa vaihdettu"
-      redirect_to :controller=>:users, :action=>:show
+      redirect_to :controller=>:users, :action=>:index
       return
     end
     if !ok
