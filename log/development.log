@@ -9100,3 +9100,1801 @@ Rendering template within layouts/application
 Rendering users/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
 Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 10:45:31) [POST]
+  Parameters: {"user"=>{"password2"=>"late", "password3"=>"late", "password"=>""}, "commit"=>"Vaihda salasana", "authenticity_token"=>"31RXRgmhxnvx7WLgeSXIxMCJ+F+3LDW5mP+6ROg8JJ4="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 10ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 10:45:31) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "password" = 'late', "updated_at" = '2009-11-19 08:47:24' WHERE "id" = 8[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 10:47:35) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"31RXRgmhxnvx7WLgeSXIxMCJ+F+3LDW5mP+6ROg8JJ4="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy
+Completed in 10ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 10:47:35) [GET]
+  Parameters: {"id"=>"destroy"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 26ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users/destroy]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-19 10:47:46) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-19 10:47:46) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-19 10:47:53) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Kirjaudu", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 10:47:53) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 10:49:53) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 7ms (DB: 1) | 302 Found [http://127.0.0.1/users/show]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 10:49:53) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 10:49:55) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 10:50:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 7ms (DB: 1) | 302 Found [http://127.0.0.1/users/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 10:50:02) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 15, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 10:50:53) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 10:50:59) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy?method=delete
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 10:51:00) [GET]
+  Parameters: {"id"=>"destroy", "method"=>"delete"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 1) | 302 Found [http://127.0.0.1/users/destroy?method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 10:51:00) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-19 10:51:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 75ms (View: 65, DB: 1) | 200 OK [http://127.0.0.1/courses/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 10:51:13) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 14, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 10:51:14) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 10:53:06) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/delete?method=delete
+Completed in 10ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 10:53:06) [GET]
+  Parameters: {"id"=>"delete", "method"=>"delete"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 0) | 302 Found [http://127.0.0.1/users/delete?method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 10:53:06) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 10:53:22) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:01:38) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+
+NoMethodError (undefined method `rednder' for #<UsersController:0x5c1b970>):
+  app/controllers/users_controller.rb:47:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:01:50) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:01:52) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:02:30) [POST]
+  Parameters: {"user"=>{"password"=>""}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = '') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 10ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:02:30) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:02:35) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+
+NoMethodError (undefined method `rednder' for #<UsersController:0x5c7ba64>):
+  app/controllers/users_controller.rb:47:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:02:48) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:03:07) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+
+NoMethodError (undefined method `rednder' for #<UsersController:0x5dfbb64>):
+  app/controllers/users_controller.rb:47:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:03:16) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:03:21) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template users/destroy.erb in view path app/views):
+  app/controllers/users_controller.rb:47:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:03:25) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 63ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:03:59) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:04:01) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:04:03) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:07:00) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:07:00) [GET]
+  Parameters: {"id"=>"destroy"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 7ms (DB: 0) | 302 Found [http://127.0.0.1/users/destroy]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:07:00) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 26ms (View: 18, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:07:48) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:07:54) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:07:55) [GET]
+  Parameters: {"id"=>"destroy"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 7ms (DB: 1) | 302 Found [http://127.0.0.1/users/destroy]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:07:55) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:07:59) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:08:16) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:08:16) [GET]
+  Parameters: {"id"=>"destroy"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 0) | 302 Found [http://127.0.0.1/users/destroy]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:08:16) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 25ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:08:55) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:09:00) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:09:00) [GET]
+  Parameters: {"id"=>"destroy"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/users/destroy]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:09:05) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:10:04) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/delete?method=delete
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:10:04) [GET]
+  Parameters: {"id"=>"delete", "method"=>"delete"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 0) | 302 Found [http://127.0.0.1/users/delete?method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:10:04) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:10:15) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:11:50) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy?method=delete
+Completed in 10ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:11:50) [GET]
+  Parameters: {"id"=>"destroy", "method"=>"delete"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/users/destroy?method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:11:50) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:12:02) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:19:56) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy?_method=delete
+Completed in 10ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:19:56) [GET]
+  Parameters: {"id"=>"destroy"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/users/destroy?_method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:19:57) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 29ms (View: 21, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:19:58) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:26:11) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:26:17) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy?_method=delete
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:26:17) [GET]
+  Parameters: {"id"=>"destroy"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 0) | 302 Found [http://127.0.0.1/users/destroy?_method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:26:17) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:26:44) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:26:49) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy?_method=delete
+Completed in 11ms (DB: 2) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:26:49) [GET]
+  Parameters: {"id"=>"destroy"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 0) | 302 Found [http://127.0.0.1/users/destroy?_method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:26:49) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:27:38) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:27:43) [POST]
+  Parameters: {"user"=>{"password"=>"alte"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'alte') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:27:43) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:27:48) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/destroy?_method=delete
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:27:49) [GET]
+  Parameters: {"id"=>"destroy"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 0) | 302 Found [http://127.0.0.1/users/destroy?_method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:27:49) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:27:52) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:28:21) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/delete?_method=delete
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:28:21) [GET]
+  Parameters: {"id"=>"delete"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 1) | 302 Found [http://127.0.0.1/users/delete?_method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:28:21) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 27ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:29:19) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 25ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 11:29:23) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/users/delete?method=delete
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 11:29:23) [GET]
+  Parameters: {"id"=>"delete", "method"=>"delete"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 1) | 302 Found [http://127.0.0.1/users/delete?method=delete]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:29:23) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 14, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:32:54) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (wrong number of arguments (3 for 2)) on line #43 of app/views/users/index.html.erb:
+40: 	
+41: 	<%= f.label :password, 'Salasana' %>:
+42:     <%= f.password_field :password %><br />
+43: 	<%= submit_tag "Poista käyttäjätili" ,{:action=>"delete"}, :confirm => 'Haluatko varmasti poistaa käyttäjätunnuksesi?', :method=>:delete %>
+44:   <% end %>
+
+    app/views/users/index.html.erb:43:in `submit_tag'
+    app/views/users/index.html.erb:43
+    app/views/users/index.html.erb:39
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:34:41) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:34:42) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+ERROR: compiling _run_erb_app47views47users47index46html46erb RAISED compile error
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:44: syntax error, unexpected '}', expecting tASSOC
+@output_buffer.concat "\t  "; @output_buffer.concat(( button_to "Poista käyttäjatili", { :action => "delete",:user },
+                                                                                                                      ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:45: syntax error, unexpected ',', expecting ')'
+            :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete).to_s); @output_buffer.concat "\n"
+                                                                   ^
+Function body:           def _run_erb_app47views47users47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>K\303\244ytt\303\244j\303\244tiedot</h2>\n"
+@output_buffer.concat(( link_to "Etusivulle" , "/").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "<h3>P\303\244ivit\303\244 k\303\244ytt\303\244j\303\244tiedot</h3>\n"
+@output_buffer.concat "  ";  form_for :user do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :first_name, 'Etunimi' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :first_name , :value=>@u.first_name).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :surname, 'Sukunimi' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :surname, :value=>@u.surname ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :student_number, 'opiskelijanumero' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :student_number, :value=>@u.student_number ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password, 'Salasana' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t<br />\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( submit_tag "Päivitä" , :confirm => 'Haluatko varmasti päivittää tietosi?').to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <h3>Vaihda salasana</h3>\n"
+@output_buffer.concat "  ";  form_for :user do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "  \t"; @output_buffer.concat(( f.label :password3, 'Uusi salasana' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password3 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password2, 'Uusi salasana uudelleen' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password2 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password, 'Vanha salasana' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( submit_tag "Vaihda salasana" , :confirm => 'Haluatko varmasti vaihtaa salasanasi?').to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "  <br />\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <h3>Poista k\303\244ytt\303\244j\303\244tili</h3>\n"
+@output_buffer.concat "    ";  form_for :user do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :password, 'Salasana' ).to_s); @output_buffer.concat ":\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.password_field :password ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "\t<!--"; @output_buffer.concat(( submit_tag "Poista käyttäjätili" ,{:action=>"delete"}, :confirm => 'Haluatko varmasti poistaa käyttäjätunnuksesi?', :method=>:delete ).to_s); @output_buffer.concat "-->\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( button_to "Poista käyttäjatili", { :action => "delete",:user },
+            :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:51:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:44: syntax error, unexpected '}', expecting tASSOC
+@output_buffer.concat "\t  "; @output_buffer.concat(( button_to "Poista käyttäjatili", { :action => "delete",:user },
+                                                                                                                      ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/views/users/index.html.erb:45: syntax error, unexpected ',', expecting ')'
+            :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete).to_s); @output_buffer.concat "\n"
+                                                                   ^) on line #44 of app/views/users/index.html.erb:
+41: 	<%= f.label :password, 'Salasana' %>:
+42:     <%= f.password_field :password %><br />
+43: 	<!--<%= submit_tag "Poista käyttäjätili" ,{:action=>"delete"}, :confirm => 'Haluatko varmasti poistaa käyttäjätunnuksesi?', :method=>:delete %>-->
+44: 	  <%= button_to "Poista käyttäjatili", { :action => "delete",:user },
+45:             :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete%>
+46:   <% end %>
+
+    app/views/users/index.html.erb:51:in `compile!'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:35:11) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:35:12) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (wrong number of arguments (3 for 2)) on line #43 of app/views/users/index.html.erb:
+40: 	
+41: 	<%= f.label :password, 'Salasana' %>:
+42:     <%= f.password_field :password %><br />
+43: 	<!--<%= submit_tag "Poista käyttäjätili" ,{:action=>"delete"}, :confirm => 'Haluatko varmasti poistaa käyttäjätunnuksesi?', :method=>:delete %>-->
+44: 	  <%= button_to "Poista käyttäjatili", { :action => "delete",:user=>:user },
+45:             :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete%>
+46:   <% end %>
+
+    app/views/users/index.html.erb:43:in `submit_tag'
+    app/views/users/index.html.erb:43
+    app/views/users/index.html.erb:39
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:35:30) [GET]
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 14, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:35:53) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 26ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:35:58) [DELETE]
+  Parameters: {"user"=>{"password"=>"asdasd"}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 11:36:04) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 73ms (View: 64, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:36:42) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:38:01) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 25ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:38:04) [DELETE]
+  Parameters: {"user"=>{"password"=>"sa"}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:38:15) [DELETE]
+  Parameters: {"user"=>{"password"=>""}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:38:29) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 24ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:38:31) [DELETE]
+  Parameters: {"user"=>{"password"=>""}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:38:46) [DELETE]
+  Parameters: {"user"=>{"password"=>""}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 68ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:41:59) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:42:14) [DELETE]
+  Parameters: {"user"=>{"password"=>"asd"}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:42:57) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:43:14) [DELETE]
+  Parameters: {"user"=>{"password"=>""}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:58:47) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 79ms (View: 71, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2009-11-19 11:58:50) [DELETE]
+  Parameters: {"authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo=", "method"=>"post"}
+
+RuntimeError (saasas):
+  app/controllers/users_controller.rb:53:in `destroy'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:58:59) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:59:02) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:59:06) [DELETE]
+  Parameters: {"user"=>{"password"=>""}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 11:59:08) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 68ms (View: 61, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:00:09) [DELETE]
+  Parameters: {"user"=>{"password"=>"asd"}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:00:12) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:03:28) [DELETE]
+  Parameters: {"user"=>{"password"=>"late"}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tCONSTANT, expecting kEND
+      render :inline => " Oletko aivan varma? <%=   button_to "Poista käyttäjätunnuksesi", { :action => "delete",  }, :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete%> "
+                                                                     ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tIDENTIFIER, expecting kEND
+      render :inline => " Oletko aivan varma? <%=   button_to "Poista käyttäjätunnuksesi", { :action => "delete",  }, :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete%> "
+                                                                                                                  ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tCONSTANT, expecting kEND
+      render :inline => " Oletko aivan varma? <%=   button_to "Poista käyttäjätunnuksesi", { :action => "delete",  }, :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete%> "
+                                                                                                                                              ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:04:04) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:04:09) [DELETE]
+  Parameters: {"user"=>{"password"=>"late"}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:04:18) [DELETE]
+  Parameters: {"user"=>{"password"=>"late"}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:05:11) [DELETE]
+  Parameters: {"user"=>{"password"=>"late"}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:05:36) [DELETE]
+  Parameters: {"user"=>{"password"=>"late"}, "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:06:40) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:06:45) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+
+RuntimeError (ok):
+  app/controllers/users_controller.rb:47:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:06:57) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:07:01) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:07:08) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:07:25) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template users/create.erb in view path app/views):
+  app/controllers/users_controller.rb:47:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:07:28) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:07:43) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:07:50) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 69ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:09:15) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:09:35) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:10:12) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Rendering template within layouts/application
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-11-19 12:12:26) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                         ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                       ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                  ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                          ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                                               ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:12:27) [GET]
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                         ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                       ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                  ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                          ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                                               ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:12:28) [GET]
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                         ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                       ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                  ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                          ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                                               ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:12:29) [GET]
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                         ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                       ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                  ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                          ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                                               ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:12:30) [GET]
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                         ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                       ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                  ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                          ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                                               ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:12:31) [GET]
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                         ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                       ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                  ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                          ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                                               ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 12:12:31) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 28ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:12:33) [GET]
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                         ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                       ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                  ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                          ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render :text => " Oletko aivan varma?", button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete%> , :layout=>true
+                                                                                                                                                                                               ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 12:13:09) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 14, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:13:11) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:13:16) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+
+NoMethodError (undefined method `button_to' for #<UsersController:0x5cd9aec>):
+  app/controllers/users_controller.rb:47:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:13:26) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-11-19 12:14:47) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render <%=button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete %>, :layout=>true
+                                                                                ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render <%=button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete %>, :layout=>true
+                                                                                                                                            ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render <%=button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete %>, :layout=>true
+                                                                                                                                                                  ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:14:50) [GET]
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render <%=button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete %>, :layout=>true
+                                                                                ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render <%=button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete %>, :layout=>true
+                                                                                                                                            ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render <%=button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete %>, :layout=>true
+                                                                                                                                                                  ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 12:14:52) [GET]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 74ms (View: 67, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:14:53) [GET]
+
+SyntaxError (C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render <%=button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete %>, :layout=>true
+                                                                                ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected ',', expecting kEND
+      render <%=button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete %>, :layout=>true
+                                                                                                                                            ^
+C:/Users/Lauri/My Documents/Aptana RadRails Workspace/Ilmo2.0/app/controllers/users_controller.rb:47: syntax error, unexpected '>'
+      render <%=button_to 'Poista käyttäjätunnuksesi', { :action => 'delete',  }, :confirm => 'Haluatko varmasti poistaa käyttäjäsi?', :method => :delete %>, :layout=>true
+                                                                                                                                                                  ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 12:15:17) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 14, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:16:34) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:16:38) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/confirm
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2009-11-19 12:16:44) [DELETE]
+  Parameters: {"authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo=", "id"=>"delete"}
+
+RuntimeError (saasas):
+  app/controllers/users_controller.rb:54:in `destroy'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:17:25) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:17:30) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/confirm
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2009-11-19 12:17:35) [DELETE]
+  Parameters: {"authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo=", "id"=>"delete"}
+
+RuntimeError (saasas):
+  app/controllers/users_controller.rb:54:in `destroy'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:17:51) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 12:17:51) [GET]
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:17:52) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:17:57) [POST]
+  Parameters: {"user"=>{"password"=>"late"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/confirm
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2009-11-19 12:17:59) [DELETE]
+  Parameters: {"authenticity_token"=>"aPbiUAFcZ9ic3E0xMngiHw1dQjdEDz3J8yRD6UPDSLo=", "id"=>"delete"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;35;1mUser Delete all (33.0ms)[0m   [0mDELETE FROM "users" WHERE ("id" IN (8)) [0m
+Redirected to http://127.0.0.1:3002/sessions/logout
+Completed in 42ms (DB: 33) | 302 Found [http://127.0.0.1/users/delete]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-19 12:17:59) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-19 12:17:59) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-19 12:18:04) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Kirjaudu", "authenticity_token"=>"wLKpftRVucd3J4CxKNiecCWzKbc1983K2sO7O+k5H+M="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 6ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-19 12:18:04) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-11-19 12:18:36) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-11-19 12:18:42) [POST]
+  Parameters: {"user"=>{"password2"=>"uusi", "password3"=>"uusi", "username"=>"uusi"}, "commit"=>"Rekisteröi", "authenticity_token"=>"wLKpftRVucd3J4CxKNiecCWzKbc1983K2sO7O+k5H+M="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'uusi') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "student_number", "first_name", "password", "surname", "created_at") VALUES('2009-11-19 10:18:42', 'uusi', NULL, NULL, 'uusi', NULL, '2009-11-19 10:18:42')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 96ms (DB: 2) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-19 12:18:42) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-19 12:18:48) [POST]
+  Parameters: {"user"=>{"username"=>"uusi", "password"=>"uusi"}, "commit"=>"Kirjaudu", "authenticity_token"=>"wLKpftRVucd3J4CxKNiecCWzKbc1983K2sO7O+k5H+M="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'uusi' AND password = 'uusi') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 12:18:48) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-19 12:18:50) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-19 12:18:55) [POST]
+  Parameters: {"user"=>{"password"=>"uusi"}, "commit"=>"Poista käyttäjätili", "authenticity_token"=>"wLKpftRVucd3J4CxKNiecCWzKbc1983K2sO7O+k5H+M="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'uusi' AND password = 'uusi') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/confirm
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2009-11-19 12:18:56) [DELETE]
+  Parameters: {"authenticity_token"=>"wLKpftRVucd3J4CxKNiecCWzKbc1983K2sO7O+k5H+M=", "id"=>"delete"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;36;1mUser Delete all (30.0ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (9)) [0m
+Redirected to http://127.0.0.1:3002/sessions/logout
+Completed in 38ms (DB: 31) | 302 Found [http://127.0.0.1/users/delete]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-11-19 12:18:56) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-11-19 12:18:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/sessions]

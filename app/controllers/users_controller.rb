@@ -4,7 +4,9 @@ class UsersController < ApplicationController
   end
   
   def show
-    @u = User.find_by_id(session[:user])   
+   
+    @u = User.find_by_id(session[:user]) 
+    redirect_to :index
   end
   
   def create
@@ -42,8 +44,8 @@ class UsersController < ApplicationController
       return
     end
     if params[:commit]=="Poista käyttäjätili"
-      redirect_to :controller=>:users, :action=>:destroy
-      return
+      render :template => "users/confirm", :layout=>true
+
     end
         
   end
