@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   
   def create
     u = User.find_by_id(session[:user])
-    
+    raise params[:commit].inspect
     warning = User.checkInformation_on_update(params[:user])
     if warning!=nil
       flash[:warning]=warning

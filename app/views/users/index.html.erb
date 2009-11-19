@@ -1,7 +1,7 @@
 <h2>Käyttäjätiedot</h2>
 <%= link_to "Etusivulle" , "/"%>
 <br />
-
+<h3>Päivitä käyttäjätiedot</h3>
   <% form_for :user do |f| %>
 	
 	<%= f.label :first_name, 'Etunimi' %>:
@@ -12,8 +12,18 @@
 	
 	<%= f.label :student_number, 'opiskelijanumero' %>:
     <%= f.text_field :student_number, :value=>@u.student_number %><br />
+
 	
-	<%= f.label :password3, 'Uusi salasana' %>:
+	<%= f.label :password, 'Salasana' %>:
+    <%= f.password_field :password %><br />
+	
+	<br />
+	<%= submit_tag "Päivitä" , :confirm => 'Haluatko varmasti päivittää tietosi?'%>
+  <% end %>
+  
+  <h3>Vaihda salasana</h3>
+  <% form_for :user do |f| %>
+  	<%= f.label :password3, 'Uusi salasana' %>:
     <%= f.password_field :password3 %><br />
 	
 	<%= f.label :password2, 'Uusi salasana uudelleen' %>:
@@ -21,10 +31,15 @@
 	
 	<%= f.label :password, 'Vanha salasana' %>:
     <%= f.password_field :password %><br />
-	
-	<br />
-	<%= submit_tag "Päivitä" , :confirm => 'Haluatko varmasti päivittää tietosi?'%>
+	<%= submit_tag "Vaihda salasana" , :confirm => 'Haluatko varmasti vaihtaa salasanasi?'%>
   <% end %>
   <br />
-  <%=   button_to "Poista käyttäjätunnuksesi", { :action => "delete",  },
-            :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete%>
+  
+  <h3>Poista käyttäjätili</h3>
+    <% form_for :user do |f| %>
+	
+	<%= f.label :password, 'Salasana' %>:
+    <%= f.password_field :password %><br />
+	<%= submit_tag "Vaihda salasana" , :confirm => 'Haluatko varmasti poistaa käyttäjätunnuksesi?'%>
+  <% end %>
+
