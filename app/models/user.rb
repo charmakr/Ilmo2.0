@@ -17,4 +17,12 @@ class User < ActiveRecord::Base
   end
     
     
+    def self.checkInformation(user)
+      if user[:password3]!=user[:password2]
+        return "Salasanat ei täsmää"
+      end
+      if user[:username]=="" || user[:password2]==""
+        return "Tyhjiä kenttiä"
+      end
+    end
 end

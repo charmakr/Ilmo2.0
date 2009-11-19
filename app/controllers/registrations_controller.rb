@@ -4,17 +4,14 @@ class RegistrationsController < ApplicationController
     
   end
   def create
-    if params[:user][:password]!=params[:user][:password2]
-      flash[:warning]= "Salasanat ei täsmää" 
-      redirect_to :controller=>:registrations, :action=>:index  
+
+    warning = User.checkInformation(params[:user])
+    if warning!=nil
+      flash[:warning]=warning
+      redirect_to :controller=>:registrations, :action=>:index
       return
-    end
-     if params[:user][:username]=="" || params[:user][:password]==""
-       flash[:warning]="Tyhjiä kenttiä"
-       redirect_to :controller=>:registrations, :action=>:index 
-      return
-     end
-    ok = User.register(params[:user][:username], params[:user][:password])
+    end    
+    ok = User.register(params[:user][:username], params[:user][:password2])
     if ok
       flash[:success]="Käyttäjän luonti onnistui"
       redirect_to :controller=>:sessions, :action=>:index  
