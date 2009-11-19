@@ -45,7 +45,6 @@ class UsersController < ApplicationController
     end
     if params[:commit]=="Poista käyttäjätili"
       render :template => "users/confirm", :layout=>true
-
     end
         
   end
