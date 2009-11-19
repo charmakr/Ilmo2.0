@@ -47,6 +47,8 @@ class UsersController < ApplicationController
   end
   
   def destroy
-    
+    User.find_by_id(session[:user]).delete
+    flash[:success]="Käyttäjätilisi on nyt poistettu"
+    redirect_to :controller=>:sessions, :action=>:destroy
   end
 end

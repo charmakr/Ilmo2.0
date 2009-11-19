@@ -25,3 +25,6 @@
 	<br />
 	<%= submit_tag "Päivitä" , :confirm => 'Haluatko varmasti päivittää tietosi?'%>
   <% end %>
+  <br />
+  <%=   button_to "Poista käyttäjätunnuksesi", { :action => "delete",  },
+            :confirm => "Haluatko varmasti poistaa käyttäjäsi?", :method => :delete%>
