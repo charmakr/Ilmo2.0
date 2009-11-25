@@ -10,6 +10,9 @@
         <h3>Kurssin kuvaus</h3>
         <%=@courses.description %>
         <br/>
+		<% @courses.course_instances.each do |ci| %>
+	<ul><%=link_to ci.name, :action=> "show", :controller =>"course_instances", :id=>ci.id%></ul>
+<% end %>
         <br/>
         <%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
     </body>
