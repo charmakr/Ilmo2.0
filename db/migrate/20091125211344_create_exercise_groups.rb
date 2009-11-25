@@ -5,6 +5,7 @@ class CreateExerciseGroups < ActiveRecord::Migration
       t.string :classroom
       t.date :begins_at
       t.date :ends_at
+      t.integer :course_instance_id
       t.timestamps
     end
   end

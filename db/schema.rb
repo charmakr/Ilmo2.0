@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20091125211344) do
     t.string   "classroom"
     t.date     "begins_at"
     t.date     "ends_at"
+    t.integer  "course_instance_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
