@@ -11611,3 +11611,4 @@ Migrating to CreateExerciseGroups (20091125211344)
   [4;35;1mCourseInstance Create (0.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2101', '2009-11-25 21:43:18', 1, '2009-11-25 21:43:18')[0m
   [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 1) LIMIT 1[0m
   [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 1) [0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'Huone 123', '2009-11-25 22:50:22', 1, '2009-11-25 21:50:22', '2009-11-26 01:50:22', '2009-11-25 21:50:22')[0m
