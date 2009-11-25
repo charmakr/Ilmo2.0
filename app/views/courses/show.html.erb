@@ -4,15 +4,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <title>Untitled Document</title>
     </head>
-    <body>        
+    <body>
         <h2>Kurssi: <%= @courses.name %></h2>
-		<%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
         <h3>Kurssin kuvaus</h3>
         <%=@courses.description %>
         <br/>
-		<% @courses.course_instances.each do |ci| %>
-	<ul><%=link_to ci.name, :action=> "show", :controller =>"course_instances", :id=>ci.id%></ul>
-<% end %>
+        <% @courses.course_instances.each do |ci| %>
+        <ul>
+            <%=link_to ci.name, :action=> "show", :controller =>"course_instances", :id=>ci.id %>
+        </ul>
+        <% end %>
         <br/>
         <%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
     </body>

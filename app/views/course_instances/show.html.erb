@@ -1,15 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <title>Untitled Document</title>
-    </head>
-    <body>
-        <h2>Kurssi: <%= @ci.course.name %></h2>
+       <h2><%= @ci.course.name %>: <%=@ci.name %></h2>
+        
+        <h3>Harjoitusryhmät:</h3>       
+		<% @ci.exercise_groups.each do |ex| %>
+        <ul>
+            <%= ex.name %> : <%= ex.classroom %> <%= ex.begins_at.strftime("%a") %> <%= ex.begins_at.strftime("%H") %> <%= ex.ends_at.strftime("%H") %>
+        </ul>
+        <% end %>
         <%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
-        <br/>
-            <h3><%=@ci.name %></h3>
-        <br/>
-        <%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
-    </body>
-</html>
+
+
