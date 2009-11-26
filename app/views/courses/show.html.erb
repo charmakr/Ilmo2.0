@@ -11,7 +11,7 @@
         <br/>
         <% @courses.course_instances.each do |ci| %>
         <ul>
-            <%=link_to ci.name, :action=> "show", :controller =>"course_instances", :id=>ci.id %>
+            <%=link_to ci.name, course_course_instance_path(ci.course,ci) %>
         </ul>
         <% end %>
         <br/>

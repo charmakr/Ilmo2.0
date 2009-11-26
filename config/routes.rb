@@ -44,7 +44,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :sessions
   map.resources :registrations
-  
+  map.resources :courses, :has_many => [:course_instances]
+
   
   
   map.connect ':controller/:action/:id'
