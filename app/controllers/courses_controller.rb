@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   def index
-    @courses = Course.find(:all)
+    @courses = Course.down
   end
   def show
     @courses = Course.find(params[:id])   

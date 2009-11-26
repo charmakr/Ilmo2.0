@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
     if params[:locale]
       I18n.locale = params[:locale]
       session[:locale]= params[:locale]
+      return
     end
     if session[:locale]
       I18n.locale = session[:locale]
