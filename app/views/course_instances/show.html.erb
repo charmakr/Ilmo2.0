@@ -6,6 +6,9 @@
             <%= ex.name %> : <%= ex.begins_at.strftime("%a") %> <%= ex.begins_at.strftime("%H") %>-<%= ex.ends_at.strftime("%H") %> <%= ex.classroom %>
         </ul>
         <% end %>
-        <%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
+        <%= link_to "Kurssin tietoihin", course_path(@ci.course) %>
+		<br />
+		<%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
+		
 
 
