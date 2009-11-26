@@ -1,11 +1,11 @@
  
- <h2> Kirjaudu:</h2>
+ <h2> <%=t(:login) %>:</h2>
   <% form_for :user do |f| %>
-    <%= f.label :username, 'Käyttäjänimi' %>:
+    <%= f.label :username, t(:username) %>:
     <%= f.text_field :username %><br />
 	
-    <%= f.label :password, 'Salasana' %>:
+    <%= f.label :password, t(:password) %>:
     <%= f.password_field :password %><br />
-	<%= submit_tag "Kirjaudu" %>
+	<%= submit_tag t(:login) %>
   <% end %>
-  <%= link_to "Rekisteröinti", registrations_url%>
+  <%= link_to t(:register), registrations_url%>
