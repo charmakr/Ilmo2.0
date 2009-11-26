@@ -6,6 +6,7 @@ fi:
   course: "Kurssi"
   courses: "Kurssit"
   course_Desc: "Kurssin kuvaus"
+  exgroup: "Harjoitusryhmä"
   exgroups: "Harjoitusryhmät"
   logout: "Kirjaudu ulos"
   login: "Kirjaudu"
@@ -14,4 +15,7 @@ fi:
   register: "Rekisteröinti"
   to_courselist: "Kurssilistaan"
   to_courseDesc: "Kurssin tietoihin"
+  day: "Päivä"
+  time: "Aika"
+  classroom: "Luokka"
   

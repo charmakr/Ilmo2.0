@@ -15966,3 +15966,58 @@ Rendering course_instances/show
   [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 1) [0m
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 93ms (View: 84, DB: 1) | 200 OK [http://127.0.0.1/courses/1/course_instances/1]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-11-26 14:14:57) [GET]
+  Parameters: {"course_instance_id"=>"1", "id"=>"1", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 38ms (View: 28, DB: 3) | 200 OK [http://127.0.0.1/courses/1/course_instances/1/exercise_groups/1]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-11-26 14:17:00) [GET]
+  Parameters: {"course_instance_id"=>"1", "id"=>"1", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 42ms (View: 34, DB: 0) | 200 OK [http://127.0.0.1/courses/1/course_instances/1/exercise_groups/1]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-11-26 14:17:19) [GET]
+  Parameters: {"course_instance_id"=>"1", "id"=>"1", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 43ms (View: 35, DB: 1) | 200 OK [http://127.0.0.1/courses/1/course_instances/1/exercise_groups/1]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-11-26 14:17:28) [GET]
+  Parameters: {"course_instance_id"=>"1", "id"=>"1", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 90ms (View: 81, DB: 1) | 200 OK [http://127.0.0.1/courses/1/course_instances/1/exercise_groups/1]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-11-26 14:17:38) [GET]
+  Parameters: {"course_instance_id"=>"1", "id"=>"1", "locale"=>"en", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 38ms (View: 29, DB: 1) | 200 OK [http://127.0.0.1/courses/1/course_instances/1/exercise_groups/1?locale=en]
