@@ -10,7 +10,7 @@
             <div id="sisalto">
                 <h1>Ilmo 2.0</h1>
                 <% if session[:user] %>
-                <%= link_to User.find_by_id(session[:user]).username, :controller=>:users, :action=>:index%> (<%= link_to "Kirjaudu ulos", logout_url %>)
+                <%= link_to User.find_by_id(session[:user]).username, :controller=>:users, :action=>:index%> (<%= link_to t(:logout), logout_url %>)
 				<br/>
                 <%end %>
 				

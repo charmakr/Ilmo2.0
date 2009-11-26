@@ -1,14 +1,14 @@
        <h2><%= @ci.course.name %>: <%=@ci.name %></h2>
         
-        <h3>Harjoitusryhmät:</h3>       
+        <h3><%=t (:exgroups)%>:</h3>       
 		<% @ci.exercise_groups.each do |ex| %>
         <ul>
             <%= ex.name %> : <%= ex.begins_at.strftime("%a") %> <%= ex.begins_at.strftime("%H") %>-<%= ex.ends_at.strftime("%H") %> <%= ex.classroom %>
         </ul>
         <% end %>
-        <%= link_to "Kurssin tietoihin", course_path(@ci.course) %>
+        <%= link_to t(:to_courseDesc), course_path(@ci.course) %>
 		<br />
-		<%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
+		<%= link_to t(:to_courselist), :action => "index", :controller =>"courses" %>
 		
 
 

@@ -5,8 +5,8 @@
         <title>Untitled Document</title>
     </head>
     <body>
-        <h2>Kurssi: <%= @courses.name %></h2>
-        <h3>Kurssin kuvaus</h3>
+        <h2><%=t (:course)%>: <%= @courses.name %></h2>
+        <h3><%=t (:course_Desc)%></h3>
         <%=@courses.description %>
         <br/>
         <% @courses.course_instances.each do |ci| %>
@@ -15,6 +15,6 @@
         </ul>
         <% end %>
         <br/>
-        <%= link_to "Kurssilistaan", :action => "index", :controller =>"courses" %>
+        <%= link_to t(:to_courselist), :action => "index", :controller =>"courses" %>
     </body>
 </html>
