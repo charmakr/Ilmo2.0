@@ -22,4 +22,10 @@ end
   ENV['maara'].to_i.times{
     i=i+1    
   Course.create(:name=>"Kurssi "+i.to_s, :description=> "Kurssin "+i.to_s+" kuvaus selityksineen")
+  Course.last.course_instances.create(:name => "Kevät 2010")
+  Course.last.course_instances.create(:name => "Syksy 2010")
+  Course.last.course_instances.first.exercise_groups.create(:name => "Ryhmä 1", :classroom=>"A1", :begins_at => Time.now, :ends_at =>1.hour.from_now )
+  Course.last.course_instances.first.exercise_groups.create(:name => "Ryhmä 2", :classroom=>"B2", :begins_at => Time.now, :ends_at =>2.hour.from_now)
+  Course.last.course_instances.last.exercise_groups.create(:name => "Ryhmä 1", :classroom=>"C3", :begins_at => Time.now, :ends_at =>3.hour.from_now)
+  Course.last.course_instances.last.exercise_groups.create(:name => "Ryhmä 2", :classroom=>"D4", :begins_at => Time.now, :ends_at =>4.hour.from_now)
   }
