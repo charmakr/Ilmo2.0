@@ -44,7 +44,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :sessions
   map.resources :registrations
-  map.resources :courses, :has_many => [:course_instances]
+   map.resources :courses do |course|
+     course.resources :course_instances do |ci|
+       ci.resources :exercise_groups
+     end
+   end
+  
 
   
   
