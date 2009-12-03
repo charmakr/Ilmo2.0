@@ -3,7 +3,7 @@
         <h3><%=t (:exgroups)%>:</h3>       
 		<% @ci.exercise_groups.each do |ex| %>
         <ul>
-            <%= ex.name %> : <%= ex.begins_at.strftime("%a") %> <%= ex.begins_at.strftime("%H") %>-<%= ex.ends_at.strftime("%H") %> <%= ex.classroom %>
+            <%= link_to ex.name, course_course_instance_exercise_group_path(@ci.course, @ci, ex) %> : <%= ex.begins_at.strftime("%a") %> <%= ex.begins_at.strftime("%H") %>-<%= ex.ends_at.strftime("%H") %> <%= ex.classroom %>
         </ul>
         <% end %>
         <%= link_to t(:to_courseDesc), course_path(@ci.course) %>

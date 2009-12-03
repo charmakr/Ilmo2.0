@@ -16834,3 +16834,18 @@ Processing SessionsController#index (for 127.0.0.1 at 2009-11-26 14:22:53) [GET]
 Rendering template within layouts/application
 Rendering sessions/index
 Completed in 8ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-26 14:24:45) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Login", "authenticity_token"=>"uCf41507/lZj6NpEdgqrizj6fER8gbSgTy1yIX+OUpg="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-26 14:24:45) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (3.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 35ms (View: 24, DB: 3) | 200 OK [http://127.0.0.1/]

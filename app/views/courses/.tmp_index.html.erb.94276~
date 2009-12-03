@@ -1,7 +1,0 @@
-
-
-  
-<h2><%=t (:courses)%>:</h2>
-<% @courses.each do |course| %>
-	<ul><%=link_to course.name, :action=> "show", :controller =>"courses", :id=>course.id%></ul>
-<% end %>
