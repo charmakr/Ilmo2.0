@@ -17429,3 +17429,14 @@ Rendering courses/index
   [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 36ms (View: 22, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-03 13:03:59) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-03 13:03:59) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sessions]
