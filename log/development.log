@@ -19201,3 +19201,285 @@ Rendering courses/index
   [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 220ms (View: 208, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-03 15:02:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 93ms (View: 85, DB: 1) | 200 OK [http://localhost/courses/1]
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-03 15:02:26) [GET]
+  Parameters: {"id"=>"2", "course_id"=>"1"}
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = '2') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 52ms (View: 40, DB: 1) | 200 OK [http://localhost/courses/1/course_instances/2]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 15:02:29) [GET]
+  Parameters: {"course_instance_id"=>"2", "id"=>"3", "course_id"=>"1"}
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 3)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 49ms (View: 39, DB: 1) | 200 OK [http://localhost/courses/1/course_instances/2/exercise_groups/3]
+
+
+Processing ExerciseGroupsController#join (for 127.0.0.1 at 2009-12-03 15:02:33) [GET]
+  Parameters: {"post"=>"true", "id"=>"3"}
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '3') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 3)) LIMIT 1[0m
+  [4;36;1mRegistration Create (1.0ms)[0m   [0;1mINSERT INTO "registrations" ("updated_at", "exercise_group_id", "user_id", "created_at") VALUES('2009-12-03 13:02:33', 3, 1, '2009-12-03 13:02:33')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 3) [0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mNewsfeed Create (0.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä late liittyi kurssin: Kurssi 1:Syksy 2010 harjoitusryhmään:Ryhmä 1', '2009-12-03 13:02:33', '2009-12-03 13:02:33')[0m
+Redirected to http://localhost:3002/exercise_groups/show/3
+Completed in 129ms (DB: 4) | 302 Found [http://localhost/exercise_groups/join/3?post=true]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 15:02:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 3)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 44ms (View: 34, DB: 1) | 200 OK [http://localhost/exercise_groups/show/3]
+
+
+Processing MailerController#show (for 127.0.0.1 at 2009-12-03 15:02:39) [GET]
+  Parameters: {"user"=>"1"}
+Redirected to http://localhost:3002/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/mailer?user=1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:02:40) [GET]
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 33ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MailerController#show (for 127.0.0.1 at 2009-12-03 15:04:13) [GET]
+  Parameters: {"user"=>"1"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3002/
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/mailer?user=1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:04:14) [GET]
+  [4;35;1mNewsfeed Load (50.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 84ms (View: 22, DB: 51) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:04:35) [GET]
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 35ms (View: 23, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-03 15:04:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 33ms (View: 26, DB: 0) | 200 OK [http://localhost/courses/1]
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-03 15:04:39) [GET]
+  Parameters: {"id"=>"2", "course_id"=>"1"}
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = '2') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 2) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 43ms (View: 33, DB: 2) | 200 OK [http://localhost/courses/1/course_instances/2]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 15:04:42) [GET]
+  Parameters: {"course_instance_id"=>"2", "id"=>"3", "course_id"=>"1"}
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 3)) [0m
+
+ActionView::TemplateError (undefined method `user_id' for #<User:0x5e68fc0>) on line #17 of app/views/exercise_groups/show.html.erb:
+14: </ul>
+15: <h3>Kurssiin liittyneet käyttäjät</h3>
+16: <% @ex.users.each do |u| %>
+17: 	<ul><%=u.username%><%=link_to "Lähetä postia" , :controller =>"mailer", :action =>"show",:user =>u.user_id%></ul>
+18: <% end %>
+19: 
+20: <%= link_to t(:to_courseDesc), course_path(@ex.course_instance.course) %>
+
+    app/views/exercise_groups/show.html.erb:17
+    app/views/exercise_groups/show.html.erb:16
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 15:05:13) [GET]
+  Parameters: {"course_instance_id"=>"2", "id"=>"3", "course_id"=>"1"}
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 3)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 97ms (View: 85, DB: 3) | 200 OK [http://localhost/courses/1/course_instances/2/exercise_groups/3]
+
+
+Processing MailerController#show (for 127.0.0.1 at 2009-12-03 15:05:16) [GET]
+  Parameters: {"user"=>"1"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering mailer/show
+
+ActionView::TemplateError (undefined method `name' for #<User:0x5de312c>) on line #5 of app/views/mailer/show.html.erb:
+2: 
+3: 
+4: <% form_tag do%>
+5: Vastaanottaja: <%=text_field_tag :user, @destination.name%><br />
+6: Otsikko: <%=text_field_tag :subject%><br />
+7: Sisältö:<br /><%=text_area_tag :body,"",:rows=>10%><br />
+8: 
+
+    app/views/mailer/show.html.erb:5
+    app/views/mailer/show.html.erb:4
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MailerController#show (for 127.0.0.1 at 2009-12-03 15:05:34) [GET]
+  Parameters: {"user"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering mailer/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/mailer?user=1]
+
+
+Processing MailerController#create (for 127.0.0.1 at 2009-12-03 15:05:43) [POST]
+  Parameters: {"user"=>"late", "commit"=>"Lähetä", "body"=>"assad", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "subject"=>"sad"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+
+NoMethodError (undefined method `send_message' for UserMailer:Class):
+  app/controllers/mailer_controller.rb:15:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MailerController#create (for 127.0.0.1 at 2009-12-03 15:06:01) [POST]
+  Parameters: {"user"=>"late", "commit"=>"Lähetä", "body"=>"assad", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "subject"=>"sad"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+
+NoMethodError (undefined method `send_message' for #<UserMailer:0x5c3e164>):
+  app/controllers/mailer_controller.rb:15:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MailerController#create (for 127.0.0.1 at 2009-12-03 15:06:20) [POST]
+  Parameters: {"user"=>"late", "commit"=>"Lähetä", "body"=>"assad", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "subject"=>"sad"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+Sent mail to 
+
+Date: Thu, 3 Dec 2009 15:06:20 +0200
+From: no-reply@yourdomain.com
+Subject: sad
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+sad
+
+assad
+
+ActionView::MissingTemplate (Missing template mailer/create.erb in view path app/views):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MailerController#create (for 127.0.0.1 at 2009-12-03 15:07:12) [POST]
+  Parameters: {"user"=>"late", "commit"=>"Lähetä", "body"=>"assad", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "subject"=>"sad"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+Sent mail to 
+
+Date: Thu, 3 Dec 2009 15:07:12 +0200
+From: no-reply@yourdomain.com
+Subject: sad
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+sad
+
+assad
+Redirected to http://localhost:3002/
+Completed in 1025ms (DB: 0) | 302 Found [http://localhost/mailer]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:07:14) [GET]
+  [4;36;1mNewsfeed Load (2.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 81ms (View: 69, DB: 3) | 200 OK [http://localhost/]

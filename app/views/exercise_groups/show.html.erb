@@ -14,7 +14,7 @@
 </ul>
 <h3>Kurssiin liittyneet käyttäjät</h3>
 <% @ex.users.each do |u| %>
-	<ul><%=u.username%></ul>
+	<ul><%=u.username%><%=link_to "Lähetä postia" , :controller =>"mailer", :action =>"show",:user =>u.id%></ul>
 <% end %>
 
 <%= link_to t(:to_courseDesc), course_path(@ex.course_instance.course) %>

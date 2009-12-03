@@ -2,7 +2,7 @@
 
 
 <% form_tag do%>
-Vastaanottaja: <%=text_field_tag :user, @destination.name%><br />
+Vastaanottaja: <%=text_field_tag :user, @destination.username%><br />
 Otsikko: <%=text_field_tag :subject%><br />
 Sisältö:<br /><%=text_area_tag :body,"",:rows=>10%><br />
 
