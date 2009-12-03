@@ -13,6 +13,8 @@
                 <%= link_to User.find_by_id(session[:user]).username, :controller=>:users, :action=>:index%> (<%= link_to t(:logout), logout_url %>)
 				<br/>
                 <%end %>
+				<%=link_to "Suomeksi", :locale=>"fi"%>
+				<%=link_to "In english", :locale=>"en"%>
 				
                 <% if flash[:warning] %>
                 <div id="varoitus">
