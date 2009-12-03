@@ -19073,3 +19073,131 @@ Rendering courses/index
   [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 34ms (View: 21, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-03 14:39:48) [GET]
+
+ActionController::RoutingError (No route matches "/mailer" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-03 14:39:54) [GET]
+
+ActionController::RoutingError (No route matches "/mailer/show" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-03 14:39:59) [GET]
+
+ActionController::RoutingError (No route matches "/mailer/show/1" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing MailerController#show (for 127.0.0.1 at 2009-12-03 14:42:42) [GET]
+Rendering template within layouts/application
+Rendering mailer/show
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 101ms (View: 100, DB: 0) | 200 OK [http://localhost/mailer/show/]
+
+
+Processing MailerController#create (for 127.0.0.1 at 2009-12-03 14:43:05) [POST]
+  Parameters: {"commit"=>"Lähetä", "body"=>"", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "subject"=>""}
+
+ActionController::UnknownAction (No action responded to create. Actions: authentication_required and set_locale):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing MailerController#create (for 127.0.0.1 at 2009-12-03 14:48:34) [POST]
+  Parameters: {"commit"=>"Lähetä", "body"=>"fdsf", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "subject"=>"dfd"}
+
+RuntimeError ({"commit"=>"Lähetä", "body"=>"fdsf", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "action"=>"create", "subject"=>"dfd", "controller"=>"mailer"}):
+  app/controllers/mailer_controller.rb:6:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MailerController#create (for 127.0.0.1 at 2009-12-03 14:50:27) [POST]
+  Parameters: {"commit"=>"Lähetä", "body"=>"fdsf", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "subject"=>"dfd"}
+
+RuntimeError ({"commit"=>"Lähetä", "body"=>"fdsf", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "action"=>"create", "subject"=>"dfd", "controller"=>"mailer"}):
+  app/controllers/mailer_controller.rb:6:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MailerController#show (for 127.0.0.1 at 2009-12-03 14:52:50) [GET]
+Rendering template within layouts/application
+Rendering mailer/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 24ms (View: 22, DB: 0) | 200 OK [http://localhost/mailer/show/]
+
+
+Processing MailerController#create (for 127.0.0.1 at 2009-12-03 14:52:52) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Lähetä", "body"=>"", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "subject"=>""}
+
+RuntimeError ({"user"=>"2", "commit"=>"Lähetä", "body"=>"", "authenticity_token"=>"0Sndho4Lx6fmWjkfcvxrfzt38EPAnh/VLckpFzGeQ/0=", "action"=>"create", "subject"=>"", "controller"=>"mailer"}):
+  app/controllers/mailer_controller.rb:6:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MailerController#show (for 127.0.0.1 at 2009-12-03 14:53:19) [GET]
+Rendering template within layouts/application
+Rendering mailer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #5 of app/views/mailer/show.html.erb:
+2: 
+3: 
+4: <% form_tag do%>
+5: Vastaanottaja: <%=text_field_tag :user, @destination.name%><br />
+6: Otsikko: <%=text_field_tag :subject%><br />
+7: Sisältö:<br /><%=text_area_tag :body,"",:rows=>10%><br />
+8: 
+
+    app/views/mailer/show.html.erb:5
+    app/views/mailer/show.html.erb:4
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MailerController#show (for 127.0.0.1 at 2009-12-03 14:55:17) [GET]
+Redirected to http://localhost:3002/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/mailer/show]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 14:55:18) [GET]
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 220ms (View: 208, DB: 2) | 200 OK [http://localhost/]

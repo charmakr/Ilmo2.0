@@ -1,0 +1,10 @@
+<h2>Lähetä postia</h2>
+
+
+<% form_tag do%>
+Vastaanottaja: <%=text_field_tag :user, @destination.name%><br />
+Otsikko: <%=text_field_tag :subject%><br />
+Sisältö:<br /><%=text_area_tag :body,"",:rows=>10%><br />
+
+<%=submit_tag "Lähetä"%>
+<% end%>

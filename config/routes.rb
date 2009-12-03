@@ -49,7 +49,7 @@ ActionController::Routing::Routes.draw do |map|
        ci.resources :exercise_groups
      end
    end
-  
+  map.resource :mailer, :controller =>"mailer"
 
   
   
