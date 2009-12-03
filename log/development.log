@@ -17440,3 +17440,44 @@ Processing SessionsController#index (for 127.0.0.1 at 2009-12-03 13:03:59) [GET]
 Rendering template within layouts/application
 Rendering sessions/index
 Completed in 9ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110225146)
+Migrating to CreateUsers (20091118164610)
+Migrating to CreateCourseInstances (20091125205329)
+Migrating to CreateExerciseGroups (20091125211344)
+Migrating to CreateNewsfeeds (20091203101825)
+Migrating to CreateRegistrations (20091203110513)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "registrations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "exercise_group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091203110513')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("course_instances")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("courses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("exercise_groups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("newsfeeds")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("registrations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: database schema has changed: SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m

@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
   
+  has_many :registrations, :dependent => true
+  has_many :exercise_groups, :through => :registrations
+
+  
   after_create :update_newsfeed
   
   def update_newsfeed
