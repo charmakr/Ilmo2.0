@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  has_many :registrations, :dependent => true
+  has_many :registrations
   has_many :exercise_groups, :through => :registrations
 
   
