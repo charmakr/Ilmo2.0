@@ -17400,3 +17400,32 @@ Processing SessionsController#index (for 127.0.0.1 at 2009-12-03 12:39:21) [GET]
 Rendering template within layouts/application
 Rendering sessions/index
 Completed in 8ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 12:45:03) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Login", "authenticity_token"=>"9cwOYg+1u6diiwv0DcV/MsZ1FjDGBUDm17/mnxYnV5w="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 12:45:03) [GET]
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: at: SELECT * FROM "newsfeeds" ORDER BY created-at DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: at: SELECT * FROM "newsfeeds"  ORDER BY created-at DESC):
+  app/controllers/courses_controller.rb:3:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 12:45:25) [GET]
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 36ms (View: 22, DB: 3) | 200 OK [http://127.0.0.1/]
