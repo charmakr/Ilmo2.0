@@ -14,6 +14,9 @@ ActiveRecord::Schema.define(:version => 20091203110513) do
   create_table "course_instances", :force => true do |t|
     t.string   "name"
     t.integer  "course_id"
+    t.boolean  "multiple_exercise_groups"
+    t.integer  "min"
+    t.integer  "max"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

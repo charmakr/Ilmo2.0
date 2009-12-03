@@ -3,7 +3,9 @@ class CreateCourseInstances < ActiveRecord::Migration
     create_table :course_instances do |t|
       t.string :name
       t.integer :course_id
-      
+      t.boolean :multiple_exercise_groups
+      t.integer :min
+      t.integer :max
       t.timestamps
     end
   end
