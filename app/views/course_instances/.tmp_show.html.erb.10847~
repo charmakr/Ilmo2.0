@@ -1,5 +1,5 @@
        <h2><%= @ci.course.name %>: <%=@ci.name %></h2>
-        Voi liittyä moneen ryhmään: <%=@ci.multiple_exercise_groups.to_s%>
+        
         <h3><%=t (:exgroups)%>:</h3>       
 		<% @ci.exercise_groups.each do |ex| %>
         <ul>
