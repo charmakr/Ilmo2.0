@@ -1,4 +1,13 @@
 class User < ActiveRecord::Base
+  
+  after_create :update_newsfeed
+  
+  def update_newsfeed
+    Newsfeed.user_registered(self)
+  end
+  
+  
+  
   def self.authenticate(username, password)
     u = User.find(:first, :conditions=>["username = ? AND password = ?", username, password])
     if u==nil

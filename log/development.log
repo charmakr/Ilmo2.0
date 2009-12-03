@@ -17259,3 +17259,39 @@ Hei
 otsikko
 
 sisältö
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-03 10:27:32', 'moi', NULL, NULL, 'moi', NULL, NULL, '2009-12-03 10:27:32')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110225146)
+Migrating to CreateUsers (20091118164610)
+Migrating to CreateCourseInstances (20091125205329)
+Migrating to CreateExerciseGroups (20091125211344)
+Migrating to CreateNewsfeeds (20091203101825)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "newsfeeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091203101825')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("course_instances")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("courses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("exercise_groups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("newsfeeds")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mSQLite3::SQLException: database schema has changed: INSERT INTO "users" ("updated_at", "username", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-03 10:28:17', 'moi', NULL, NULL, 'moi', NULL, NULL, '2009-12-03 10:28:17')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-03 10:28:17', 'moi', NULL, NULL, 'moi', NULL, NULL, '2009-12-03 10:28:17')[0m
+  [4;35;1mNewsfeed Create (0.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä moi rekisteröityi järjestelmään', '2009-12-03 10:28:17', '2009-12-03 10:28:17')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" LIMIT 1[0m
