@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   def index
+    @newsfeed = Newsfeed.all
     @courses = Course.down
   end
   def show

@@ -17295,3 +17295,108 @@ Migrating to CreateNewsfeeds (20091203101825)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" LIMIT 1[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 12:37:28) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1562ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-03 12:37:30) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 67ms (View: 65, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 12:37:35) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Login", "authenticity_token"=>"aWHhgD1O5Ua+10OazDOn+POdeMuahvAfQOMRLjLnTr0="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 12:37:35) [GET]
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 77ms (View: 29, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 12:38:09) [GET]
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 36ms (View: 24, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-03 12:38:12) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 3ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-03 12:38:12) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-12-03 12:38:14) [GET]
+Rendering template within layouts/application
+Rendering registrations/index
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/registrations]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-12-03 12:38:20) [POST]
+  Parameters: {"user"=>{"password2"=>"joo", "password3"=>"joo", "username"=>"joo"}, "commit"=>"Rekisteröi", "authenticity_token"=>"DvE69emVHl7lxT1OzcWdBs7DvcfifeJMn3m3naDWJEg="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'joo') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-03 10:38:20', 'joo', NULL, NULL, 'joo', NULL, NULL, '2009-12-03 10:38:20')[0m
+  [4;35;1mNewsfeed Create (0.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä joo rekisteröityi järjestelmään', '2009-12-03 10:38:20', '2009-12-03 10:38:20')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 42ms (DB: 2) | 302 Found [http://127.0.0.1/registrations]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-03 12:38:20) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 12:38:25) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Login", "authenticity_token"=>"DvE69emVHl7lxT1OzcWdBs7DvcfifeJMn3m3naDWJEg="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 12:38:25) [GET]
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 33ms (View: 21, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 12:39:02) [GET]
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 220ms (View: 204, DB: 4) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-03 12:39:21) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-03 12:39:21) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sessions]
