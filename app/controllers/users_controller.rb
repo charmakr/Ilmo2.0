@@ -24,6 +24,7 @@ class UsersController < ApplicationController
       u.first_name = params[:user][:first_name]
       u.surname = params[:user][:surname]
       u.student_number = params[:user][:student_number]
+      u.email = params[:user][:email]
       u.save
       flash[:success]="Tiedot päivitetty"
       redirect_to :controller=>:users, :action=>:index
