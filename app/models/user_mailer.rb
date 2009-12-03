@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
    def send_mail(user, subject, message)
-     if user.email=nil
+     if user.email==nil
        flash[:warning]="Vastaanottajalla ei mailiosoitetta"
        return
      end
