@@ -16849,3 +16849,399 @@ Rendering courses/index
   [4;36;1mCourse Load (3.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 35ms (View: 24, DB: 3) | 200 OK [http://127.0.0.1/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110225146)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091110225146')[0m
+Migrating to CreateUsers (20091118164610)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "first_name" varchar(255), "surname" varchar(255), "student_number" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091118164610')[0m
+Migrating to CreateCourseInstances (20091125205329)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "course_instances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "course_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125205329')[0m
+Migrating to CreateExerciseGroups (20091125211344)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "classroom" varchar(255), "begins_at" time, "ends_at" time, "course_instance_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125211344')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("course_instances")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("courses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("exercise_groups")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 1', '2009-12-03 09:55:25', 'Kurssin 1 kuvaus selityksineen', '2009-12-03 09:55:25')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:25', 1, '2009-12-03 09:55:25')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:25', 1, '2009-12-03 09:55:25')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 1) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:25', 1, '2009-12-03 09:55:25', '2009-12-03 10:55:25', '2009-12-03 09:55:25')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 1) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:26', 1, '2009-12-03 09:55:26', '2009-12-03 11:55:26', '2009-12-03 09:55:26')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 1) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:26', 2, '2009-12-03 09:55:26', '2009-12-03 12:55:26', '2009-12-03 09:55:26')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 1) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:26', 2, '2009-12-03 09:55:26', '2009-12-03 13:55:26', '2009-12-03 09:55:26')[0m
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 2', '2009-12-03 09:55:26', 'Kurssin 2 kuvaus selityksineen', '2009-12-03 09:55:26')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:26', 2, '2009-12-03 09:55:26')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:26', 2, '2009-12-03 09:55:26')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 2) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:26', 3, '2009-12-03 09:55:26', '2009-12-03 10:55:26', '2009-12-03 09:55:26')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 2) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:26', 3, '2009-12-03 09:55:26', '2009-12-03 11:55:26', '2009-12-03 09:55:26')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 2) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:26', 4, '2009-12-03 09:55:26', '2009-12-03 12:55:26', '2009-12-03 09:55:26')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 2) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:26', 4, '2009-12-03 09:55:26', '2009-12-03 13:55:26', '2009-12-03 09:55:26')[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 3', '2009-12-03 09:55:26', 'Kurssin 3 kuvaus selityksineen', '2009-12-03 09:55:26')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:26', 3, '2009-12-03 09:55:26')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:26', 3, '2009-12-03 09:55:26')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 3) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:26', 5, '2009-12-03 09:55:26', '2009-12-03 10:55:26', '2009-12-03 09:55:26')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 3) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:26', 5, '2009-12-03 09:55:26', '2009-12-03 11:55:26', '2009-12-03 09:55:26')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 3) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:26', 6, '2009-12-03 09:55:26', '2009-12-03 12:55:26', '2009-12-03 09:55:26')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 3) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:26', 6, '2009-12-03 09:55:26', '2009-12-03 13:55:26', '2009-12-03 09:55:26')[0m
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 4', '2009-12-03 09:55:26', 'Kurssin 4 kuvaus selityksineen', '2009-12-03 09:55:26')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (0.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:27', 4, '2009-12-03 09:55:27')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:27', 4, '2009-12-03 09:55:27')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 4) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:27', 7, '2009-12-03 09:55:27', '2009-12-03 10:55:27', '2009-12-03 09:55:27')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 4) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:27', 7, '2009-12-03 09:55:27', '2009-12-03 11:55:27', '2009-12-03 09:55:27')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 4) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:27', 8, '2009-12-03 09:55:27', '2009-12-03 12:55:27', '2009-12-03 09:55:27')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 4) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:27', 8, '2009-12-03 09:55:27', '2009-12-03 13:55:27', '2009-12-03 09:55:27')[0m
+  [4;36;1mCourse Create (0.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 5', '2009-12-03 09:55:27', 'Kurssin 5 kuvaus selityksineen', '2009-12-03 09:55:27')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:27', 5, '2009-12-03 09:55:27')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:27', 5, '2009-12-03 09:55:27')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 5) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:27', 9, '2009-12-03 09:55:27', '2009-12-03 10:55:27', '2009-12-03 09:55:27')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 5) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:27', 9, '2009-12-03 09:55:27', '2009-12-03 11:55:27', '2009-12-03 09:55:27')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 5) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:27', 10, '2009-12-03 09:55:27', '2009-12-03 12:55:27', '2009-12-03 09:55:27')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 5) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:27', 10, '2009-12-03 09:55:27', '2009-12-03 13:55:27', '2009-12-03 09:55:27')[0m
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 6', '2009-12-03 09:55:27', 'Kurssin 6 kuvaus selityksineen', '2009-12-03 09:55:27')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:27', 6, '2009-12-03 09:55:27')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:28', 6, '2009-12-03 09:55:28')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 6) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:28', 11, '2009-12-03 09:55:28', '2009-12-03 10:55:28', '2009-12-03 09:55:28')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 6) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:28', 11, '2009-12-03 09:55:28', '2009-12-03 11:55:28', '2009-12-03 09:55:28')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 6) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:28', 12, '2009-12-03 09:55:28', '2009-12-03 12:55:28', '2009-12-03 09:55:28')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 6) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:28', 12, '2009-12-03 09:55:28', '2009-12-03 13:55:28', '2009-12-03 09:55:28')[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 7', '2009-12-03 09:55:28', 'Kurssin 7 kuvaus selityksineen', '2009-12-03 09:55:28')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:28', 7, '2009-12-03 09:55:28')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (0.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:28', 7, '2009-12-03 09:55:28')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 7) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:28', 13, '2009-12-03 09:55:28', '2009-12-03 10:55:28', '2009-12-03 09:55:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 7) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:28', 13, '2009-12-03 09:55:28', '2009-12-03 11:55:28', '2009-12-03 09:55:28')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 7) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:28', 14, '2009-12-03 09:55:28', '2009-12-03 12:55:28', '2009-12-03 09:55:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 7) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:28', 14, '2009-12-03 09:55:28', '2009-12-03 13:55:28', '2009-12-03 09:55:28')[0m
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 8', '2009-12-03 09:55:28', 'Kurssin 8 kuvaus selityksineen', '2009-12-03 09:55:28')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:28', 8, '2009-12-03 09:55:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:28', 8, '2009-12-03 09:55:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 8) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:29', 15, '2009-12-03 09:55:29', '2009-12-03 10:55:29', '2009-12-03 09:55:29')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 8) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:29', 15, '2009-12-03 09:55:29', '2009-12-03 11:55:29', '2009-12-03 09:55:29')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 8) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:29', 16, '2009-12-03 09:55:29', '2009-12-03 12:55:29', '2009-12-03 09:55:29')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 8) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:29', 16, '2009-12-03 09:55:29', '2009-12-03 13:55:29', '2009-12-03 09:55:29')[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 9', '2009-12-03 09:55:29', 'Kurssin 9 kuvaus selityksineen', '2009-12-03 09:55:29')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:29', 9, '2009-12-03 09:55:29')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:29', 9, '2009-12-03 09:55:29')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 9) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:29', 17, '2009-12-03 09:55:29', '2009-12-03 10:55:29', '2009-12-03 09:55:29')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 9) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:29', 17, '2009-12-03 09:55:29', '2009-12-03 11:55:29', '2009-12-03 09:55:29')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 9) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:29', 18, '2009-12-03 09:55:29', '2009-12-03 12:55:29', '2009-12-03 09:55:29')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 9) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:29', 18, '2009-12-03 09:55:29', '2009-12-03 13:55:29', '2009-12-03 09:55:29')[0m
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 10', '2009-12-03 09:55:30', 'Kurssin 10 kuvaus selityksineen', '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:30', 10, '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:30', 10, '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 10) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:30', 19, '2009-12-03 09:55:30', '2009-12-03 10:55:30', '2009-12-03 09:55:30')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 10) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:30', 19, '2009-12-03 09:55:30', '2009-12-03 11:55:30', '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 10) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:30', 20, '2009-12-03 09:55:30', '2009-12-03 12:55:30', '2009-12-03 09:55:30')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 10) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:30', 20, '2009-12-03 09:55:30', '2009-12-03 13:55:30', '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 11', '2009-12-03 09:55:30', 'Kurssin 11 kuvaus selityksineen', '2009-12-03 09:55:30')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:30', 11, '2009-12-03 09:55:30')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:30', 11, '2009-12-03 09:55:30')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:30', 21, '2009-12-03 09:55:30', '2009-12-03 10:55:30', '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:30', 21, '2009-12-03 09:55:30', '2009-12-03 11:55:30', '2009-12-03 09:55:30')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:30', 22, '2009-12-03 09:55:30', '2009-12-03 12:55:30', '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:30', 22, '2009-12-03 09:55:30', '2009-12-03 13:55:30', '2009-12-03 09:55:30')[0m
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 12', '2009-12-03 09:55:30', 'Kurssin 12 kuvaus selityksineen', '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (0.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:30', 12, '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:30', 12, '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 12) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:30', 23, '2009-12-03 09:55:30', '2009-12-03 10:55:30', '2009-12-03 09:55:30')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 12) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:30', 23, '2009-12-03 09:55:30', '2009-12-03 11:55:30', '2009-12-03 09:55:30')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 12) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:31', 24, '2009-12-03 09:55:31', '2009-12-03 12:55:31', '2009-12-03 09:55:31')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 12) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:31', 24, '2009-12-03 09:55:31', '2009-12-03 13:55:31', '2009-12-03 09:55:31')[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 13', '2009-12-03 09:55:31', 'Kurssin 13 kuvaus selityksineen', '2009-12-03 09:55:31')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:31', 13, '2009-12-03 09:55:31')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:31', 13, '2009-12-03 09:55:31')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 13) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:31', 25, '2009-12-03 09:55:31', '2009-12-03 10:55:31', '2009-12-03 09:55:31')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 13) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:31', 25, '2009-12-03 09:55:31', '2009-12-03 11:55:31', '2009-12-03 09:55:31')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 13) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:31', 26, '2009-12-03 09:55:31', '2009-12-03 12:55:31', '2009-12-03 09:55:31')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 13) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:31', 26, '2009-12-03 09:55:31', '2009-12-03 13:55:31', '2009-12-03 09:55:31')[0m
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 14', '2009-12-03 09:55:31', 'Kurssin 14 kuvaus selityksineen', '2009-12-03 09:55:31')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:31', 14, '2009-12-03 09:55:31')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:31', 14, '2009-12-03 09:55:31')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 14) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:31', 27, '2009-12-03 09:55:31', '2009-12-03 10:55:31', '2009-12-03 09:55:31')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 14) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:31', 27, '2009-12-03 09:55:31', '2009-12-03 11:55:31', '2009-12-03 09:55:31')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 14) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:31', 28, '2009-12-03 09:55:31', '2009-12-03 12:55:31', '2009-12-03 09:55:31')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 14) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:32', 28, '2009-12-03 09:55:32', '2009-12-03 13:55:32', '2009-12-03 09:55:32')[0m
+  [4;36;1mCourse Create (0.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 15', '2009-12-03 09:55:32', 'Kurssin 15 kuvaus selityksineen', '2009-12-03 09:55:32')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:32', 15, '2009-12-03 09:55:32')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:32', 15, '2009-12-03 09:55:32')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 15) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:32', 29, '2009-12-03 09:55:32', '2009-12-03 10:55:32', '2009-12-03 09:55:32')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 15) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:32', 29, '2009-12-03 09:55:32', '2009-12-03 11:55:32', '2009-12-03 09:55:32')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 15) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:32', 30, '2009-12-03 09:55:32', '2009-12-03 12:55:32', '2009-12-03 09:55:32')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 15) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:32', 30, '2009-12-03 09:55:32', '2009-12-03 13:55:32', '2009-12-03 09:55:32')[0m
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 16', '2009-12-03 09:55:32', 'Kurssin 16 kuvaus selityksineen', '2009-12-03 09:55:32')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:32', 16, '2009-12-03 09:55:32')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:32', 16, '2009-12-03 09:55:32')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 16) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:32', 31, '2009-12-03 09:55:32', '2009-12-03 10:55:32', '2009-12-03 09:55:32')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 16) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:32', 31, '2009-12-03 09:55:32', '2009-12-03 11:55:32', '2009-12-03 09:55:32')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 16) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:33', 32, '2009-12-03 09:55:33', '2009-12-03 12:55:33', '2009-12-03 09:55:33')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 16) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:33', 32, '2009-12-03 09:55:33', '2009-12-03 13:55:33', '2009-12-03 09:55:33')[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 17', '2009-12-03 09:55:33', 'Kurssin 17 kuvaus selityksineen', '2009-12-03 09:55:33')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:33', 17, '2009-12-03 09:55:33')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:33', 17, '2009-12-03 09:55:33')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 17) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:33', 33, '2009-12-03 09:55:33', '2009-12-03 10:55:33', '2009-12-03 09:55:33')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 17) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:33', 33, '2009-12-03 09:55:33', '2009-12-03 11:55:33', '2009-12-03 09:55:33')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 17) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:33', 34, '2009-12-03 09:55:33', '2009-12-03 12:55:33', '2009-12-03 09:55:33')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 17) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:33', 34, '2009-12-03 09:55:33', '2009-12-03 13:55:33', '2009-12-03 09:55:33')[0m
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 18', '2009-12-03 09:55:33', 'Kurssin 18 kuvaus selityksineen', '2009-12-03 09:55:33')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (0.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:33', 18, '2009-12-03 09:55:33')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:33', 18, '2009-12-03 09:55:33')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 18) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:33', 35, '2009-12-03 09:55:33', '2009-12-03 10:55:33', '2009-12-03 09:55:33')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 18) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:33', 35, '2009-12-03 09:55:33', '2009-12-03 11:55:33', '2009-12-03 09:55:33')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 18) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:33', 36, '2009-12-03 09:55:33', '2009-12-03 12:55:33', '2009-12-03 09:55:33')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 18) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:33', 36, '2009-12-03 09:55:33', '2009-12-03 13:55:33', '2009-12-03 09:55:33')[0m
+  [4;36;1mCourse Create (0.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 19', '2009-12-03 09:55:33', 'Kurssin 19 kuvaus selityksineen', '2009-12-03 09:55:33')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:34', 19, '2009-12-03 09:55:34')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:34', 19, '2009-12-03 09:55:34')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 19) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:34', 37, '2009-12-03 09:55:34', '2009-12-03 10:55:34', '2009-12-03 09:55:34')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 19) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:34', 37, '2009-12-03 09:55:34', '2009-12-03 11:55:34', '2009-12-03 09:55:34')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 19) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:34', 38, '2009-12-03 09:55:34', '2009-12-03 12:55:34', '2009-12-03 09:55:34')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 19) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:34', 38, '2009-12-03 09:55:34', '2009-12-03 13:55:34', '2009-12-03 09:55:34')[0m
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 20', '2009-12-03 09:55:34', 'Kurssin 20 kuvaus selityksineen', '2009-12-03 09:55:34')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Kevät 2010', '2009-12-03 09:55:34', 20, '2009-12-03 09:55:34')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "updated_at", "course_id", "created_at") VALUES('Syksy 2010', '2009-12-03 09:55:34', 20, '2009-12-03 09:55:34')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 20) LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-03 09:55:34', 39, '2009-12-03 09:55:34', '2009-12-03 10:55:34', '2009-12-03 09:55:34')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 20) LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-03 09:55:34', 39, '2009-12-03 09:55:34', '2009-12-03 11:55:34', '2009-12-03 09:55:34')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 20) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-03 09:55:34', 40, '2009-12-03 09:55:34', '2009-12-03 12:55:34', '2009-12-03 09:55:34')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 20) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-03 09:55:34', 40, '2009-12-03 09:55:34', '2009-12-03 13:55:34', '2009-12-03 09:55:34')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-03 09:58:12', 'late', NULL, NULL, 'late', NULL, 'mailiosoite', '2009-12-03 09:58:12')[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+Sent mail to mailiosoite
+
+Date: Thu, 3 Dec 2009 12:03:38 +0200
+From: no-reply@yourdomain.com
+To: mailiosoite
+Subject: otsikko
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hei
+
+
