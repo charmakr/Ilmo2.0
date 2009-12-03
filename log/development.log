@@ -19842,3 +19842,196 @@ Rendering exercise_groups/show
   [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 1)) [0m
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
 Completed in 49ms (View: 39, DB: 2) | 200 OK [http://localhost/exercise_groups/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:29:20) [GET]
+  [4;36;1mNewsfeed Load (2.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 35ms (View: 22, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-03 15:29:38) [GET]
+
+ActionController::RoutingError (No route matches "/index.rss" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#show to rss (for 127.0.0.1 at 2009-12-03 15:29:56) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Course with ID=index):
+  app/controllers/courses_controller.rb:14:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#show to rss (for 127.0.0.1 at 2009-12-03 15:31:40) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Course with ID=index):
+  app/controllers/courses_controller.rb:11:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#show to html (for 127.0.0.1 at 2009-12-03 15:32:43) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Course with ID=index):
+  app/controllers/courses_controller.rb:11:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-03 15:35:06) [GET]
+
+ActionController::RoutingError (No route matches "/.rxml" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#show to rxml (for 127.0.0.1 at 2009-12-03 15:35:17) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Course with ID=index):
+  app/controllers/courses_controller.rb:11:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#show to rxml (for 127.0.0.1 at 2009-12-03 15:36:15) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Course with ID=index):
+  app/controllers/courses_controller.rb:13:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#show to rss (for 127.0.0.1 at 2009-12-03 15:36:21) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Course with ID=index):
+  app/controllers/courses_controller.rb:13:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:38:40) [GET]
+  [4;35;1mNewsfeed Load (2.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 36ms (View: 22, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:40:08) [GET]
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 39ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:40:43) [GET]
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 40ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:41:09) [GET]
+  [4;36;1mNewsfeed Load (2.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 40ms (View: 26, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:41:12) [GET]
+  [4;35;1mNewsfeed Load (2.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 84ms (View: 70, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:41:33) [GET]
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 40ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#index to rss (for 127.0.0.1 at 2009-12-03 15:41:35) [GET]
+  Parameters: {"controler"=>"courses"}
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering courses/index
+Completed in 30ms (View: 18, DB: 1) | 200 OK [http://localhost/?controler=courses&format=rss]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 15:42:07) [GET]
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 41ms (View: 28, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing CoursesController#index to rss (for 127.0.0.1 at 2009-12-03 15:42:09) [GET]
+  [4;35;1mNewsfeed Load (2.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering courses/index
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://localhost/?format=rss]
+
+
+Processing CoursesController#index to rss (for 127.0.0.1 at 2009-12-03 15:42:38) [GET]
+  [4;36;1mNewsfeed Load (2.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering courses/index
+Completed in 28ms (View: 15, DB: 2) | 200 OK [http://localhost/?format=rss]
