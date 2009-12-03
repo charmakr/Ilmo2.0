@@ -13,7 +13,12 @@ class MailerController < ApplicationController
     redirect_to "/"
     end
     UserMailer.deliver_send_mail(User.find_by_username(params[:user]),params[:subject],params[:body])
+    if flash[:warning]!=nil
     flash[:success]="Lähetys onnistui"
+    redirect_to "/"
+    return
+  end
+  flash[:warning] = "Lähetys epäonnistui"
     redirect_to "/"
   end
 end

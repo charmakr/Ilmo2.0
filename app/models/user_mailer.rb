@@ -1,5 +1,9 @@
 class UserMailer < ActionMailer::Base
    def send_mail(user, subject, message)
+     if user.email=nil
+       flash[:warning]="Vastaanottajalla ei mailiosoitetta"
+       return
+     end
       @subject = subject
       @recipients = user.email
       @from = 'no-reply@yourdomain.com'
