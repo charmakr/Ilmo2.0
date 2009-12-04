@@ -4,20 +4,26 @@
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <title>Ilmo2.0Admin</title>
         <%=stylesheet_link_tag "style" %>
-
+		<%= javascript_include_tag :defaults %>
+		<%= active_scaffold_includes %>
 		
     </head>
     <body>
         <div id="container">
             <div id="sisalto">
-                <h1>Ilmo 2.0</h1>
+                <h1>Ilmo 2.0Admin</h1>
                 <% if session[:user] %>
                 <%= link_to User.find_by_id(session[:user]).username, edit_user_url(session[:user])%> (<%= link_to t(:logout), logout_url %>)
 				<br/>
                 <%end %>
 				<%=link_to "Suomeksi", :locale=>"fi"%>
 				<%=link_to "In english", :locale=>"en"%>
-				
+				<br />
+				<%=link_to "Courses", admin_courses_url%>				
+				<%=link_to "Course Instances", admin_course_instances_url%>
+				<%=link_to "Exercise Groups", admin_exercise_groups_url%>
+				<%=link_to "Users", admin_users_url%>
+				<%=link_to "Registrations", admin_registrations_url%>
                 <% if flash[:warning] %>
                 <div id="varoitus">
                     <%= flash[:warning] %>

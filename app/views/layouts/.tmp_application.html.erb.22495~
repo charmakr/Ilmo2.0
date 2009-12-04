@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Ilmo2.0</title>
+        <%=stylesheet_link_tag "style" %>
+
+		
+    </head>
+    <body>
+        <div id="container">
+            <div id="sisalto">
+                <h1>Ilmo 2.0</h1>
+                <% if session[:user] %>
+                <%= link_to User.find_by_id(session[:user]).username, edit_user_url(session[:user])%> (<%= link_to t(:logout), logout_url %>)
+				<br/>
+                <%end %>
+				<%=link_to "Suomeksi", :locale=>"fi"%>
+				<%=link_to "In english", :locale=>"en"%>
+				
+                <% if flash[:warning] %>
+                <div id="varoitus">
+                    <%= flash[:warning] %>
+                </div>
+				<br/>
+                <%end %>
+                
+				<% if flash[:success] %>
+                <div id="onnistuminen">
+                    <%= flash[:success] %>
+                </div>
+				<br/>
+                <%end %>
+                
+                <%= yield %>
+            </div>
+            <center>
+                <%= luontiaika %>
+            </center>
+        </div>
+    </body>
+</html>

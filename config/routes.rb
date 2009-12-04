@@ -53,6 +53,11 @@ ActionController::Routing::Routes.draw do |map|
 
    map.namespace(:admin) do |admin|
     admin.resources :users
+    admin.resources :courses
+    admin.resources :course_instances
+    admin.resources :exercise_groups
+    admin.resources :newsfeeds
+    admin.resources :registrations
   end
 
   
