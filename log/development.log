@@ -32651,3 +32651,872 @@ Rendering courses/index
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
 Completed in 45ms (View: 35, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-04 19:34:18) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-04 19:34:18) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-04 19:34:24) [POST]
+  Parameters: {"user"=>{"username"=>"joo", "password"=>"joo"}, "commit"=>"Login", "authenticity_token"=>"FaZ2bWtQfIVzHhPgXHLUfDeaST4/xEXv5S8F38jRM+8="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:34:25) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 45ms (View: 33, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-04 19:34:26) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-04 19:34:26) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 13ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-04 19:34:30) [POST]
+  Parameters: {"user"=>{"username"=>"juu", "password"=>"juu"}, "commit"=>"Login", "authenticity_token"=>"AO+PxeGCABpnxGvuqXKxsQeYkEwaG7IYMvItX042gUM="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'juu' AND password = 'juu') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:34:30) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 96ms (View: 86, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-04 19:34:31) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "courses" [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT "courses".* FROM "courses" ORDER BY courses."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCourseInstance Load (2.0ms)[0m   [0mSELECT "course_instances".* FROM "course_instances" WHERE ("course_instances".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (20.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (15.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (163.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 221ms (View: 201, DB: 4) | 200 OK [http://127.0.0.1/admin/courses]
+
+
+Processing Admin::ExerciseGroupsController#index (for 127.0.0.1 at 2009-12-04 19:34:36) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exercise_groups" [0m
+  [4;35;1mExerciseGroup Load (2.0ms)[0m   [0mSELECT "exercise_groups".* FROM "exercise_groups" ORDER BY exercise_groups."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" IN (6,7,8,1,2,3,4,5)) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT "registrations".* FROM "registrations" WHERE ("registrations".exercise_group_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (36.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (20.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (64.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (11.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (11.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_pagination_links (15.0ms)
+Rendered _list (290.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 397ms (View: 381, DB: 3) | 200 OK [http://127.0.0.1/admin/exercise_groups]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:34:38) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id IN (1,2,3,4)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (40.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (101.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 203ms (View: 195, DB: 2) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::RegistrationsController#index (for 127.0.0.1 at 2009-12-04 19:34:39) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "registrations" [0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" ORDER BY registrations."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "registrations".* FROM "registrations" ORDER BY registrations."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (17.0ms)
+Rendered _messages (1.0ms)
+Rendered _list (30.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 73ms (View: 68, DB: 1) | 200 OK [http://127.0.0.1/admin/registrations]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:34:40) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id IN (1,2,3,4)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (40.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (19.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list (151.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 195ms (View: 188, DB: 1) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::UsersController#edit (for 127.0.0.1 at 2009-12-04 19:34:44) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"4"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered _form_attribute (3.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 4)) [0m
+Rendered _horizontal_subform_header (16.0ms)
+Rendered _form_association_footer (4.0ms)
+Rendered _horizontal_subform (30.0ms)
+Rendered _form_association (39.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations".user_id = 4) [0m
+Rendered _horizontal_subform_header (1.0ms)
+  [4;36;1mExerciseGroup Load (4.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (9.0ms)
+Rendered _horizontal_subform_record (13.0ms)
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (21.0ms)
+Rendered _form_association (24.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form (227.0ms)
+Rendered _update_form (239.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 268ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/admin/users/4/edit?_method=get&adapter=_list_inline_adapter]
+
+
+Processing Admin::UsersController#row (for 127.0.0.1 at 2009-12-04 19:35:08) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 4)) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 4)) LIMIT 4[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "registrations" WHERE ("registrations".user_id = 4) [0m
+Rendered _list_actions (5.0ms)
+Rendered _list_record (71.0ms)
+Completed in 89ms (View: 84, DB: 3) | 200 OK [http://127.0.0.1/admin/users/row/4?_method=get]
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-04 19:35:12) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "courses" [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT "courses".* FROM "courses" ORDER BY courses."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCourseInstance Load (2.0ms)[0m   [0;1mSELECT "course_instances".* FROM "course_instances" WHERE ("course_instances".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (20.0ms)
+Rendered _messages (51.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (14.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (164.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 222ms (View: 202, DB: 3) | 200 OK [http://127.0.0.1/admin/courses]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:35:13) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 43ms (View: 31, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-04 19:35:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 104ms (View: 97, DB: 1) | 200 OK [http://127.0.0.1/courses/1]
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-04 19:35:18) [GET]
+  Parameters: {"id"=>"1", "course_id"=>"1"}
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 57ms (View: 49, DB: 0) | 200 OK [http://127.0.0.1/courses/1/course_instances/1]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-04 19:35:19) [GET]
+  Parameters: {"course_instance_id"=>"1", "id"=>"1", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 1)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 109ms (View: 101, DB: 0) | 200 OK [http://127.0.0.1/courses/1/course_instances/1/exercise_groups/1]
+
+
+Processing ExerciseGroupsController#join (for 127.0.0.1 at 2009-12-04 19:35:21) [GET]
+  Parameters: {"post"=>"true", "id"=>"1"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 3) AND (("registrations".exercise_group_id = 1)) LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mRegistration Create (1.0ms)[0m   [0mINSERT INTO "registrations" ("updated_at", "exercise_group_id", "user_id", "created_at") VALUES('2009-12-04 17:35:21', 1, 3, '2009-12-04 17:35:21')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä juu liittyi kurssin: Kurssi 1:Kevät 2010 harjoitusryhmään:Ryhmä 1', '2009-12-04 17:35:21', '2009-12-04 17:35:21')[0m
+Redirected to http://127.0.0.1:3002/exercise_groups/show/1
+Completed in 124ms (DB: 3) | 302 Found [http://127.0.0.1/exercise_groups/join/1?post=true]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-04 19:35:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 1)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 55ms (View: 44, DB: 3) | 200 OK [http://127.0.0.1/exercise_groups/show/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:35:26) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (2.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 43ms (View: 31, DB: 4) | 200 OK [http://127.0.0.1/]
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-04 19:35:27) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "courses" [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT "courses".* FROM "courses" ORDER BY courses."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCourseInstance Load (2.0ms)[0m   [0;1mSELECT "course_instances".* FROM "course_instances" WHERE ("course_instances".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (20.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (14.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list (160.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 218ms (View: 198, DB: 4) | 200 OK [http://127.0.0.1/admin/courses]
+
+
+Processing Admin::ExerciseGroupsController#index (for 127.0.0.1 at 2009-12-04 19:35:29) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "exercise_groups" [0m
+  [4;36;1mExerciseGroup Load (2.0ms)[0m   [0;1mSELECT "exercise_groups".* FROM "exercise_groups" ORDER BY exercise_groups."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" IN (6,7,8,1,2,3,4,5)) [0m
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".exercise_group_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (36.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (19.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (61.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_pagination_links (14.0ms)
+Rendered _list (283.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 339ms (View: 322, DB: 5) | 200 OK [http://127.0.0.1/admin/exercise_groups]
+
+
+Processing Admin::RegistrationsController#index (for 127.0.0.1 at 2009-12-04 19:35:31) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "registrations" [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT "registrations".* FROM "registrations" ORDER BY registrations."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (17.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list (52.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 96ms (View: 89, DB: 2) | 200 OK [http://127.0.0.1/admin/registrations]
+
+
+Processing Admin::UsersController#edit (for 127.0.0.1 at 2009-12-04 19:35:38) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"3", "parent_controller"=>"admin/registrations"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 3)) [0m
+Rendered _horizontal_subform_header (17.0ms)
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourseInstance Load (2.0ms)[0m   [0mSELECT * FROM "course_instances" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".exercise_group_id = 1) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ((exercise_group_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 1)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (5.0ms)
+Rendered _horizontal_subform_record (37.0ms)
+Rendered _form_association_footer (4.0ms)
+Rendered _horizontal_subform (75.0ms)
+Rendered _form_association (84.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (0.0ms)
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".user_id = 3) [0m
+Rendered _horizontal_subform_header (1.0ms)
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+  [4;36;1mExerciseGroup Load (3.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (8.0ms)
+Rendered _horizontal_subform_record (11.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (21.0ms)
+Rendered _form_association (25.0ms)
+Rendered _form_attribute (49.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (0.0ms)
+Rendered _form (272.0ms)
+Rendered _update_form (287.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 317ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/admin/users/3/edit?_method=get&parent_controller=admin%2Fregistrations&adapter=_list_inline_adapter]
+
+
+Processing Admin::RegistrationsController#row (for 127.0.0.1 at 2009-12-04 19:35:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations"."id" = 1) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendered _list_actions (5.0ms)
+Rendered _list_record (68.0ms)
+Completed in 85ms (View: 82, DB: 0) | 200 OK [http://127.0.0.1/admin/registrations/row/1?_method=get]
+
+
+Processing Admin::ExerciseGroupsController#edit (for 127.0.0.1 at 2009-12-04 19:35:45) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"1", "parent_controller"=>"admin/registrations"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+Rendered _horizontal_subform_header (3.0ms)
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (18.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "course_instances" [0m
+  [4;35;1mCourseInstance Load (2.0ms)[0m   [0mSELECT * FROM "course_instances" [0m
+Rendered _form_association_footer (12.0ms)
+Rendered _horizontal_subform (48.0ms)
+Rendered _form_association (107.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".exercise_group_id = 1) [0m
+Rendered _horizontal_subform_header (1.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (5.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (4.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "registrations" WHERE ((exercise_group_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (14.0ms)
+Rendered _form_association (18.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 1)) [0m
+Rendered _horizontal_subform_header (2.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 3)) [0m
+  [4;35;1mExerciseGroup Load (3.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+Rendered _form_attribute (23.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".user_id = 3) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (43.0ms)
+Rendered _form_association_footer (1.0ms)
+Rendered _horizontal_subform (47.0ms)
+Rendered _form_association (50.0ms)
+Rendered _form (229.0ms)
+Rendered _update_form (296.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 327ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/admin/exercise_groups/1/edit?_method=get&parent_controller=admin%2Fregistrations&adapter=_list_inline_adapter]
+
+
+Processing Admin::RegistrationsController#row (for 127.0.0.1 at 2009-12-04 19:36:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations"."id" = 1) [0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendered _list_actions (55.0ms)
+Rendered _list_record (68.0ms)
+Completed in 86ms (View: 83, DB: 1) | 200 OK [http://127.0.0.1/admin/registrations/row/1?_method=get]
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-04 19:36:04) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "courses" [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT "courses".* FROM "courses" ORDER BY courses."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCourseInstance Load (2.0ms)[0m   [0mSELECT "course_instances".* FROM "course_instances" WHERE ("course_instances".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (21.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (15.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (167.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 226ms (View: 206, DB: 4) | 200 OK [http://127.0.0.1/admin/courses]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-04 19:36:15) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-04 19:36:15) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 14ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:36:26) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.account_type):
+  app/controllers/admin_controller.rb:7:in `admin_authentication_required'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:37:23) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id IN (1,2,3,4)) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (40.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (16.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (100.0ms)
+Completed in 197ms (View: 187, DB: 2) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:37:35) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id IN (1,2,3,4)) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (40.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (67.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list (150.0ms)
+Completed in 198ms (View: 187, DB: 0) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:39:05) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id IN (1,2,3,4)) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (91.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (16.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (150.0ms)
+Completed in 197ms (View: 186, DB: 3) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:39:07) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id IN (1,2,3,4)) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (40.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (17.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (101.0ms)
+Completed in 204ms (View: 193, DB: 3) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:39:09) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-04 19:39:09) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 14ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:39:15) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id IN (1,2,3,4)) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (40.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (16.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (9.0ms)
+Rendered _list (149.0ms)
+Completed in 196ms (View: 185, DB: 0) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:40:03) [GET]
+Redirected to http://127.0.0.1:3002/
+Filter chain halted as [:admin_authentication_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/admin/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:40:03) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-04 19:40:03) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 13ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-04 19:40:20) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Login", "authenticity_token"=>"fOCasjwnqR15ABRc58wcCLyRW4+mavv/rVHxJCHOA/Q="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:40:20) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (3.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 48ms (View: 34, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-04 19:40:22) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-04 19:40:22) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 68ms (View: 68, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-04 19:40:25) [POST]
+  Parameters: {"user"=>{"username"=>"joo", "password"=>"joo"}, "commit"=>"Login", "authenticity_token"=>"YInondgJS8q5Egf6enzYD9NjJqNIYxnhQEFPSJcxXaM="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 9ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:40:25) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 43ms (View: 33, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-04 19:40:31) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Filter chain halted as [:admin_authentication_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/admin/users]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:40:31) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (2.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 98ms (View: 86, DB: 3) | 200 OK [http://127.0.0.1/]
