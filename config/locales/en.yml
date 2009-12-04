@@ -16,5 +16,5 @@ en:
   to_courselist: "Courselist"
   to_courseDesc: "Courses description"
   day: "Day"
-  time: "Time"
+  time_name: "Time"
   classroom: "Classroom"

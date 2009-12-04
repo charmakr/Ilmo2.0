@@ -16,7 +16,7 @@ fi:
   to_courselist: "Kurssilistaan"
   to_courseDesc: "Kurssin tietoihin"
   day: "Päivä"
-  time: "Aika"
+  time_name: "Aika"
   classroom: "Luokka"
     
   date:
