@@ -25,8 +25,7 @@ class User < ActiveRecord::Base
     u = User.find(:first, :conditions=>["username = ? AND password = ?", username, password])
     if u==nil
       return false
-    end
-    
+    end   
     return u
   end
   def self.register(username, password)

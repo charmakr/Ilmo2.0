@@ -4,9 +4,8 @@ class SessionsController < ApplicationController
   end
   
   def create
-    begin
-      user = User.authenticate(params[:user][:username], params[:user][:password])
-    rescue
+    user = User.authenticate(params[:user][:username], params[:user][:password])
+    if user==false
       flash[:warning]= "Kirjautuminen epäonnistui" 
       redirect_to :controller=> :sessions, :action => :index
       return

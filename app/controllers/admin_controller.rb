@@ -4,6 +4,10 @@ class AdminController < ApplicationController
   layout "admin"
   
   def admin_authentication_required
-    
+    unless User.find_by_id(session[:user]).account_type == "Admin"
+      flash[:warning]="Pääsy kielletty"
+      redirect_to "/"
+      return false;
+    end
   end
 end
