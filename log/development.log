@@ -32368,3 +32368,82 @@ Rendering courses/index
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 42ms (View: 31, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:18:35) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 42ms (View: 31, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 19:18:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 37ms (View: 29, DB: 1) | 200 OK [http://127.0.0.1/users/1/edit]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:18:37) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 42ms (View: 31, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-04 19:18:40) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-04 19:18:40) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-12-04 19:18:41) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-12-04 19:18:47) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"joo", "username"=>"joo", "password"=>"joo"}, "commit"=>"Rekisteröi", "authenticity_token"=>"xDdOkD7qCTyKJ7wFDC/Se0iqZKYiMi3amy5ERxIWPNA="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-04 17:18:47', 'joo', 'User', NULL, NULL, 'joo', NULL, NULL, '2009-12-04 17:18:47')[0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä joo rekisteröityi järjestelmään', '2009-12-04 17:18:47', '2009-12-04 17:18:47')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 49ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-04 19:18:47) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-04 19:18:51) [POST]
+  Parameters: {"user"=>{"username"=>"joo", "password"=>"joo"}, "commit"=>"Login", "authenticity_token"=>"xDdOkD7qCTyKJ7wFDC/Se0iqZKYiMi3amy5ERxIWPNA="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 8ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 19:18:51) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (2.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 44ms (View: 30, DB: 4) | 200 OK [http://127.0.0.1/]

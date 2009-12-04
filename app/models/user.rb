@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   validates_length_of :student_number, :maximum=>30, :allow_blank=>true , :allow_nil=>true
   validates_numericality_of :student_number, :only_integer =>true, :allow_blank=>true , :allow_nil=>true
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :allow_blank=>true , :allow_nil=>true
+  validates_inclusion_of :account_type, :in => %w( Admin User )
   validates_confirmation_of :password
   validates_uniqueness_of :username
   
