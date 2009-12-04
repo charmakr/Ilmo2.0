@@ -51,6 +51,8 @@ class UsersController < ApplicationController
         redirect_to edit_user_url(params[:user])
         return
       end
+      render  :action=>:edit 
+      return
     end
     flash[:warning]="Väärä salasana"
     render  :action=>:edit 

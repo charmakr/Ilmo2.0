@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
   
   validates_length_of :username, :in => 3..20
   validates_length_of :password, :in => 3..20
+  validates_length_of :first_name, :maximum=>30
+  validates_length_of :surname, :maximum=>30
+  validates_length_of :student_number, :maximum=>30
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :allow_blank=>true , :allow_nil=>true
   validates_confirmation_of :password
   validates_uniqueness_of :username
   

@@ -27104,3 +27104,112 @@ Rendering courses/index
   [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
   [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
 Completed in 40ms (View: 24, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 16:51:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 27ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 16:52:05) [PUT]
+  Parameters: {"user"=>{"student_number"=>"asas", "first_name"=>"joo", "password"=>"joo", "surname"=>"juu", "email"=>"as"}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 33ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/users/3]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 16:53:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 28ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 16:53:36) [PUT]
+  Parameters: {"user"=>{"student_number"=>"asas", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>"asas"}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 34ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/users/3]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 16:53:56) [PUT]
+  Parameters: {"user"=>{"student_number"=>"asas", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>"asas@lol.net"}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "email" = 'asas@lol.net', "student_number" = 'asas', "surname" = 'saas', "updated_at" = '2009-12-04 14:53:56', "first_name" = 'juu' WHERE "id" = 3[0m
+Redirected to http://127.0.0.1:3002/users/3/edit?email=asas%40lol.net&first_name=juu&password=joo&student_number=asas&surname=saas
+Completed in 46ms (DB: 0) | 302 Found [http://127.0.0.1/users/3]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 16:53:57) [GET]
+  Parameters: {"id"=>"3", "student_number"=>"asas", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>"asas@lol.net"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 27ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit?email=asas%40lol.net&first_name=juu&password=joo&student_number=asas&surname=saas]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 16:54:05) [PUT]
+  Parameters: {"user"=>{"student_number"=>"asas", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>"as"}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 32ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/users/3]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 16:54:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 84ms (View: 74, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 16:55:14) [PUT]
+  Parameters: {"user"=>{"student_number"=>"asas", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>""}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 34ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/users/3]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 16:57:01) [PUT]
+  Parameters: {"user"=>{"student_number"=>"asas", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>""}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "email" = '', "updated_at" = '2009-12-04 14:57:01' WHERE "id" = 3[0m
+Redirected to http://127.0.0.1:3002/users/3/edit?email=&first_name=juu&password=joo&student_number=asas&surname=saas
+Completed in 40ms (DB: 3) | 302 Found [http://127.0.0.1/users/3]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 16:57:01) [GET]
+  Parameters: {"id"=>"3", "student_number"=>"asas", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>""}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 26ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit?email=&first_name=juu&password=joo&student_number=asas&surname=saas]
