@@ -37,6 +37,7 @@ class UsersController < ApplicationController
         @user1.password = params[:password]
         @user1.password_confirmation= params[:password_confirmation]
         @user1.save
+        flash[:warning]=""
         render  :action=>:edit 
         return
       end

@@ -27213,3 +27213,234 @@ Rendering template within layouts/application
 Rendering users/edit
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
 Completed in 26ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit?email=&first_name=juu&password=joo&student_number=asas&surname=saas]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 17:00:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `only_integer' for #<Class:0x5c0e004>):
+  app/models/user.rb:11
+  app/controllers/users_controller.rb:15:in `edit'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (98.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 17:01:20) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 26ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:01:27) [PUT]
+  Parameters: {"user"=>{"student_number"=>"1", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>""}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "student_number" = '1', "updated_at" = '2009-12-04 15:01:27' WHERE "id" = 3[0m
+Redirected to http://127.0.0.1:3002/users/3/edit?email=&first_name=juu&password=joo&student_number=1&surname=saas
+Completed in 42ms (DB: 1) | 302 Found [http://127.0.0.1/users/3]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 17:01:27) [GET]
+  Parameters: {"id"=>"3", "student_number"=>"1", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>""}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 27ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit?email=&first_name=juu&password=joo&student_number=1&surname=saas]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:01:34) [PUT]
+  Parameters: {"user"=>{"student_number"=>"ad", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>""}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 32ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/users/3]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:01:45) [PUT]
+  Parameters: {"user"=>{"student_number"=>"0129", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>""}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "student_number" = '0129', "updated_at" = '2009-12-04 15:01:45' WHERE "id" = 3[0m
+Redirected to http://127.0.0.1:3002/users/3/edit?email=&first_name=juu&password=joo&student_number=0129&surname=saas
+Completed in 48ms (DB: 2) | 302 Found [http://127.0.0.1/users/3]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 17:01:45) [GET]
+  Parameters: {"id"=>"3", "student_number"=>"0129", "first_name"=>"juu", "password"=>"joo", "surname"=>"saas", "email"=>""}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 33ms (View: 19, DB: 2) | 200 OK [http://127.0.0.1/users/3/edit?email=&first_name=juu&password=joo&student_number=0129&surname=saas]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:02:36) [PUT]
+  Parameters: {"user"=>{"student_number"=>"0129", "first_name"=>"juu", "password"=>"juu", "surname"=>"saas", "email"=>""}, "commit"=>"Päivitä", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"3"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'juu') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 26ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/users/3]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:02:52) [PUT]
+  Parameters: {"commit"=>"Vaihda salasana", "password_vanha"=>"joo", "password_confirmation"=>"saddas", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"1", "password"=>"asd"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 33ms (View: 19, DB: 2) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 17:03:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 27ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:03:18) [PUT]
+  Parameters: {"commit"=>"Vaihda salasana", "password_vanha"=>"jooa", "password_confirmation"=>"asdasd", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"1", "password"=>"asd"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'jooa') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 26ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:03:24) [PUT]
+  Parameters: {"commit"=>"Vaihda salasana", "password_vanha"=>"joo", "password_confirmation"=>"asdasdas", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"1", "password"=>"asdsda"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 90ms (View: 20, DB: 1) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 17:04:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:04:13) [PUT]
+  Parameters: {"commit"=>"Vaihda salasana", "password_vanha"=>"joo", "password_confirmation"=>"sdaasddas", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"1", "password"=>"sd"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 37ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 17:05:42) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 27ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 17:05:46) [GET]
+  [4;35;1mNewsfeed Load (2.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 41ms (View: 25, DB: 4) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 17:05:52) [GET]
+  Parameters: {"locale"=>"fi"}
+  [4;36;1mNewsfeed Load (2.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 97ms (View: 26, DB: 3) | 200 OK [http://127.0.0.1/?locale=fi]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-12-04 17:05:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 26ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:06:03) [PUT]
+  Parameters: {"commit"=>"Vaihda salasana", "password_vanha"=>"joo", "password_confirmation"=>"asddas", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"1", "password"=>"asd"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+
+NameError (undefined local variable or method `falsh' for #<UsersController:0x5d4acc4>):
+  app/controllers/users_controller.rb:40:in `update'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-12-04 17:06:20) [PUT]
+  Parameters: {"commit"=>"Vaihda salasana", "password_vanha"=>"joo", "password_confirmation"=>"asdasd", "authenticity_token"=>"pExSGsrYglKy+KozisX4s10DXmj5KqwwyvV0n0/PLsw=", "id"=>"1", "password"=>"dasasd"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'joo' AND password = 'joo') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo' AND "users".id <> 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 88ms (View: 75, DB: 1) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-12-04 17:06:40) [GET]
+  Parameters: {"id"=>"1", "locale"=>"en"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 10ms (DB: 1) | 302 Found [http://127.0.0.1/users/1?locale=en]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-04 17:06:40) [GET]
+  [4;35;1mNewsfeed Load (2.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 40ms (View: 25, DB: 4) | 200 OK [http://127.0.0.1/]
