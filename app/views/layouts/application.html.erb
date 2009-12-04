@@ -10,9 +10,12 @@
     <body>
         <div id="container">
             <div id="sisalto">
-                <h1>Ilmo 2.0</h1>
+                <h1><%=link_to "Ilmo2.0", "/"%></h1>
                 <% if session[:user] %>
                 <%= link_to User.find_by_id(session[:user]).username, edit_user_url(session[:user])%> (<%= link_to t(:logout), logout_url %>)
+				<% if User.find_by_id(session[:user]).account_type=="Admin" %>
+				<%=link_to "Järjestelmän hallinnointiin", admin_courses_url%>
+					<%end %>
 				<br/>
                 <%end %>
 				<%=link_to "Suomeksi", :locale=>"fi"%>

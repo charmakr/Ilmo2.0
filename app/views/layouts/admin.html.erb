@@ -11,7 +11,7 @@
     <body>
         <div id="container">
             <div id="sisalto">
-                <h1>Ilmo 2.0Admin</h1>
+                <h1><%=link_to "Ilmo2.0Admin", "/"%></h1>
                 <% if session[:user] %>
                 <%= link_to User.find_by_id(session[:user]).username, edit_user_url(session[:user])%> (<%= link_to t(:logout), logout_url %>)
 				<br/>
