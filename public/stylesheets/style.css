@@ -44,4 +44,8 @@ a:active {
 .fieldWithErrors{
 	
 }
+#errorExplanation{
+	color: red;
+	
+}
 
