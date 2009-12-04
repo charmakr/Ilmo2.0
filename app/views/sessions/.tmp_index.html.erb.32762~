@@ -8,4 +8,4 @@
     <%= f.password_field :password %><br />
 	<%= submit_tag t(:login) %>
   <% end %>
-  <%= link_to t(:register), new_user_url%>
+  <%= link_to t(:register), registrations_url%>

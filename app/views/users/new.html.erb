@@ -1,6 +1,7 @@
 <h2>Rekisteröinti</h2>
 	<%= link_to "Sisäänkirjautumiseen", :action => "index", :controller =>"sessions" %>
-  <% form_for @User do |f| %>
+  <% form_for @user do |f| %>
+  	<%= f.error_messages %>
     <%= f.label :username, 'Käyttäjänimi' %>:
     <%= f.text_field :username %><br />
 	

@@ -2,7 +2,11 @@ class User < ActiveRecord::Base
   
   has_many :registrations
   has_many :exercise_groups, :through => :registrations
-
+  
+  validates_length_of :username, :in => 3..20
+  validates_length_of :password, :in => 3..20
+  validates_confirmation_of :password
+  validates_uniqueness_of :username
   
   after_create :update_newsfeed
   
@@ -15,7 +19,7 @@ class User < ActiveRecord::Base
   def self.authenticate(username, password)
     u = User.find(:first, :conditions=>["username = ? AND password = ?", username, password])
     if u==nil
-      raise ArgumentError.new("Login failed")
+      return false
     end
     
     return u
@@ -30,23 +34,5 @@ class User < ActiveRecord::Base
   end
     
     
-    def self.checkInformation_on_registration(user)
-      if user[:password3]!=user[:password2]
-        return "Salasanat ei täsmää"
-      end
-      if user[:username]=="" || user[:password2]==""
-        return "Tyhjiä kenttiä"
-      end
-  end
-  
-  def self.checkInformation_on_update(user)
-        if user[:password3]!=user[:password2]
-      return "Uudet salasanat ei täsmää"     
-    end
-          if user[:username]=="" || user[:password2]==""
-        return "Tyhjiä kenttiä"
-      end
-    
-  end
 
 end

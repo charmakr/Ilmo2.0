@@ -1,53 +1,75 @@
 class UsersController < ApplicationController
+  skip_before_filter :authentication_required, :only => [:create, :new]
+  
+  
   def index
     @u = User.find_by_id(session[:user])
   end
   
-  def show
-   
+  def show 
     @u = User.find_by_id(session[:user]) 
     redirect_to :index
   end
   
-  def create
-    u = User.find_by_id(session[:user])
-    
-    begin 
-      User.authenticate(u.username, params[:user][:password])
-    rescue
-      flash[:warning]="Väärä salasana, tietoja ei tallenettu"
-      redirect_to :controller=>:users, :action=>:index
-      return  
-    end
-    
-    if params[:commit]=="Päivitä"
-      u.first_name = params[:user][:first_name]
-      u.surname = params[:user][:surname]
-      u.student_number = params[:user][:student_number]
-      u.email = params[:user][:email]
-      u.save
-      flash[:success]="Tiedot päivitetty"
-      redirect_to :controller=>:users, :action=>:index
-      return        
-    end
-    
-    if params[:commit]=="Vaihda salasana"
-      warning = User.checkInformation_on_update(params[:user])
-      if warning!=nil
-        flash[:warning]=warning
-        redirect_to :controller=>:users, :action=>:index
+  def edit
+    @user = User.find_by_id(session[:user]) 
+    @user1 = User.new
+  end
+  
+  def new
+    @user = User.new
+  end
+  
+  def update
+    @user = User.find_by_id(session[:user])
+    if params[:commit]=="Poista käyttäjätili"
+      if(User.authenticate(@user.username,params[:user][:password]))
+        render :template => "users/confirm", :layout=>true
         return
-      end   
-      u.password = params[:user][:password2]
-      u.save
-      flash[:success]="Salasanaa vaihdettu"
-      redirect_to :controller=>:users, :action=>:index
+      end
+      flash[:warning]="Väärä salasana"
+      render  :action=>:edit 
       return
     end
-    if params[:commit]=="Poista käyttäjätili"
-      render :template => "users/confirm", :layout=>true
+    if (params[:commit]=="Vaihda salasana")
+      if(User.authenticate(@user.username,params[:password_vanha]))
+        @user1 = @user
+        @user1.password = params[:password]
+        @user1.password_confirmation= params[:password_confirmation]
+        @user1.save
+        render  :action=>:edit 
+        return
+      end
+      flash[:warning]="Väärä salasana"
+      render  :action=>:edit 
+      return
     end
-        
+    
+    if(User.authenticate(@user.username,params[:user][:password]))     
+      if @user.update_attributes(params[:user])
+        flash[:success]="Tiedot päivitetty"
+        redirect_to edit_user_url(params[:user])
+        return
+      end
+    end
+    flash[:warning]="Väärä salasana"
+    render  :action=>:edit 
+  end
+  
+  
+  
+  def create
+    
+    @user = User.new(params[:user])
+    
+    if @user.save
+      flash[:success]="Käyttäjän luonti onnistui"
+      redirect_to :controller =>"sessions", :action=> "index"
+      return
+    end
+    render  :action=>:new  
+    return
+          
   end
   
   def destroy
