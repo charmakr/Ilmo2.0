@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  has_many :registrations
+  has_many :registrations, :dependent => :destroy
   has_many :exercise_groups, :through => :registrations
   
   validates_length_of :username, :in => 3..20
