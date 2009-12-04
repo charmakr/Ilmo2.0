@@ -10,7 +10,13 @@
 	
 	<%= f.label :password_cofirmation, 'Salasana uudelleen' %>:
     <%= f.password_field :password_confirmation %>
-	
+	<br />
+	Account type:<br />
+	User:
+	<%= radio_button("user", "account_type", "User")%><br />
+	Admin:
+	<%= radio_button("user", "account_type", "Admin")%>
+	    
 	<br />
 	<%= submit_tag "Rekisteröi" %>
   <% end %>
