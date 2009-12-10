@@ -15,7 +15,7 @@
         </ul>
         <% end %>
 <ul><b>Kokeet:</b><% @exams.each do |ex| %>
-	<ul><%=link_to ex.name, course_exam_path(@courses, ex)%> <%= ex.start_time.strftime("%a") %> <%= ex.start_time.strftime("%H") %>-<%= ex.end_time.strftime("%H") %></ul>
+	<ul><%=ex.name%> <%= ex.start_time.strftime("%a") %> <%= ex.start_time.strftime("%H") %>-<%= ex.end_time.strftime("%H") %></ul>
 <% end %></ul>
         <br/>
         <%= link_to t(:to_courselist), :action => "index", :controller =>"courses" %>
