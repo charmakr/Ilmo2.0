@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20091210163034) do
     t.time     "begins_at"
     t.time     "ends_at"
     t.integer  "course_instance_id"
+    t.integer  "max_registrations",  :default => 20
     t.datetime "created_at"
     t.datetime "updated_at"
   end

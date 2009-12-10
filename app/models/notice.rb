@@ -6,7 +6,8 @@ class Notice < ActiveRecord::Base
   
   def check_user
     if (self.user.account_type!="Admin")
-      errors.add_to_base("Admin required")
+      errors.add("Admin required")
+      return false
     end  
   end
 end

@@ -6,6 +6,7 @@ class CreateExerciseGroups < ActiveRecord::Migration
       t.time :begins_at
       t.time :ends_at
       t.integer :course_instance_id
+      t.integer :max_registrations, :default=>20
       t.timestamps
     end
   end
