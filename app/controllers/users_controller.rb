@@ -3,11 +3,13 @@ class UsersController < ApplicationController
   
   
   def index
-    @u = User.find_by_id(session[:user])
+    @u = User.find(:all)
   end
   
   def show 
-    @u = User.find_by_id(session[:user]) 
+    if params[:id]
+    @u = User.find_by_id(params[:id]) and return
+    end
     redirect_to :index
   end
   
