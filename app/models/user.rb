@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   
   has_many :registrations, :dependent => :destroy
   has_many :exercise_groups, :through => :registrations
+  has_many :notices, :dependent => :destroy
   
   validates_length_of :username, :in => 3..20
   validates_length_of :password, :in => 3..20

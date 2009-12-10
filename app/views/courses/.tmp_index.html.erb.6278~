@@ -1,9 +1,5 @@
 
-	<h2>Uutiset/Ilmoitukset</h2>
-	  <% @notices.each do |n| %>
-	 <%=n.message%> <br />Lisääjä:<%=n.user.username%><br /><%=n.created_at%>
-	<hr>
-	<% end %>
+
   <h2>Newsfeed</h2>
   <%=link_to "RSS Newsfeed", :action=>"index", :format=>"rss"%><br /><br />
   <% @newsfeed.each do |n| %>

@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   def index
+    @notices = Notice.find(:all)
     @newsfeed = Newsfeed.new_15
     @courses = Course.down
     respond_to do |format|
