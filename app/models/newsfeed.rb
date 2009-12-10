@@ -1,7 +1,20 @@
 class Newsfeed < ActiveRecord::Base
+  has_many :newsfeed_likes, :dependent => :destroy
+  has_many :users, :through => :newsfeed_likes
+  
   default_scope :order => 'created_at DESC'
   
   named_scope :new_15, :limit =>15
+  
+  def like(user)
+    if self.users.find_by_id(user.id)
+      return
+    end
+    self.users<<user
+  end
+  
+  
+  
   def self.user_registered(user)
     self.create :message => "Käyttäjä "+ user.username + " rekisteröityi järjestelmään"
   end

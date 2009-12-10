@@ -80,4 +80,16 @@ class UsersController < ApplicationController
     flash[:success]="Käyttäjätilisi on nyt poistettu"
     redirect_to :controller=>:sessions, :action=>:destroy
   end
+  
+  def like_newsfeed
+    if params[:id]
+      begin
+        Newsfeed.find_by_id(params[:id]).like(User.find_by_id(session[:user]))
+      rescue 
+        flash[:warning]="Ongelma"
+        redirect_to "/"  and return
+      end
+    end
+    redirect_to "/" 
+  end
 end

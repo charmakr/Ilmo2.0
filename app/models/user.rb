@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   
   has_many :registrations, :dependent => :destroy
   has_many :exercise_groups, :through => :registrations
+  has_many :newsfeed_likes, :dependent => :destroy
+  has_many :newsfeeds, :through => :newsfeed_likes
   has_many :notices, :dependent => :destroy
   
   validates_length_of :username, :in => 3..20

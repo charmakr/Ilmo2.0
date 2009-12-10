@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091210163034) do
+ActiveRecord::Schema.define(:version => 20091210183833) do
 
   create_table "course_instances", :force => true do |t|
     t.string   "name"
@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(:version => 20091210163034) do
     t.time     "ends_at"
     t.integer  "course_instance_id"
     t.integer  "max_registrations",  :default => 20
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "newsfeed_likes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "newsfeed_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
