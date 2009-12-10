@@ -27,7 +27,6 @@
 				<%=link_to "Registrations", admin_registrations_url%>
 				<%=link_to "Notices", admin_notices_url%>
 				<%=link_to "Newsfeeds", admin_newsfeeds_url%>
-				<%=link_to "Newsfeeds_likes", admin_newsfeed_likes_url%>
 				
                 <% if flash[:warning] %>
                 <div id="varoitus">

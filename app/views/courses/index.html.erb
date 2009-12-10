@@ -8,9 +8,10 @@
   <%=link_to "RSS Newsfeed", :action=>"index", :format=>"rss"%><br /><br />
   <% @newsfeed.each do |n| %>
 	<%=n.message%> <br ><%=n.created_at.strftime("%c")%>
-	Likes:<% n.users.each do |u| %>
+	<% if n.users.size>0%>Likes:<% n.users.each do |u| %>
 	<%=u.username%>, 
-<% end %>
+	<%end%>
+	<% end %>
 	<%= link_to "Like", :action => "like_newsfeed", :controller =>"users", :post=>true, :id=>n.id %><br />
 	<br />	
 <% end %>

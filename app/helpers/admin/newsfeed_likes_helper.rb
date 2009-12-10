@@ -1,0 +1,2 @@
+module Admin::NewsfeedLikesHelper
+end

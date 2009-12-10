@@ -42123,3 +42123,2146 @@ Rendering courses/index
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 118ms (View: 94, DB: 11) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 21:11:30) [GET]
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 76ms (View: 56, DB: 6) | 200 OK [http://127.0.0.1/]
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-10 21:11:55) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "courses" [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT "courses".* FROM "courses" ORDER BY courses."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCourseInstance Load (2.0ms)[0m   [0;1mSELECT "course_instances".* FROM "course_instances" WHERE ("course_instances".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+  [4;35;1mExam Load (0.0ms)[0m   [0mSELECT "exams".* FROM "exams" WHERE ("exams".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (24.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (20.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (10.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (179.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 267ms (View: 225, DB: 3) | 200 OK [http://127.0.0.1/admin/courses]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-10 21:11:58) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" IN (1,5)) [0m
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT "newsfeed_likes".* FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" IN (6,11,8,13,10,5)) [0m
+  [4;36;1mNotice Load (1.0ms)[0m   [0;1mSELECT "notices".* FROM "notices" WHERE ("notices".user_id = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (50.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (74.0ms)
+Rendered _list (141.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 200ms (View: 182, DB: 3) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::UsersController#nested (for 127.0.0.1 at 2009-12-10 21:12:00) [GET]
+  Parameters: {"associations"=>"newsfeed_likes", "adapter"=>"_list_inline_adapter", "id"=>"1"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered _nested (23.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (8.0ms)
+Completed in 53ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/admin/users/nested/1?_method=get&associations=newsfeed_likes&adapter=_list_inline_adapter]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-10 21:14:13) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-10 21:14:17) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 19ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-10 21:14:58) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Login", "authenticity_token"=>"lFzLKuWdMRhmBowcr5zam4l7vkAH0LEzCeRY85o/kuQ="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 91ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 21:14:58) [GET]
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 359ms (View: 331, DB: 7) | 200 OK [http://127.0.0.1/]
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-10 21:15:04) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "courses" [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT "courses".* FROM "courses" ORDER BY courses."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCourseInstance Load (2.0ms)[0m   [0;1mSELECT "course_instances".* FROM "course_instances" WHERE ("course_instances".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+  [4;35;1mExam Load (0.0ms)[0m   [0mSELECT "exams".* FROM "exams" WHERE ("exams".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (25.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (21.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (133.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 267ms (View: 226, DB: 4) | 200 OK [http://127.0.0.1/admin/courses]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-10 21:15:08) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" IN (1,5)) [0m
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT "newsfeed_likes".* FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" IN (6,11,8,13,10,5)) [0m
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT "notices".* FROM "notices" WHERE ("notices".user_id = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (102.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (24.0ms)
+Rendered _list (143.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 201ms (View: 183, DB: 3) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::UsersController#nested (for 127.0.0.1 at 2009-12-10 21:15:16) [GET]
+  Parameters: {"associations"=>"newsfeed_likes", "adapter"=>"_list_inline_adapter", "id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `render_component' for #<ActionView::Base:0x5a0e768>) on line #39 of vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:
+36:           :constraints => @constraints,
+37:           :conditions => association.options[:conditions],
+38:           :label => h(@label),
+39:           :params => {:nested => true, :parent_column => column_name, :parent_model => association.active_record}
+40:         )
+41:       end
+42:     end
+
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:39
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (105.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::UsersController#nested (for 127.0.0.1 at 2009-12-10 21:15:20) [GET]
+  Parameters: {"associations"=>"registrations", "adapter"=>"_list_inline_adapter", "id"=>"1"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `render_component' for #<ActionView::Base:0x5b39278>) on line #39 of vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:
+36:           :constraints => @constraints,
+37:           :conditions => association.options[:conditions],
+38:           :label => h(@label),
+39:           :params => {:nested => true, :parent_column => column_name, :parent_model => association.active_record}
+40:         )
+41:       end
+42:     end
+
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:39
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::UsersController#show (for 127.0.0.1 at 2009-12-10 21:15:26) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) LIMIT 4[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+  [4;35;1mNewsfeedLike Load (1.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) LIMIT 4[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) [0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) ORDER BY created_at DESC LIMIT 4[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "notices" WHERE ("notices".user_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".user_id = 1) LIMIT 4[0m
+Rendered _show_columns (20.0ms)
+Rendered _show (28.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (6.0ms)
+Completed in 57ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/admin/users/1?_method=get&adapter=_list_inline_adapter]
+
+
+Processing Admin::NewsfeedsController#index (for 127.0.0.1 at 2009-12-10 21:15:33) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeeds" [0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT "newsfeeds".* FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15 OFFSET 0[0m
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT "newsfeed_likes".* FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id IN (13,12,11,10,8,9,5,6,7,2,3,4,1)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (20.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (63.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (185.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 239ms (View: 224, DB: 3) | 200 OK [http://127.0.0.1/admin/newsfeeds]
+
+
+Processing Admin::NewsfeedsController#nested (for 127.0.0.1 at 2009-12-10 21:15:35) [GET]
+  Parameters: {"associations"=>"newsfeed_likes", "adapter"=>"_list_inline_adapter", "id"=>"13"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 13) ORDER BY created_at DESC[0m
+
+ActionView::TemplateError (undefined method `render_component' for #<ActionView::Base:0x58ff354>) on line #39 of vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:
+36:           :constraints => @constraints,
+37:           :conditions => association.options[:conditions],
+38:           :label => h(@label),
+39:           :params => {:nested => true, :parent_column => column_name, :parent_model => association.active_record}
+40:         )
+41:       end
+42:     end
+
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:39
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (103.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::NewsfeedsController#nested (for 127.0.0.1 at 2009-12-10 21:15:51) [GET]
+  Parameters: {"associations"=>"newsfeed_likes", "adapter"=>"_list_inline_adapter", "id"=>"11"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 11) ORDER BY created_at DESC[0m
+
+ActionView::TemplateError (undefined method `render_component' for #<ActionView::Base:0x5b34b88>) on line #39 of vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:
+36:           :constraints => @constraints,
+37:           :conditions => association.options[:conditions],
+38:           :label => h(@label),
+39:           :params => {:nested => true, :parent_column => column_name, :parent_model => association.active_record}
+40:         )
+41:       end
+42:     end
+
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:39
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 21:17:14) [GET]
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 123ms (View: 103, DB: 7) | 200 OK [http://127.0.0.1/]
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-10 21:17:16) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "courses" [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT "courses".* FROM "courses" ORDER BY courses."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCourseInstance Load (2.0ms)[0m   [0;1mSELECT "course_instances".* FROM "course_instances" WHERE ("course_instances".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+  [4;35;1mExam Load (1.0ms)[0m   [0mSELECT "exams".* FROM "exams" WHERE ("exams".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (24.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (130.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 247ms (View: 224, DB: 5) | 200 OK [http://127.0.0.1/admin/courses]
+
+
+Processing Admin::NewsfeedLikesController#index (for 127.0.0.1 at 2009-12-10 21:17:18) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeed_likes" [0m
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT "newsfeed_likes".* FROM "newsfeed_likes" ORDER BY newsfeed_likes."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" IN (6,11,8,13,10,5)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (65.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (139.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 187ms (View: 178, DB: 2) | 200 OK [http://127.0.0.1/admin/newsfeed_likes]
+
+
+Processing Admin::NewsfeedsController#edit (for 127.0.0.1 at 2009-12-10 21:17:20) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"13", "parent_controller"=>"admin/newsfeed_likes"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 13) ORDER BY created_at DESC[0m
+Rendered _form_attribute (2.0ms)
+  [4;35;1mNewsfeedLike Load (1.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 13) [0m
+Rendered _horizontal_subform_header (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (8.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (3.0ms)
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_association_footer (7.0ms)
+Rendered _horizontal_subform (78.0ms)
+Rendered _form_association (86.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+Rendered _horizontal_subform_header (129.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) [0m
+  [4;36;1mExerciseGroup Load (4.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" [0m
+Rendered _form_attribute (24.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mNewsfeedLike Load (1.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (5.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) ORDER BY created_at DESC[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendered _form_attribute (11.0ms)
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT * FROM "notices" WHERE ("notices".user_id = 1) [0m
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (3.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (65.0ms)
+Rendered _form_association_footer (0.0ms)
+Rendered _horizontal_subform (196.0ms)
+Rendered _form_association (200.0ms)
+Rendered _form (337.0ms)
+Rendered _update_form (352.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 436ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/admin/newsfeeds/13/edit?_method=get&parent_controller=admin%2Fnewsfeed_likes&adapter=_list_inline_adapter]
+
+
+Processing Admin::NewsfeedsController#index (for 127.0.0.1 at 2009-12-10 21:17:23) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeeds" [0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT "newsfeeds".* FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15 OFFSET 0[0m
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT "newsfeed_likes".* FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id IN (13,12,11,10,8,9,5,6,7,2,3,4,1)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (20.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (14.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list (182.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 235ms (View: 220, DB: 4) | 200 OK [http://127.0.0.1/admin/newsfeeds]
+
+
+Processing Admin::NewsfeedsController#nested (for 127.0.0.1 at 2009-12-10 21:17:25) [GET]
+  Parameters: {"associations"=>"newsfeed_likes", "adapter"=>"_list_inline_adapter", "id"=>"13"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 13) ORDER BY created_at DESC[0m
+
+ActionView::TemplateError (undefined method `render_component' for #<ActionView::Base:0x58e83ac>) on line #39 of vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:
+36:           :constraints => @constraints,
+37:           :conditions => association.options[:conditions],
+38:           :label => h(@label),
+39:           :params => {:nested => true, :parent_column => column_name, :parent_model => association.active_record}
+40:         )
+41:       end
+42:     end
+
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:39
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (102.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::RegistrationsController#index (for 127.0.0.1 at 2009-12-10 21:17:28) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "registrations" [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT "registrations".* FROM "registrations" ORDER BY registrations."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" IN (1,5)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (17.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (19.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (61.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 160ms (View: 152, DB: 2) | 200 OK [http://127.0.0.1/admin/registrations]
+
+
+Processing Admin::ExerciseGroupsController#edit (for 127.0.0.1 at 2009-12-10 21:17:30) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"1", "parent_controller"=>"admin/registrations"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+Rendered _horizontal_subform_header (2.0ms)
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (17.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "course_instances" [0m
+  [4;35;1mCourseInstance Load (2.0ms)[0m   [0mSELECT * FROM "course_instances" [0m
+Rendered _form_association_footer (12.0ms)
+Rendered _horizontal_subform (46.0ms)
+Rendered _form_association (100.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".exercise_group_id = 1) [0m
+Rendered _horizontal_subform_header (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (5.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (4.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "registrations" WHERE ((exercise_group_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (13.0ms)
+Rendered _form_association (16.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 1)) [0m
+Rendered _horizontal_subform_header (90.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (0.0ms)
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) [0m
+  [4;35;1mExerciseGroup Load (4.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+Rendered _form_attribute (23.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (5.0ms)
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) ORDER BY created_at DESC[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendered _form_attribute (11.0ms)
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" WHERE ("notices".user_id = 1) [0m
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT * FROM "notices" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (3.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (65.0ms)
+Rendered _form_association_footer (1.0ms)
+Rendered _horizontal_subform (157.0ms)
+Rendered _form_association (160.0ms)
+Rendered _form (341.0ms)
+Rendered _update_form (355.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 387ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/admin/exercise_groups/1/edit?_method=get&parent_controller=admin%2Fregistrations&adapter=_list_inline_adapter]
+
+
+Processing Admin::NewsfeedLikesController#index (for 127.0.0.1 at 2009-12-10 21:17:32) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeed_likes" [0m
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT "newsfeed_likes".* FROM "newsfeed_likes" ORDER BY newsfeed_likes."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" IN (6,11,8,13,10,5)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (17.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (16.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (135.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 180ms (View: 173, DB: 2) | 200 OK [http://127.0.0.1/admin/newsfeed_likes]
+
+
+Processing Admin::NewsfeedsController#edit (for 127.0.0.1 at 2009-12-10 21:17:34) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"13", "parent_controller"=>"admin/newsfeed_likes"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 13) ORDER BY created_at DESC[0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 13) [0m
+Rendered _horizontal_subform_header (2.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (51.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (4.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_association_footer (5.0ms)
+Rendered _horizontal_subform (77.0ms)
+Rendered _form_association (85.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+Rendered _horizontal_subform_header (129.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (0.0ms)
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) [0m
+  [4;35;1mExerciseGroup Load (4.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+Rendered _form_attribute (23.0ms)
+Rendered _form_attribute (0.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+  [4;35;1mNewsfeedLike Load (1.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (4.0ms)
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) ORDER BY created_at DESC[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendered _form_attribute (11.0ms)
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" WHERE ("notices".user_id = 1) [0m
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT * FROM "notices" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+  [4;35;1mRegistration Load (1.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (3.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (65.0ms)
+Rendered _form_association_footer (1.0ms)
+Rendered _horizontal_subform (197.0ms)
+Rendered _form_association (201.0ms)
+Rendered _form (337.0ms)
+Rendered _update_form (404.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 436ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/admin/newsfeeds/13/edit?_method=get&parent_controller=admin%2Fnewsfeed_likes&adapter=_list_inline_adapter]
+
+
+Processing Admin::NewsfeedLikesController#index (for 127.0.0.1 at 2009-12-10 21:17:49) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeed_likes" [0m
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT "newsfeed_likes".* FROM "newsfeed_likes" ORDER BY newsfeed_likes."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" IN (6,11,8,13,10,5)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (17.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (16.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (135.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 181ms (View: 173, DB: 3) | 200 OK [http://127.0.0.1/admin/newsfeed_likes]
+
+
+Processing Admin::UsersController#edit (for 127.0.0.1 at 2009-12-10 21:17:52) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"1", "parent_controller"=>"admin/newsfeed_likes"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) [0m
+Rendered _horizontal_subform_header (62.0ms)
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;36;1mCourseInstance Load (2.0ms)[0m   [0;1mSELECT * FROM "course_instances" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mRegistration Load (1.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations".exercise_group_id = 1) [0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ((exercise_group_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 1)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (37.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations".exercise_group_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ((exercise_group_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 5)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (32.0ms)
+Rendered _form_association_footer (5.0ms)
+Rendered _horizontal_subform (152.0ms)
+Rendered _form_association (161.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mNewsfeedLike Load (1.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+Rendered _horizontal_subform_header (1.0ms)
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 13) ORDER BY created_at DESC[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (5.0ms)
+Rendered _horizontal_subform_record (7.0ms)
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 11) ORDER BY created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 8) ORDER BY created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 10) ORDER BY created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (5.0ms)
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 5) ORDER BY created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 6) ORDER BY created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (58.0ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (3.0ms)
+Rendered _horizontal_subform (104.0ms)
+Rendered _form_association (107.0ms)
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) ORDER BY created_at DESC[0m
+Rendered _horizontal_subform_header (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mNewsfeedLike Load (1.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 5) [0m
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mNewsfeedLike Load (1.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+Rendered _form_attribute (0.0ms)
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (1.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (9.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (9.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (9.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (9.0ms)
+Rendered _form_association_footer (1.0ms)
+Rendered _horizontal_subform (62.0ms)
+Rendered _form_association (65.0ms)
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT * FROM "notices" WHERE ("notices".user_id = 1) [0m
+Rendered _horizontal_subform_header (0.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (3.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "notices" WHERE ((user_id IS NULL)) [0m
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT * FROM "notices" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (5.0ms)
+Rendered _horizontal_subform (9.0ms)
+Rendered _form_association (12.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+Rendered _horizontal_subform_header (1.0ms)
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+  [4;36;1mExerciseGroup Load (4.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (8.0ms)
+Rendered _horizontal_subform_record (11.0ms)
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (5.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (3.0ms)
+Rendered _horizontal_subform (28.0ms)
+Rendered _form_association (31.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (0.0ms)
+Rendered _form (485.0ms)
+Rendered _update_form (552.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 581ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/admin/users/1/edit?_method=get&parent_controller=admin%2Fnewsfeed_likes&adapter=_list_inline_adapter]
+
+
+Processing Admin::NewsfeedLikesController#index (for 127.0.0.1 at 2009-12-10 21:18:28) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeed_likes" [0m
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT "newsfeed_likes".* FROM "newsfeed_likes" ORDER BY newsfeed_likes."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" IN (6,11,8,13,10,5)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (16.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (16.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (135.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 181ms (View: 173, DB: 2) | 200 OK [http://127.0.0.1/admin/newsfeed_likes]
+
+
+Processing Admin::UsersController#edit (for 127.0.0.1 at 2009-12-10 21:18:30) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"1", "parent_controller"=>"admin/newsfeed_likes"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) [0m
+Rendered _horizontal_subform_header (62.0ms)
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourseInstance Load (2.0ms)[0m   [0mSELECT * FROM "course_instances" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".exercise_group_id = 1) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ((exercise_group_id IS NULL)) [0m
+Rendered _form_attribute (3.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 1)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (37.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "course_instances" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".exercise_group_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ((exercise_group_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 5)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (31.0ms)
+Rendered _form_association_footer (4.0ms)
+Rendered _horizontal_subform (150.0ms)
+Rendered _form_association (159.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+Rendered _horizontal_subform_header (1.0ms)
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 13) ORDER BY created_at DESC[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (5.0ms)
+Rendered _horizontal_subform_record (8.0ms)
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 11) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 8) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 10) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 5) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (56.0ms)
+Rendered _horizontal_subform_record (59.0ms)
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 6) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (5.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (5.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (104.0ms)
+Rendered _form_association (108.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) ORDER BY created_at DESC[0m
+Rendered _horizontal_subform_header (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 5) [0m
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (9.0ms)
+Rendered _form_attribute (0.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+Rendered _form_attribute (0.0ms)
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (1.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (9.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (9.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+Rendered _form_association_footer (1.0ms)
+Rendered _horizontal_subform (62.0ms)
+Rendered _form_association (65.0ms)
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" WHERE ("notices".user_id = 1) [0m
+Rendered _horizontal_subform_header (0.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (3.0ms)
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "notices" WHERE ((user_id IS NULL)) [0m
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (5.0ms)
+Rendered _horizontal_subform (9.0ms)
+Rendered _form_association (12.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mRegistration Load (1.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+Rendered _horizontal_subform_header (1.0ms)
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+  [4;35;1mExerciseGroup Load (4.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (9.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (5.0ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (27.0ms)
+Rendered _form_association (31.0ms)
+Rendered _form_attribute (0.0ms)
+Rendered _form_attribute (0.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form (483.0ms)
+Rendered _update_form (549.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (6.0ms)
+Completed in 578ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/admin/users/1/edit?_method=get&parent_controller=admin%2Fnewsfeed_likes&adapter=_list_inline_adapter]
+
+
+Processing Admin::NewsfeedsController#index (for 127.0.0.1 at 2009-12-10 21:18:32) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeeds" [0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT "newsfeeds".* FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15 OFFSET 0[0m
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT "newsfeed_likes".* FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id IN (13,12,11,10,8,9,5,6,7,2,3,4,1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (19.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (15.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (184.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 236ms (View: 222, DB: 2) | 200 OK [http://127.0.0.1/admin/newsfeeds]
+
+
+Processing Admin::NewsfeedsController#nested (for 127.0.0.1 at 2009-12-10 21:18:34) [GET]
+  Parameters: {"associations"=>"newsfeed_likes", "adapter"=>"_list_inline_adapter", "id"=>"13"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 13) ORDER BY created_at DESC[0m
+
+ActionView::TemplateError (undefined method `render_component' for #<ActionView::Base:0x58f3bd0>) on line #39 of vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:
+36:           :constraints => @constraints,
+37:           :conditions => association.options[:conditions],
+38:           :label => h(@label),
+39:           :params => {:nested => true, :parent_column => column_name, :parent_model => association.active_record}
+40:         )
+41:       end
+42:     end
+
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:39
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (103.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::NewsfeedsController#edit (for 127.0.0.1 at 2009-12-10 21:18:38) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"13"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 13) ORDER BY created_at DESC[0m
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 13) [0m
+Rendered _horizontal_subform_header (2.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (8.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (3.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_association_footer (6.0ms)
+Rendered _horizontal_subform (35.0ms)
+Rendered _form_association (43.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+Rendered _horizontal_subform_header (130.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) [0m
+  [4;35;1mExerciseGroup Load (4.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+Rendered _form_attribute (70.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (4.0ms)
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) ORDER BY created_at DESC[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+Rendered _form_attribute (11.0ms)
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" WHERE ("notices".user_id = 1) [0m
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT * FROM "notices" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (113.0ms)
+Rendered _form_association_footer (1.0ms)
+Rendered _horizontal_subform (244.0ms)
+Rendered _form_association (247.0ms)
+Rendered _form (391.0ms)
+Rendered _update_form (405.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 438ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/admin/newsfeeds/13/edit?_method=get&adapter=_list_inline_adapter]
+
+
+Processing Admin::NoticesController#index (for 127.0.0.1 at 2009-12-10 21:18:42) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "notices" [0m
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT "notices".* FROM "notices" ORDER BY notices."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (17.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (17.0ms)
+Rendered _list (51.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 153ms (View: 148, DB: 2) | 200 OK [http://127.0.0.1/admin/notices]
+
+
+Processing Admin::RegistrationsController#index (for 127.0.0.1 at 2009-12-10 21:18:44) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "registrations" [0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT "registrations".* FROM "registrations" ORDER BY registrations."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" IN (1,5)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (17.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (16.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list (104.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 150ms (View: 143, DB: 0) | 200 OK [http://127.0.0.1/admin/registrations]
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-10 21:18:45) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" ORDER BY users."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT "registrations".* FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" IN (1,5)) [0m
+  [4;35;1mNewsfeedLike Load (1.0ms)[0m   [0mSELECT "newsfeed_likes".* FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" IN (6,11,8,13,10,5)) [0m
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT "notices".* FROM "notices" WHERE ("notices".user_id = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (50.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (21.0ms)
+Rendered _list (89.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 198ms (View: 180, DB: 4) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::UsersController#nested (for 127.0.0.1 at 2009-12-10 21:18:47) [GET]
+  Parameters: {"associations"=>"registrations", "adapter"=>"_list_inline_adapter", "id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `render_component' for #<ActionView::Base:0x5c130b8>) on line #39 of vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:
+36:           :constraints => @constraints,
+37:           :conditions => association.options[:conditions],
+38:           :label => h(@label),
+39:           :params => {:nested => true, :parent_column => column_name, :parent_model => association.active_record}
+40:         )
+41:       end
+42:     end
+
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:39
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::UsersController#nested (for 127.0.0.1 at 2009-12-10 21:18:48) [GET]
+  Parameters: {"associations"=>"newsfeed_likes", "adapter"=>"_list_inline_adapter", "id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `render_component' for #<ActionView::Base:0x5cb2604>) on line #39 of vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:
+36:           :constraints => @constraints,
+37:           :conditions => association.options[:conditions],
+38:           :label => h(@label),
+39:           :params => {:nested => true, :parent_column => column_name, :parent_model => association.active_record}
+40:         )
+41:       end
+42:     end
+
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:39
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (100.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::UsersController#nested (for 127.0.0.1 at 2009-12-10 21:18:55) [GET]
+  Parameters: {"associations"=>"registrations", "adapter"=>"_list_inline_adapter", "id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `render_component' for #<ActionView::Base:0x5a52710>) on line #39 of vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:
+36:           :constraints => @constraints,
+37:           :conditions => association.options[:conditions],
+38:           :label => h(@label),
+39:           :params => {:nested => true, :parent_column => column_name, :parent_model => association.active_record}
+40:         )
+41:       end
+42:     end
+
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:39
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_nested.html.erb:11
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (106.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::UsersController#edit (for 127.0.0.1 at 2009-12-10 21:18:58) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"1"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) [0m
+Rendered _horizontal_subform_header (16.0ms)
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (6.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".exercise_group_id = 1) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ((exercise_group_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 1)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (38.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "course_instances" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _form_attribute (5.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".exercise_group_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ((exercise_group_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 5)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (31.0ms)
+Rendered _form_association_footer (5.0ms)
+Rendered _horizontal_subform (152.0ms)
+Rendered _form_association (161.0ms)
+Rendered _form_attribute (0.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+Rendered _horizontal_subform_header (1.0ms)
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 13) ORDER BY created_at DESC[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (5.0ms)
+Rendered _horizontal_subform_record (8.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 11) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 8) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 10) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (7.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 5) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (7.0ms)
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 6) ORDER BY created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (4.0ms)
+Rendered _horizontal_subform_record (5.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (3.0ms)
+Rendered _horizontal_subform (51.0ms)
+Rendered _form_association (55.0ms)
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) ORDER BY created_at DESC[0m
+Rendered _horizontal_subform_header (2.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 5) [0m
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (66.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (2.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (9.0ms)
+Rendered _form_attribute (0.0ms)
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_attribute (1.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendered _form_attribute (2.0ms)
+Rendered _horizontal_subform_record (9.0ms)
+Rendered _form_association_footer (0.0ms)
+Rendered _horizontal_subform (119.0ms)
+Rendered _form_association (122.0ms)
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" WHERE ("notices".user_id = 1) [0m
+Rendered _horizontal_subform_header (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (3.0ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "notices" WHERE ((user_id IS NULL)) [0m
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (5.0ms)
+Rendered _horizontal_subform (10.0ms)
+Rendered _form_association (13.0ms)
+Rendered _form_attribute (1.0ms)
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+Rendered _horizontal_subform_header (1.0ms)
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+  [4;35;1mExerciseGroup Load (4.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (9.0ms)
+Rendered _horizontal_subform_record (12.0ms)
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (6.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (5.0ms)
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (3.0ms)
+Rendered _horizontal_subform (28.0ms)
+Rendered _form_association (31.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (0.0ms)
+Rendered _form (543.0ms)
+Rendered _update_form (556.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 586ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/admin/users/1/edit?_method=get&adapter=_list_inline_adapter]
+
+
+Processing Admin::UsersController#row (for 127.0.0.1 at 2009-12-10 21:19:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 1)) LIMIT 4[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) [0m
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".user_id = 1) LIMIT 4[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) [0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 1)) ORDER BY created_at DESC LIMIT 4[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "notices" WHERE ("notices".user_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "registrations" WHERE ("registrations".user_id = 1) [0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM "registrations" WHERE ("registrations".user_id = 1) LIMIT 4[0m
+Rendered _list_actions (4.0ms)
+Rendered _list_record (35.0ms)
+Completed in 52ms (View: 47, DB: 3) | 200 OK [http://127.0.0.1/admin/users/row/1?_method=get]
+
+
+Processing Admin::UsersController#new (for 127.0.0.1 at 2009-12-10 21:19:13) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered _form_attribute (3.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_header (62.0ms)
+Rendered _form_association_footer (5.0ms)
+Rendered _horizontal_subform (77.0ms)
+Rendered _form_association (85.0ms)
+Rendered _form_attribute (0.0ms)
+Rendered _horizontal_subform_header (1.0ms)
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (6.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (18.0ms)
+Rendered _form_association (20.0ms)
+Rendered _horizontal_subform_header (1.0ms)
+Rendered _form_association_footer (1.0ms)
+Rendered _horizontal_subform (2.0ms)
+Rendered _form_association (5.0ms)
+Rendered _horizontal_subform_header (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (3.0ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "notices" WHERE ((user_id IS NULL)) [0m
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (4.0ms)
+Rendered _horizontal_subform (9.0ms)
+Rendered _form_association (12.0ms)
+Rendered _form_attribute (0.0ms)
+Rendered _horizontal_subform_header (1.0ms)
+  [4;36;1mExerciseGroup Load (4.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (8.0ms)
+Rendered _horizontal_subform_record (11.0ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (14.0ms)
+Rendered _form_association (17.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form (248.0ms)
+Rendered _create_form (311.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (56.0ms)
+Completed in 388ms (View: 60, DB: 0) | 200 OK [http://127.0.0.1/admin/users/new?_method=get&adapter=_list_inline_adapter]
+
+
+Processing Admin::UsersController#create (for 127.0.0.1 at 2009-12-10 21:19:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"lFzLKuWdMRhmBowcr5zam4l7vkAH0LEzCeRY85o/kuQ=", "associated_id"=>"", "record"=>{"newsfeed_likes"=>{"1260472754093"=>{"newsfeed"=>{"id"=>""}}}, "username"=>"sala", "account_type"=>"User", "student_number"=>"asassa", "registrations"=>{"1260472754147"=>{"exercise_group"=>{"id"=>""}}}, "first_name"=>"", "surname"=>"asas", "password"=>"sala", "notices"=>{"1260472754132"=>{"message"=>""}}, "email"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'sala') LIMIT 1[0m
+Rendering on_create
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_header (65.0ms)
+Rendered _form_association_footer (4.0ms)
+Rendered _horizontal_subform (79.0ms)
+Rendered _form_association (87.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_header (1.0ms)
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC[0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (5.0ms)
+Rendered _horizontal_subform_record (10.0ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (18.0ms)
+Rendered _form_association (20.0ms)
+Rendered _horizontal_subform_header (1.0ms)
+Rendered _form_association_footer (0.0ms)
+Rendered _horizontal_subform (2.0ms)
+Rendered _form_association (4.0ms)
+Rendered _horizontal_subform_header (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_record (4.0ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "notices" WHERE ((user_id IS NULL)) [0m
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT * FROM "notices" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (4.0ms)
+Rendered _horizontal_subform (9.0ms)
+Rendered _form_association (12.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _horizontal_subform_header (1.0ms)
+  [4;36;1mExerciseGroup Load (4.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (8.0ms)
+Rendered _horizontal_subform_record (11.0ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "registrations" WHERE ((user_id IS NULL)) [0m
+Rendered _form_association_footer (2.0ms)
+Rendered _horizontal_subform (14.0ms)
+Rendered _form_association (17.0ms)
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form (311.0ms)
+Rendered _create_form (329.0ms)
+Rendered _messages (1.0ms)
+Completed in 365ms (View: 350, DB: 7) | 200 OK [http://127.0.0.1/admin/users]
+
+
+Processing Admin::UsersController#create (for 127.0.0.1 at 2009-12-10 21:19:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"lFzLKuWdMRhmBowcr5zam4l7vkAH0LEzCeRY85o/kuQ=", "associated_id"=>"", "record"=>{"newsfeed_likes"=>{"1260472781945"=>{"newsfeed"=>{"id"=>""}}}, "username"=>"sala", "account_type"=>"User", "student_number"=>"123", "registrations"=>{"1260472782000"=>{"exercise_group"=>{"id"=>""}}}, "first_name"=>"", "surname"=>"asas", "password"=>"sala", "notices"=>{"1260472781984"=>{"message"=>""}}, "email"=>""}}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'sala') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'sala') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 19:19:47', 'sala', 'User', '123', NULL, 'sala', 'asas', NULL, '2009-12-10 19:19:47')[0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä sala rekisteröityi järjestelmään', '2009-12-10 19:19:47', '2009-12-10 19:19:47')[0m
+Rendering on_create
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 2)) [0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT "exercise_groups".* FROM "exercise_groups" INNER JOIN "registrations" ON "exercise_groups".id = "registrations".exercise_group_id WHERE (("registrations".user_id = 2)) LIMIT 4[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 2)) [0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT "newsfeeds".* FROM "newsfeeds" INNER JOIN "newsfeed_likes" ON "newsfeeds".id = "newsfeed_likes".newsfeed_id WHERE (("newsfeed_likes".user_id = 2)) ORDER BY created_at DESC LIMIT 4[0m
+Rendered _list_actions (6.0ms)
+Rendered _list_record (35.0ms)
+Rendered _messages (1.0ms)
+Completed in 158ms (View: 115, DB: 4) | 200 OK [http://127.0.0.1/admin/users?associated_id=]
+
+
+Processing Admin::NewsfeedLikesController#index (for 127.0.0.1 at 2009-12-10 21:19:55) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeed_likes" [0m
+  [4;35;1mNewsfeedLike Load (1.0ms)[0m   [0mSELECT "newsfeed_likes".* FROM "newsfeed_likes" ORDER BY newsfeed_likes."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" IN (6,11,8,13,10,5)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (17.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (16.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (140.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 187ms (View: 179, DB: 3) | 200 OK [http://127.0.0.1/admin/newsfeed_likes]
+
+
+Processing Admin::NewsfeedsController#index (for 127.0.0.1 at 2009-12-10 21:19:57) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeeds" [0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT "newsfeeds".* FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15 OFFSET 0[0m
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT "newsfeed_likes".* FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id IN (14,13,12,11,10,8,9,5,6,7,2,3,4,1)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (20.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (15.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (6.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (58.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (195.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 301ms (View: 232, DB: 2) | 200 OK [http://127.0.0.1/admin/newsfeeds]
+
+
+Processing Admin::NewsfeedsController#edit (for 127.0.0.1 at 2009-12-10 21:19:59) [GET]
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"12"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 12) ORDER BY created_at DESC[0m
+Rendered _form_attribute (2.0ms)
+  [4;35;1mNewsfeedLike Load (0.0ms)[0m   [0mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 12) [0m
+Rendered _horizontal_subform_header (2.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+ActiveScaffold: Setting html options directly in a hash is deprecated for :select form_ui. Set the html options hash under html_options key, such as config.columns[:column_name].options = {:html_options => {...}, ...}
+Rendered _form_attribute (3.0ms)
+Rendered _horizontal_subform_record (7.0ms)
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ((newsfeed_id IS NULL)) [0m
+Rendered _form_association_footer (5.0ms)
+Rendered _horizontal_subform (30.0ms)
+Rendered _form_association (38.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+Rendered _horizontal_subform_header (180.0ms)
+Rendered _form_association_footer (1.0ms)
+Rendered _horizontal_subform (181.0ms)
+Rendered _form_association (183.0ms)
+Rendered _form (326.0ms)
+Rendered _update_form (338.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 371ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/admin/newsfeeds/12/edit?_method=get&adapter=_list_inline_adapter]
+
+
+Processing Admin::NewsfeedsController#update (for 127.0.0.1 at 2009-12-10 21:20:06) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"lFzLKuWdMRhmBowcr5zam4l7vkAH0LEzCeRY85o/kuQ=", "id"=>"12", "record"=>{"message"=>"Käyttäjä late liittyi kurssin: Kurssi 1:Kevät 2010 harjoitusryhmään:<a href=\"courses\\1\\course_instances\\1\\exercise_groups\\1\">Ryhmä 1</a>", "newsfeed_likes"=>{"1260472799712"=>{"user"=>{"id"=>"1"}}}}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 12) ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 12) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'late' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mNewsfeedLike Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeed_likes" ("updated_at", "newsfeed_id", "user_id", "created_at") VALUES('2009-12-10 19:20:06', 12, 1, '2009-12-10 19:20:06')[0m
+Rendering on_update
+Rendered _messages (2.0ms)
+Completed in 158ms (View: 77, DB: 0) | 200 OK [http://127.0.0.1/admin/newsfeeds/12]
+
+
+Processing Admin::NewsfeedsController#row (for 127.0.0.1 at 2009-12-10 21:20:06) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = 12) ORDER BY created_at DESC[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 12) [0m
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id = 12) LIMIT 4[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) LIMIT 4[0m
+Rendered _list_actions (5.0ms)
+Rendered _list_record (20.0ms)
+Completed in 42ms (View: 36, DB: 1) | 200 OK [http://127.0.0.1/admin/newsfeeds/row/12?_method=get]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 21:20:09) [GET]
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 14)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 124ms (View: 102, DB: 9) | 200 OK [http://127.0.0.1/]
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-10 21:20:20) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "courses" [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT "courses".* FROM "courses" ORDER BY courses."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCourseInstance Load (2.0ms)[0m   [0;1mSELECT "course_instances".* FROM "course_instances" WHERE ("course_instances".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+  [4;35;1mExam Load (1.0ms)[0m   [0mSELECT "exams".* FROM "exams" WHERE ("exams".course_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (23.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (180.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 241ms (View: 218, DB: 5) | 200 OK [http://127.0.0.1/admin/courses]
+
+
+Processing Admin::NewsfeedsController#index (for 127.0.0.1 at 2009-12-10 21:20:26) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "newsfeeds" [0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT "newsfeeds".* FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15 OFFSET 0[0m
+  [4;36;1mNewsfeedLike Load (0.0ms)[0m   [0;1mSELECT "newsfeed_likes".* FROM "newsfeed_likes" WHERE ("newsfeed_likes".newsfeed_id IN (14,13,12,11,10,8,9,5,6,7,2,3,4,1)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (20.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (62.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (8.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list_actions (4.0ms)
+Rendered _list_record (7.0ms)
+Rendered _list (192.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 246ms (View: 230, DB: 2) | 200 OK [http://127.0.0.1/admin/newsfeeds]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 21:20:35) [GET]
+  [4;35;1mNotice Load (0.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 14)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 73ms (View: 52, DB: 6) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-10 21:20:53) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-10 21:20:58) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 19ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-10 21:21:02) [POST]
+  Parameters: {"user"=>{"username"=>"sala", "password"=>"sala"}, "commit"=>"Login", "authenticity_token"=>"UijXy/Zuys3UTNwkz7ytBV1bVANBxVXgQdjb+z8xt6A="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'sala' AND password = 'sala') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 13ms (DB: 1) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 21:21:02) [GET]
+  [4;36;1mNotice Load (2.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 14)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 142ms (View: 109, DB: 14) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#like_newsfeed (for 127.0.0.1 at 2009-12-10 21:21:05) [GET]
+  Parameters: {"post"=>"true", "id"=>"9"}
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = '9') ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE ("users"."id" = 2) AND (("newsfeed_likes".newsfeed_id = 9)) LIMIT 1[0m
+  [4;35;1mNewsfeedLike Create (1.0ms)[0m   [0mINSERT INTO "newsfeed_likes" ("updated_at", "newsfeed_id", "user_id", "created_at") VALUES('2009-12-10 19:21:05', 9, 2, '2009-12-10 19:21:05')[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 58ms (DB: 1) | 302 Found [http://127.0.0.1/users/like_newsfeed/9?post=true]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 21:21:05) [GET]
+  [4;36;1mNotice Load (1.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 14)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 76ms (View: 54, DB: 7) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#like_newsfeed (for 127.0.0.1 at 2009-12-10 21:21:08) [GET]
+  Parameters: {"post"=>"true", "id"=>"11"}
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = '11') ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE ("users"."id" = 2) AND (("newsfeed_likes".newsfeed_id = 11)) LIMIT 1[0m
+  [4;36;1mNewsfeedLike Create (1.0ms)[0m   [0;1mINSERT INTO "newsfeed_likes" ("updated_at", "newsfeed_id", "user_id", "created_at") VALUES('2009-12-10 19:21:08', 11, 2, '2009-12-10 19:21:08')[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 112ms (DB: 2) | 302 Found [http://127.0.0.1/users/like_newsfeed/11?post=true]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 21:21:08) [GET]
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 14)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 77ms (View: 51, DB: 12) | 200 OK [http://127.0.0.1/]
