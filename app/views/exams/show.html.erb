@@ -1,6 +1,7 @@
 <h2>Koe</h2>
 Kokeen nimi: <%= @exam.name%>
+<%= link_to "Osallistu", :action => "join", :controller =>"exams", :post=>true, :id=>@exam.id %><br />
 <h3>Kokeen osallistujat</h3>
 <% @u.each do |u| %>
-	<ul>u.username</ul>
+	<ul><%=u.username%></ul>
 <% end %>

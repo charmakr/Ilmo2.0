@@ -45686,3 +45686,143 @@ Rendering exams/show
   [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
 Completed in 41ms (View: 28, DB: 2) | 200 OK [http://127.0.0.1/courses/1/exams/1]
+
+
+Processing ExamsController#show (for 127.0.0.1 at 2009-12-10 23:57:12) [GET]
+  Parameters: {"id"=>"1", "course_id"=>"1"}
+  [4;35;1mExam Load (1.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exams/show
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE (("exam_registrations".exam_id = 1)) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Completed in 94ms (View: 78, DB: 4) | 200 OK [http://127.0.0.1/courses/1/exams/1]
+
+
+Processing ExamsController#join (for 127.0.0.1 at 2009-12-10 23:57:14) [GET]
+  Parameters: {"post"=>"true", "id"=>"1"}
+  [4;35;1mExam Load (0.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE ("users"."id" = 4) AND (("exam_registrations".exam_id = 1)) LIMIT 1[0m
+  [4;36;1mExamRegistration Create (1.0ms)[0m   [0;1mINSERT INTO "exam_registrations" ("updated_at", "user_id", "exam_id", "created_at") VALUES('2009-12-10 21:57:14', 4, 1, '2009-12-10 21:57:14')[0m
+  [4;35;1mExam Load (1.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/courses/1/exams/1
+Completed in 68ms (DB: 3) | 302 Found [http://127.0.0.1/exams/join/1?post=true]
+
+
+Processing ExamsController#show (for 127.0.0.1 at 2009-12-10 23:57:14) [GET]
+  Parameters: {"id"=>"1", "course_id"=>"1"}
+  [4;36;1mExam Load (0.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exams/show
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE (("exam_registrations".exam_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Completed in 41ms (View: 29, DB: 1) | 200 OK [http://127.0.0.1/courses/1/exams/1]
+
+
+Processing ExamsController#join (for 127.0.0.1 at 2009-12-10 23:57:19) [GET]
+  Parameters: {"post"=>"true", "id"=>"1"}
+  [4;36;1mExam Load (0.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE ("users"."id" = 4) AND (("exam_registrations".exam_id = 1)) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/courses/1/exams/1
+Completed in 30ms (DB: 1) | 302 Found [http://127.0.0.1/exams/join/1?post=true]
+
+
+Processing ExamsController#show (for 127.0.0.1 at 2009-12-10 23:57:19) [GET]
+  Parameters: {"id"=>"1", "course_id"=>"1"}
+  [4;36;1mExam Load (0.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exams/show
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE (("exam_registrations".exam_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Completed in 44ms (View: 29, DB: 2) | 200 OK [http://127.0.0.1/courses/1/exams/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 23:58:00) [GET]
+  [4;36;1mNotice Load (1.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 14)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Completed in 309ms (View: 244, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing ExamsController#show (for 127.0.0.1 at 2009-12-10 23:58:03) [GET]
+  Parameters: {"id"=>"1", "course_id"=>"1"}
+  [4;35;1mExam Load (0.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exams/show
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE (("exam_registrations".exam_id = 1)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Completed in 92ms (View: 80, DB: 0) | 200 OK [http://127.0.0.1/courses/1/exams/1]
+
+
+Processing ExamsController#join (for 127.0.0.1 at 2009-12-10 23:58:08) [GET]
+  Parameters: {"post"=>"true", "id"=>"1"}
+  [4;35;1mExam Load (0.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE ("users"."id" = 4) AND (("exam_registrations".exam_id = 1)) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/courses/1/exams/1
+Completed in 30ms (DB: 2) | 302 Found [http://127.0.0.1/exams/join/1?post=true]
+
+
+Processing ExamsController#show (for 127.0.0.1 at 2009-12-10 23:58:08) [GET]
+  Parameters: {"id"=>"1", "course_id"=>"1"}
+  [4;35;1mExam Load (0.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exams/show
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE (("exam_registrations".exam_id = 1)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Completed in 43ms (View: 29, DB: 1) | 200 OK [http://127.0.0.1/courses/1/exams/1]
+
+
+Processing ExamsController#join (for 127.0.0.1 at 2009-12-10 23:58:09) [GET]
+  Parameters: {"post"=>"true", "id"=>"1"}
+  [4;35;1mExam Load (2.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE ("users"."id" = 4) AND (("exam_registrations".exam_id = 1)) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/courses/1/exams/1
+Completed in 30ms (DB: 4) | 302 Found [http://127.0.0.1/exams/join/1?post=true]
+
+
+Processing ExamsController#show (for 127.0.0.1 at 2009-12-10 23:58:09) [GET]
+  Parameters: {"id"=>"1", "course_id"=>"1"}
+  [4;35;1mExam Load (1.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exams/show
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "exam_registrations" ON "users".id = "exam_registrations".user_id WHERE (("exam_registrations".exam_id = 1)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Completed in 42ms (View: 30, DB: 2) | 200 OK [http://127.0.0.1/courses/1/exams/1]
