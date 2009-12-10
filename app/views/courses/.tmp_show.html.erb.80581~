@@ -14,9 +14,6 @@
             <%=link_to ci.name, course_course_instance_path(ci.course,ci) %>
         </ul>
         <% end %>
-<ul><b>Kokeet:</b><% @exams.each do |ex| %>
-	<ul><%=ex.name%> <%= ex.start_time.strftime("%a") %> <%= ex.start_time.strftime("%H") %>-<%= ex.end_time.strftime("%H") %></ul>
-<% end %></ul>
         <br/>
         <%= link_to t(:to_courselist), :action => "index", :controller =>"courses" %>
     </body>
