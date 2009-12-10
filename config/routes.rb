@@ -58,6 +58,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :exercise_groups
     admin.resources :newsfeeds
     admin.resources :registrations
+    admin.resources :exams
   end
 
   

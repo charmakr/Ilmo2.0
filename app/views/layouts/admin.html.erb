@@ -19,11 +19,13 @@
 				<%=link_to "Suomeksi", :locale=>"fi"%>
 				<%=link_to "In english", :locale=>"en"%>
 				<br />
-				<%=link_to "Courses", admin_courses_url%>				
+				<%=link_to "Courses", admin_courses_url%>
+				<%=link_to "Exams", admin_exams_url%>				
 				<%=link_to "Course Instances", admin_course_instances_url%>
 				<%=link_to "Exercise Groups", admin_exercise_groups_url%>
 				<%=link_to "Users", admin_users_url%>
 				<%=link_to "Registrations", admin_registrations_url%>
+				
                 <% if flash[:warning] %>
                 <div id="varoitus">
                     <%= flash[:warning] %>
