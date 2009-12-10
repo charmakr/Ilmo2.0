@@ -1,0 +1,13 @@
+
+
+  <h2>Newsfeed</h2>
+  <%=link_to "RSS Newsfeed", :action=>"index", :format=>"rss"%><br /><br />
+  <% @newsfeed.each do |n| %>
+	<%=n.message%> <%=n.created_at%>
+	<br />	
+<% end %>
+  <hr>
+<h2><%=t (:courses)%>:</h2>
+<% @courses.each do |course| %>
+	<ul><%=link_to course.name, :action=> "show", :controller =>"courses", :id=>course.id%></ul>
+<% end %>

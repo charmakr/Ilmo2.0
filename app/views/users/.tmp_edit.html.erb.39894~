@@ -1,21 +1,6 @@
 <h2>Käyttäjätiedot</h2>
 <%= link_to "Etusivulle" , "/"%>
 <br />
-
-<h3>Tiedot:</h3>
-
-<ul><b>Käyttäjänimi:</b><%=@user.username%></ul>
-<ul><b>Etunimi:</b><%=@user.first_name%></ul>
-<ul><b>Sukunimi:</b><%=@user.surname%></ul>
-<ul><b>Opiskelijanumero:</b><%=@user.student_number%></ul>
-<ul><b>Email:</b><%=@user.email%></ul>
-<ul><b>Käyttäjätyyppi:</b><%=@user.account_type%></ul>
-
-<ul><b>Harjotusryhmät:</b><% @exgs.each do |exg| %>
-	<ul><%=link_to exg.name, :action=> "show", :controller =>"exercise_groups", :id=>exg.id%></ul>
-<% end %></ul>
-
-<hr>
 <h3>Päivitä käyttäjätiedot</h3>
 <%if @user!=@user1%><%=error_messages_for "user"%><%end%>
   <% form_for @user do |f| %>

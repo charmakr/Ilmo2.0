@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   def edit
     @user = User.find_by_id(session[:user]) 
     @user1 = User.new
+    @exgs = @user.exercise_groups
   end
   
   def new
