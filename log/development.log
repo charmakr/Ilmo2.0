@@ -44344,3 +44344,569 @@ Rendering users/show
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
 Completed in 29ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 22:06:06) [GET]
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 14)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 13)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 12)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 11)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 10)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 8)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 9)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 5)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 6)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 7)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 3)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 4)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 125ms (View: 103, DB: 7) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110225146)
+Migrating to CreateUsers (20091118164610)
+Migrating to CreateCourseInstances (20091125205329)
+Migrating to CreateExerciseGroups (20091125211344)
+Migrating to CreateNewsfeeds (20091203101825)
+Migrating to CreateRegistrations (20091203110513)
+Migrating to CreateExams (20091210160232)
+Migrating to CreateNotices (20091210163034)
+Migrating to CreateNewsfeedLikes (20091210183833)
+Migrating to CreateFriendships (20091210193441)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "friendships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091210193441')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("course_instances")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("courses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("exams")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("exercise_groups")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("friendships")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("newsfeed_likes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("newsfeeds")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notices")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("registrations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mFriendship Load (1.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".user_id = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 1)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;36;1mFriendship Create (1.0ms)[0m   [0;1mINSERT INTO "friendships" ("updated_at", "user_id", "created_at") VALUES('2009-12-10 20:15:09', 2, '2009-12-10 20:15:09')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 2)) [0m
+  [4;36;1mFriendship Load (1.0ms)[0m   [0;1mSELECT * FROM "friendships" WHERE ("friendships".user_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (91.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (66.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110225146)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091110225146')[0m
+Migrating to CreateUsers (20091118164610)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "first_name" varchar(255), "surname" varchar(255), "student_number" varchar(255), "email" varchar(255), "account_type" varchar(255) DEFAULT 'User', "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091118164610')[0m
+Migrating to CreateCourseInstances (20091125205329)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "course_instances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "course_id" integer, "multiple_exercise_groups" boolean, "min" integer, "max" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125205329')[0m
+Migrating to CreateExerciseGroups (20091125211344)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "classroom" varchar(255), "begins_at" time, "ends_at" time, "course_instance_id" integer, "max_registrations" integer DEFAULT 20, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125211344')[0m
+Migrating to CreateNewsfeeds (20091203101825)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "newsfeeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091203101825')[0m
+Migrating to CreateRegistrations (20091203110513)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "registrations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "exercise_group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091203110513')[0m
+Migrating to CreateExams (20091210160232)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "exams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "start_time" time, "end_time" time, "course_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210160232')[0m
+Migrating to CreateNotices (20091210163034)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "notices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210163034')[0m
+Migrating to CreateNewsfeedLikes (20091210183833)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "newsfeed_likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "newsfeed_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210183833')[0m
+Migrating to CreateFriendships (20091210193441)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "friendships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210193441')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("course_instances")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("courses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("exams")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("exercise_groups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("friendships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("newsfeed_likes")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("newsfeeds")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("notices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("registrations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 22:18:55) [GET]
+  [4;36;1mNotice Load (1.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.username) on line #15 of app/views/layouts/application.html.erb:
+12:             <div id="sisalto">
+13:                 <h1><%=link_to "Ilmo2.0", "/"%></h1>
+14:                 <% if session[:user] %>
+15:                 <%= link_to User.find_by_id(session[:user]).username, edit_user_url(session[:user])%> (<%= link_to t(:logout), logout_url %>)
+16: 				<% if User.find_by_id(session[:user]).account_type=="Admin" %>
+17: 				<%=link_to "Järjestelmän hallinnointiin", admin_courses_url%>
+18: 					<%end %>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/courses_controller.rb:6:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (106.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-12-10 22:19:30) [GET]
+  Parameters: {"id"=>"1"}
+Redirected to http://127.0.0.1:3002/sessions
+Filter chain halted as [:authentication_required] rendered_or_redirected.
+Completed in 3722ms (DB: 0) | 302 Found [http://127.0.0.1/users/1]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-10 22:19:34) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-12-10 22:19:36) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 84ms (View: 72, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-12-10 22:19:42) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"late", "username"=>"late", "account_type"=>"Admin", "password"=>"late"}, "commit"=>"Rekisteröi", "authenticity_token"=>"6vyvgYVcsRRwoRhfV2tpMSzYXrI9QbhMTt99MOGqqb4="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+  [4;35;1mUser Create (3.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 20:19:42', 'late', 'Admin', NULL, NULL, 'late', NULL, NULL, '2009-12-10 20:19:42')[0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä late rekisteröityi järjestelmään', '2009-12-10 20:19:42', '2009-12-10 20:19:42')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 61ms (DB: 3) | 302 Found [http://127.0.0.1/users]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-10 22:19:42) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 18ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-10 22:19:45) [POST]
+  Parameters: {"user"=>{"username"=>"late", "password"=>"late"}, "commit"=>"Login", "authenticity_token"=>"6vyvgYVcsRRwoRhfV2tpMSzYXrI9QbhMTt99MOGqqb4="}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'late' AND password = 'late') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 10ms (DB: 2) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 22:19:46) [GET]
+  [4;36;1mNotice Load (2.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 290ms (View: 225, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-10 22:19:51) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-10 22:19:51) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-12-10 22:19:52) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 64ms (View: 55, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-12-10 22:19:58) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"sala", "username"=>"sala", "account_type"=>"User", "password"=>"sala"}, "commit"=>"Rekisteröi", "authenticity_token"=>"RhFZo8C9eXbKeo09H+PkzH6zHW8bsxFgcDxIL6l/wI0="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'sala') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 20:19:58', 'sala', 'User', NULL, NULL, 'sala', NULL, NULL, '2009-12-10 20:19:58')[0m
+  [4;36;1mNewsfeed Create (1.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä sala rekisteröityi järjestelmään', '2009-12-10 20:19:58', '2009-12-10 20:19:58')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 52ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-10 22:19:58) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-10 22:20:02) [POST]
+  Parameters: {"user"=>{"username"=>"sala", "password"=>"sala"}, "commit"=>"Login", "authenticity_token"=>"RhFZo8C9eXbKeo09H+PkzH6zHW8bsxFgcDxIL6l/wI0="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'sala' AND password = 'sala') LIMIT 1[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 10ms (DB: 0) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 22:20:02) [GET]
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mNewsfeed Load (2.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 101ms (View: 84, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#like_newsfeed (for 127.0.0.1 at 2009-12-10 22:20:05) [GET]
+  Parameters: {"post"=>"true", "id"=>"2"}
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM "newsfeeds" WHERE ("newsfeeds"."id" = '2') ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE ("users"."id" = 2) AND (("newsfeed_likes".newsfeed_id = 2)) LIMIT 1[0m
+  [4;36;1mNewsfeedLike Create (1.0ms)[0m   [0;1mINSERT INTO "newsfeed_likes" ("updated_at", "newsfeed_id", "user_id", "created_at") VALUES('2009-12-10 20:20:05', 2, 2, '2009-12-10 20:20:05')[0m
+Redirected to http://127.0.0.1:3002/
+Completed in 55ms (DB: 2) | 302 Found [http://127.0.0.1/users/like_newsfeed/2?post=true]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 22:20:05) [GET]
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 2)) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "newsfeed_likes" ON "users".id = "newsfeed_likes".user_id WHERE (("newsfeed_likes".newsfeed_id = 1)) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 52ms (View: 36, DB: 3) | 200 OK [http://127.0.0.1/]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mFriendship Create (0.0ms)[0m   [0mINSERT INTO "friendships" ("updated_at", "user_id", "created_at") VALUES('2009-12-10 20:20:52', 2, '2009-12-10 20:20:52')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 2)) [0m
+  [4;35;1mFriendship Load (0.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".user_id = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'late' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'sala' AND "users".id <> 2) LIMIT 1[0m
+  [4;36;1mFriendship Load (0.0ms)[0m   [0;1mSELECT * FROM "friendships" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110225146)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091110225146')[0m
+Migrating to CreateUsers (20091118164610)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "first_name" varchar(255), "surname" varchar(255), "student_number" varchar(255), "email" varchar(255), "account_type" varchar(255) DEFAULT 'User', "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091118164610')[0m
+Migrating to CreateCourseInstances (20091125205329)
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "course_instances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "course_id" integer, "multiple_exercise_groups" boolean, "min" integer, "max" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125205329')[0m
+Migrating to CreateExerciseGroups (20091125211344)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "classroom" varchar(255), "begins_at" time, "ends_at" time, "course_instance_id" integer, "max_registrations" integer DEFAULT 20, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125211344')[0m
+Migrating to CreateNewsfeeds (20091203101825)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "newsfeeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091203101825')[0m
+Migrating to CreateRegistrations (20091203110513)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "registrations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "exercise_group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091203110513')[0m
+Migrating to CreateExams (20091210160232)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "exams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "start_time" time, "end_time" time, "course_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210160232')[0m
+Migrating to CreateNotices (20091210163034)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "notices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210163034')[0m
+Migrating to CreateNewsfeedLikes (20091210183833)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "newsfeed_likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "newsfeed_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210183833')[0m
+Migrating to CreateFriendships (20091210193441)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "friendships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "friend_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210193441')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("course_instances")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("courses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("exams")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("exercise_groups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("friendships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("newsfeed_likes")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("newsfeeds")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("notices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("registrations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-10 22:32:18) [GET]
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/sessions/logout]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-10 22:32:22) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 60ms (View: 59, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-12-10 22:32:23) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 72ms (View: 23, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-12-10 22:32:29) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"late", "username"=>"late", "account_type"=>"User", "password"=>"late"}, "commit"=>"Rekisteröi", "authenticity_token"=>"vtrGUn4fsYgS2ue7vmnu74t6FuDRLnOLps4p9d0hsm4="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'late') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 20:32:29', 'late', 'User', NULL, NULL, 'late', NULL, NULL, '2009-12-10 20:32:29')[0m
+  [4;36;1mNewsfeed Create (1.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä late rekisteröityi järjestelmään', '2009-12-10 20:32:29', '2009-12-10 20:32:29')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 61ms (DB: 3) | 302 Found [http://127.0.0.1/users]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-10 22:32:29) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 13ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-12-10 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 18ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-12-10 22:32:35) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"sala", "username"=>"sala", "account_type"=>"User", "password"=>"sala"}, "commit"=>"Rekisteröi", "authenticity_token"=>"vtrGUn4fsYgS2ue7vmnu74t6FuDRLnOLps4p9d0hsm4="}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'sala') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 20:32:35', 'sala', 'User', NULL, NULL, 'sala', NULL, NULL, '2009-12-10 20:32:35')[0m
+  [4;35;1mNewsfeed Create (0.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä sala rekisteröityi järjestelmään', '2009-12-10 20:32:35', '2009-12-10 20:32:35')[0m
+Redirected to http://127.0.0.1:3002/sessions
+Completed in 55ms (DB: 2) | 302 Found [http://127.0.0.1/users]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2009-12-10 22:32:36) [GET]
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mFriendship Create (1.0ms)[0m   [0;1mINSERT INTO "friendships" ("updated_at", "user_id", "friend_id", "created_at") VALUES('2009-12-10 20:33:50', 1, NULL, '2009-12-10 20:33:50')[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 1)) [0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mFriendship Create (1.0ms)[0m   [0mINSERT INTO "friendships" ("updated_at", "user_id", "friend_id", "created_at") VALUES('2009-12-10 20:34:26', 2, NULL, '2009-12-10 20:34:26')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 2)) [0m
+  [4;35;1mFriendship Load (0.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".user_id = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 20:38:21', 'joo', 'User', NULL, NULL, 'joo', NULL, NULL, '2009-12-10 20:38:21')[0m
+  [4;35;1mNewsfeed Create (1.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä joo rekisteröityi järjestelmään', '2009-12-10 20:38:21', '2009-12-10 20:38:21')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joo1') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 20:38:30', 'joo1', 'User', NULL, NULL, 'joo1', NULL, NULL, '2009-12-10 20:38:30')[0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä joo1 rekisteröityi järjestelmään', '2009-12-10 20:38:30', '2009-12-10 20:38:30')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mFriendship Create (1.0ms)[0m   [0;1mINSERT INTO "friendships" ("updated_at", "user_id", "friend_id", "created_at") VALUES('2009-12-10 20:38:57', 3, NULL, '2009-12-10 20:38:57')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 4)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 3)) [0m
+  [4;35;1mFriendship Load (0.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".user_id = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'just') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 20:41:23', 'just', 'User', NULL, NULL, 'just', NULL, NULL, '2009-12-10 20:41:23')[0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä just rekisteröityi järjestelmään', '2009-12-10 20:41:23', '2009-12-10 20:41:23')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'just1') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 20:41:35', 'just1', 'User', NULL, NULL, 'just1', NULL, NULL, '2009-12-10 20:41:35')[0m
+  [4;35;1mNewsfeed Create (0.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä just1 rekisteröityi järjestelmään', '2009-12-10 20:41:35', '2009-12-10 20:41:35')[0m
+  [4;36;1mFriendship Create (1.0ms)[0m   [0;1mINSERT INTO "friendships" ("updated_at", "user_id", "friend_id", "created_at") VALUES('2009-12-10 20:41:44', 6, NULL, '2009-12-10 20:41:44')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 5)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".user_id = 6)) [0m
+  [4;35;1mFriendship Load (0.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".user_id = 5) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mFriendship Create (1.0ms)[0m   [0mINSERT INTO "friendships" ("updated_at", "user_id", "friend_id", "created_at") VALUES('2009-12-10 20:44:14', 1, 6, '2009-12-10 20:44:14')[0m
+  [4;36;1mFriendship Load (0.0ms)[0m   [0;1mSELECT * FROM "friendships" WHERE ("friendships".user_id = 6) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mFriendship Load (2.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".friend_id = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".friend_id = 6)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".friend_id = 1)) [0m
+  [4;36;1mFriendship Load (1.0ms)[0m   [0;1mSELECT * FROM "friendships" WHERE ("friendships".friend_id = 1) [0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".user_id WHERE (("friendships".friend_id = 1)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mFriendship Load (0.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".friend_id = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mFriendship Load (1.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".user_id = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mFriendship Load (0.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".friend_id = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (27.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110225146)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091110225146')[0m
+Migrating to CreateUsers (20091118164610)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "first_name" varchar(255), "surname" varchar(255), "student_number" varchar(255), "email" varchar(255), "account_type" varchar(255) DEFAULT 'User', "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091118164610')[0m
+Migrating to CreateCourseInstances (20091125205329)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "course_instances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "course_id" integer, "multiple_exercise_groups" boolean, "min" integer, "max" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125205329')[0m
+Migrating to CreateExerciseGroups (20091125211344)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "classroom" varchar(255), "begins_at" time, "ends_at" time, "course_instance_id" integer, "max_registrations" integer DEFAULT 20, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125211344')[0m
+Migrating to CreateNewsfeeds (20091203101825)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "newsfeeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091203101825')[0m
+Migrating to CreateRegistrations (20091203110513)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "registrations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "exercise_group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091203110513')[0m
+Migrating to CreateExams (20091210160232)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "exams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "start_time" time, "end_time" time, "course_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210160232')[0m
+Migrating to CreateNotices (20091210163034)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "notices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210163034')[0m
+Migrating to CreateNewsfeedLikes (20091210183833)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "newsfeed_likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "newsfeed_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210183833')[0m
+Migrating to CreateFriendships (20091210193441)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "friendships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "friend_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210193441')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("course_instances")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("courses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("exams")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("exercise_groups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("friendships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("newsfeed_likes")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("newsfeeds")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("notices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("registrations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'lol') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 21:13:17', 'lol', 'User', NULL, NULL, 'jotain', NULL, NULL, '2009-12-10 21:13:17')[0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä lol rekisteröityi järjestelmään', '2009-12-10 21:13:17', '2009-12-10 21:13:17')[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'l2ol') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 21:13:27', 'l2ol', 'User', NULL, NULL, 'jot23ain', NULL, NULL, '2009-12-10 21:13:27')[0m
+  [4;35;1mNewsfeed Create (0.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä l2ol rekisteröityi järjestelmään', '2009-12-10 21:13:27', '2009-12-10 21:13:27')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'loewql') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "account_type", "student_number", "first_name", "password", "surname", "email", "created_at") VALUES('2009-12-10 21:13:33', 'loewql', 'User', NULL, NULL, 'jotweqain', NULL, NULL, '2009-12-10 21:13:33')[0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä loewql rekisteröityi järjestelmään', '2009-12-10 21:13:33', '2009-12-10 21:13:33')[0m
+  [4;35;1mFriendship Create (1.0ms)[0m   [0mINSERT INTO "friendships" ("updated_at", "user_id", "friend_id", "created_at") VALUES('2009-12-10 21:14:38', 1, 2, '2009-12-10 21:14:38')[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mFriendship Load (0.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".user_id = 1) [0m
+  [4;36;1mFriendship Load (0.0ms)[0m   [0;1mSELECT * FROM "friendships" WHERE ("friendships".friend_id = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mFriendship Load (0.0ms)[0m   [0;1mSELECT * FROM "friendships" WHERE ("friendships".user_id = 2) [0m
+  [4;35;1mFriendship Load (1.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".friend_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mFriendship Load (0.0ms)[0m   [0mSELECT * FROM "friendships" WHERE ("friendships".user_id = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m

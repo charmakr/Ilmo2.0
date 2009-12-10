@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-  
+
+  has_many :exam_registrations, :dependent => :destroy
+  has_many :exams, :through => :exam_registrations
   has_many :registrations, :dependent => :destroy
   has_many :exercise_groups, :through => :registrations
   has_many :newsfeed_likes, :dependent => :destroy
@@ -22,7 +24,6 @@ class User < ActiveRecord::Base
   def update_newsfeed
     Newsfeed.user_registered(self)
   end
-  
   
   
   def self.authenticate(username, password)
