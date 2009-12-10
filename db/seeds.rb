@@ -22,6 +22,8 @@ end
   ENV['maara'].to_i.times{
     i=i+1    
   Course.create(:name=>"Kurssi "+i.to_s, :description=> "Kurssin "+i.to_s+" kuvaus selityksineen")
+  Course.last.exams.create(:name => "Koe Kurssiin "+i.to_s, :start_time=>0.hour.from_now, :end_time=>5.hour.from_now)
+  Course.last.exams.create(:name => "Uusintakoe Kurssiin "+i.to_s, :start_time=>200.hour.from_now, :end_time=>204.hour.from_now)
   Course.last.course_instances.create(:name => "Kevät 2010", :multiple_exercise_groups =>true, :min=>0 ,:max=>4)
   Course.last.course_instances.create(:name => "Syksy 2010", :multiple_exercise_groups =>false, :min=>0 ,:max=>3)
   Course.last.course_instances.first.exercise_groups.create(:name => "Ryhmä 1", :classroom=>"A1", :begins_at => 0.hour.from_now, :ends_at =>1.hour.from_now )
