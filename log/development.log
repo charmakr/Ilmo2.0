@@ -37482,3 +37482,467 @@ Rendering courses/index
   [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Completed in 50ms (View: 33, DB: 4) | 200 OK [http://127.0.0.1/]
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 1', '2009-12-10 17:21:05', 'Kurssin 1 kuvaus selityksineen', '2009-12-10 17:21:05')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mCourse Create (0.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 1', '2009-12-10 17:21:48', 'Kurssin 1 kuvaus selityksineen', '2009-12-10 17:21:48')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 1', '2009-12-10 17:25:11', 'Kurssin 1 kuvaus selityksineen', '2009-12-10 17:25:11')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 1', '2009-12-10 17:26:09', 'Kurssin 1 kuvaus selityksineen', '2009-12-10 17:26:09')[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 1', '2009-12-10 17:26:28', 'Kurssin 1 kuvaus selityksineen', '2009-12-10 17:26:28')[0m
+  [4;35;1mNewsfeed Create (1.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Uusi kurssi <a href="courses\11">Kurssi 1</a> lisättiin', '2009-12-10 17:26:28', '2009-12-10 17:26:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "multiple_exercise_groups", "updated_at", "max", "min", "course_id", "created_at") VALUES('Kevät 2010', 't', '2009-12-10 17:26:28', 4, 0, 11, '2009-12-10 17:26:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (0.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "multiple_exercise_groups", "updated_at", "max", "min", "course_id", "created_at") VALUES('Syksy 2010', 'f', '2009-12-10 17:26:28', 3, 0, 11, '2009-12-10 17:26:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 21) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 21) [0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-10 17:26:28', 21, '2009-12-10 17:26:28', '2009-12-10 18:26:28', '2009-12-10 17:26:28')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 21) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 21) [0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-10 17:26:28', 21, '2009-12-10 17:26:28', '2009-12-10 19:26:28', '2009-12-10 17:26:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 22) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 22) [0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-10 17:26:28', 22, '2009-12-10 17:26:28', '2009-12-10 20:26:28', '2009-12-10 17:26:28')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 22) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 22) [0m
+  [4;35;1mExerciseGroup Create (1.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-10 17:26:28', 22, '2009-12-10 17:26:28', '2009-12-10 21:26:28', '2009-12-10 17:26:28')[0m
+  [4;36;1mCourse Create (0.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Kurssi 2', '2009-12-10 17:26:28', 'Kurssin 2 kuvaus selityksineen', '2009-12-10 17:26:28')[0m
+  [4;35;1mNewsfeed Create (0.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Uusi kurssi <a href="courses\12">Kurssi 2</a> lisättiin', '2009-12-10 17:26:28', '2009-12-10 17:26:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (0.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "multiple_exercise_groups", "updated_at", "max", "min", "course_id", "created_at") VALUES('Kevät 2010', 't', '2009-12-10 17:26:28', 4, 0, 12, '2009-12-10 17:26:28')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO "course_instances" ("name", "multiple_exercise_groups", "updated_at", "max", "min", "course_id", "created_at") VALUES('Syksy 2010', 'f', '2009-12-10 17:26:29', 3, 0, 12, '2009-12-10 17:26:29')[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 12) LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 23) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 23) [0m
+  [4;36;1mExerciseGroup Create (1.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'A1', '2009-12-10 17:26:29', 23, '2009-12-10 17:26:29', '2009-12-10 18:26:29', '2009-12-10 17:26:29')[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 12) LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 23) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 23) [0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'B2', '2009-12-10 17:26:29', 23, '2009-12-10 17:26:29', '2009-12-10 19:26:29', '2009-12-10 17:26:29')[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 12) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 24) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 24) [0m
+  [4;36;1mExerciseGroup Create (0.0ms)[0m   [0;1mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 1', 'C3', '2009-12-10 17:26:29', 24, '2009-12-10 17:26:29', '2009-12-10 20:26:29', '2009-12-10 17:26:29')[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY courses.id DESC LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 12) ORDER BY course_instances.id DESC LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 24) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 24) [0m
+  [4;35;1mExerciseGroup Create (0.0ms)[0m   [0mINSERT INTO "exercise_groups" ("name", "classroom", "begins_at", "course_instance_id", "updated_at", "ends_at", "created_at") VALUES('Ryhmä 2', 'D4', '2009-12-10 17:26:29', 24, '2009-12-10 17:26:29', '2009-12-10 21:26:29', '2009-12-10 17:26:29')[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 19:26:34) [GET]
+  [4;36;1mNotice Load (1.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 107ms (View: 91, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-10 19:26:40) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 11) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 11) [0m
+  [4;35;1mExam Load (0.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams".course_id = 11) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 54ms (View: 41, DB: 1) | 200 OK [http://127.0.0.1/courses/11]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 19:26:43) [GET]
+  [4;36;1mNotice Load (0.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 49ms (View: 32, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-10 19:26:53) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 11) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 11) [0m
+  [4;35;1mExam Load (1.0ms)[0m   [0mSELECT * FROM "exams" WHERE ("exams".course_id = 11) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 102ms (View: 36, DB: 2) | 200 OK [http://127.0.0.1/courses/11]
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-10 19:26:55) [GET]
+  Parameters: {"id"=>"21", "course_id"=>"11"}
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = '21') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 11) [0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 21) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 60ms (View: 51, DB: 2) | 200 OK [http://127.0.0.1/courses/11/course_instances/21]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 19:26:57) [GET]
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 101ms (View: 84, DB: 4) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-10 19:29:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+  [4;36;1mExam Load (1.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams".course_id = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 48ms (View: 36, DB: 1) | 200 OK [http://127.0.0.1/courses/2]
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-10 19:29:11) [GET]
+  Parameters: {"id"=>"4", "course_id"=>"2"}
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = '4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 4) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 54ms (View: 46, DB: 1) | 200 OK [http://127.0.0.1/courses/2/course_instances/4]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-10 19:29:12) [GET]
+  Parameters: {"course_instance_id"=>"4", "id"=>"8", "course_id"=>"2"}
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 4) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 8)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 121ms (View: 111, DB: 2) | 200 OK [http://127.0.0.1/courses/2/course_instances/4/exercise_groups/8]
+
+
+Processing ExerciseGroupsController#join (for 127.0.0.1 at 2009-12-10 19:29:13) [GET]
+  Parameters: {"post"=>"true", "id"=>"8"}
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '8') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 8)) LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 4) [0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 4) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 7)) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 8)) LIMIT 1[0m
+  [4;35;1mRegistration Create (1.0ms)[0m   [0mINSERT INTO "registrations" ("updated_at", "exercise_group_id", "user_id", "created_at") VALUES('2009-12-10 17:29:13', 8, 1, '2009-12-10 17:29:13')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 8) [0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 4) [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä late liittyi kurssin: <a href="courses\2">Kurssi 2</a>:Syksy 2010 harjoitusryhmään:Ryhmä 2', '2009-12-10 17:29:13', '2009-12-10 17:29:13')[0m
+Redirected to http://127.0.0.1:3002/exercise_groups/show/8
+Completed in 81ms (DB: 7) | 302 Found [http://127.0.0.1/exercise_groups/join/8?post=true]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-10 19:29:13) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 4) [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 8)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 110ms (View: 100, DB: 3) | 200 OK [http://127.0.0.1/exercise_groups/show/8]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 19:29:14) [GET]
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 50ms (View: 32, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-10 19:29:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 2) [0m
+  [4;36;1mExam Load (0.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams".course_id = 2) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 49ms (View: 37, DB: 1) | 200 OK [http://127.0.0.1/courses/2]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 19:29:23) [GET]
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 52ms (View: 32, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-10 19:37:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mExam Load (1.0ms)[0m   [0;1mSELECT * FROM "exams" WHERE ("exams".course_id = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 53ms (View: 39, DB: 2) | 200 OK [http://127.0.0.1/courses/1]
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-10 19:37:07) [GET]
+  Parameters: {"id"=>"2", "course_id"=>"1"}
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = '2') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 2) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 53ms (View: 43, DB: 2) | 200 OK [http://127.0.0.1/courses/1/course_instances/2]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-10 19:37:08) [GET]
+  Parameters: {"course_instance_id"=>"2", "id"=>"4", "course_id"=>"1"}
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 4)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 54ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/courses/1/course_instances/2/exercise_groups/4]
+
+
+Processing ExerciseGroupsController#join (for 127.0.0.1 at 2009-12-10 19:37:10) [GET]
+  Parameters: {"post"=>"true", "id"=>"4"}
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 4)) LIMIT 1[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 3)) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 4)) LIMIT 1[0m
+  [4;35;1mRegistration Create (1.0ms)[0m   [0mINSERT INTO "registrations" ("updated_at", "exercise_group_id", "user_id", "created_at") VALUES('2009-12-10 17:37:10', 4, 1, '2009-12-10 17:37:10')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `render' for #<Class:0x5a94f34>):
+  app/models/newsfeed.rb:12:in `join_exercise_group'
+  app/models/registration.rb:9:in `update_newsfeed'
+  app/models/exercise_group.rb:27:in `join'
+  app/controllers/exercise_groups_controller.rb:8:in `join'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (106.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-10 19:37:52) [GET]
+  Parameters: {"course_instance_id"=>"2", "id"=>"4", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 4)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 59ms (View: 49, DB: 2) | 200 OK [http://127.0.0.1/courses/1/course_instances/2/exercise_groups/4]
+
+
+Processing ExerciseGroupsController#join (for 127.0.0.1 at 2009-12-10 19:37:53) [GET]
+  Parameters: {"post"=>"true", "id"=>"4"}
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 4)) LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 3)) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 4)) LIMIT 1[0m
+  [4;36;1mRegistration Create (1.0ms)[0m   [0;1mINSERT INTO "registrations" ("updated_at", "exercise_group_id", "user_id", "created_at") VALUES('2009-12-10 17:37:53', 4, 1, '2009-12-10 17:37:53')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 4) [0m
+
+NameError (uninitialized constant Newsfeed::Base):
+  app/models/newsfeed.rb:12:in `join_exercise_group'
+  app/models/registration.rb:9:in `update_newsfeed'
+  app/models/exercise_group.rb:27:in `join'
+  app/controllers/exercise_groups_controller.rb:8:in `join'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-10 19:40:17) [GET]
+  Parameters: {"course_instance_id"=>"2", "id"=>"4", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 4)) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 112ms (View: 101, DB: 3) | 200 OK [http://127.0.0.1/courses/1/course_instances/2/exercise_groups/4]
+
+
+Processing ExerciseGroupsController#join (for 127.0.0.1 at 2009-12-10 19:40:18) [GET]
+  Parameters: {"post"=>"true", "id"=>"4"}
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 4)) LIMIT 1[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups".course_instance_id = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 3)) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE ("users"."id" = 1) AND (("registrations".exercise_group_id = 4)) LIMIT 1[0m
+  [4;36;1mRegistration Create (1.0ms)[0m   [0;1mINSERT INTO "registrations" ("updated_at", "exercise_group_id", "user_id", "created_at") VALUES('2009-12-10 17:40:18', 4, 1, '2009-12-10 17:40:18')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 4) [0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mNewsfeed Create (0.0ms)[0m   [0mINSERT INTO "newsfeeds" ("message", "updated_at", "created_at") VALUES('Käyttäjä late liittyi kurssin: Kurssi 1:Syksy 2010 harjoitusryhmään:<a href="courses\1\course_instances\1\exercise_groups\4">Ryhmä 2</a>', '2009-12-10 17:40:18', '2009-12-10 17:40:18')[0m
+Redirected to http://127.0.0.1:3002/exercise_groups/show/4
+Completed in 98ms (DB: 3) | 302 Found [http://127.0.0.1/exercise_groups/join/4?post=true]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-10 19:40:19) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 4)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 109ms (View: 100, DB: 2) | 200 OK [http://127.0.0.1/exercise_groups/show/4]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 19:40:22) [GET]
+  [4;36;1mNotice Load (1.0ms)[0m   [0;1mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mNewsfeed Load (2.0ms)[0m   [0mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 53ms (View: 33, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-10 19:40:26) [GET]
+  Parameters: {"course_instance_id"=>"1", "id"=>"4", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = '4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 2) [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users".id = "registrations".user_id WHERE (("registrations".exercise_group_id = 4)) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 55ms (View: 46, DB: 1) | 200 OK [http://127.0.0.1/courses/1/course_instances/1/exercise_groups/4]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-10 19:40:30) [GET]
+  [4;35;1mNotice Load (1.0ms)[0m   [0mSELECT * FROM "notices" [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM "newsfeeds" ORDER BY created_at DESC LIMIT 15[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 110ms (View: 35, DB: 3) | 200 OK [http://127.0.0.1/]
