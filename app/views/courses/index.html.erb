@@ -7,7 +7,7 @@
   <h2>Newsfeed</h2>
   <%=link_to "RSS Newsfeed", :action=>"index", :format=>"rss"%><br /><br />
   <% @newsfeed.each do |n| %>
-	<%=n.message%> <%=n.created_at%>
+	<%=n.message%> <br /><%=n.created_at.strftime("%c")%>
 	<br />	
 <% end %>
   <hr>
